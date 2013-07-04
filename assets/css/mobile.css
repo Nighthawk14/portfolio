@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+ul,li,ol{list-style:disc;}
+body{padding-left:10px;padding-right:10px;}
+.cursor{cursor:pointer;}
+#logo{width:250px;margin:0 auto;height:70px;margin-top:50px;}
+.socials{width:200px;margin:0 auto;margin-top:40px;}.socials a{background-image:url('../svg/sprite-rs.svg');width:36px;height:35px;display:inline-block;}.socials a.facebook{background-position:0px top;}.socials a.facebook:hover{background-position:0px bottom;}
+.socials a.twitter{background-position:-38px top;}.socials a.twitter:hover{background-position:-38px bottom;}
+.socials a.linkedin{background-position:-112px top;}.socials a.linkedin:hover{background-position:-112px bottom;}
+.socials a.github{background-position:-75px top;}.socials a.github:hover{background-position:-75px bottom;}
+.socials a.cv{background-position:-148px top;}.socials a.cv:hover{background-position:-148px bottom;}
+#projects{margin-top:20px;top:100%;width:100%;}#projects .wrapper{padding:10px 10px;}
+#projects #EachProject{margin:6px 0px;display:block;font-weight:300;}#projects #EachProject .imgProject{width:70px;height:100%;position:absolute;right:0;top:0px;background-position:50%;}
+#projects #EachProject .linkProject{text-decoration:none;}
+#projects #EachProject .Title{font-family:'Open Sans';color:#FFFFFF;margin-top:20px;text-align:center;font-size:20px;background:#e95a2d no-repeat;padding:5px 0px;}
+#projects #EachProject .desc{height:20px;font-family:'Open Sans',sans-serif;color:#333333;margin-top:5px;font-size:14px;line-height:20px;text-align:left;padding:5px 0px;overflow:hidden;position:relative;background-color:#f7f7f7;border:1px solid #eeeeee;}
+.modal.fade{top:-80%;}
+.modal{border:1px solid #dedede;background-color:#FFF;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;overflow-y:scroll;}.modal input{margin-bottom:15px;}
+.modal .modal-header{border-bottom:1px solid #f6f6f6;text-align:center;padding:10px 0px 10px 0px;}
+.modal .modal-body{max-height:300px;padding:10px 10px;}
+.modal h1{font-family:'Oxygen',sans-serif;font-size:24px;font-weight:300;color:#565656;margin-top:25px;}
+.submit{width:100%;background-color:#e95a2d;color:#FFF;font:15px 'Oxygen',sans-serif;font-weight:700;border:none;-webkit-appearance:none;padding:14px 0px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:10px;text-align:center;z-index:2;}.submit:hover{background-color:#db542b;}
+#kariboo-modal .modal-body{background-color:#F9F9F9;font-family:'Open Sans',sans-serif;}#kariboo-modal .modal-body p{margin:10px;color:#565656;line-height:20px;}
+#kariboo-modal .modal-body .orange{color:#e95a2d;}
+#feux-modal .submit{width:49%;display:inline-block;text-decoration:none;}

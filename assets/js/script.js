@@ -28,7 +28,8 @@ $('.scroll').on('click', function(){
 	{
 		$(this).addClass('top');
 		$(this).css('top',$('#projects').position().top+50);
-		$.scrollTo('#projects',800);
+		var pos = $('#projects').position().top+150;
+		$.scrollTo({ top:pos, left:0},800);
 	}
 });
 

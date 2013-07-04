@@ -1,38 +1,18 @@
-<?php 
-require_once('components/Mobile-detect/Mobile_Detect.php');
-$detect = new Mobile_Detect;
-$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mobile.html') : header('Location: mobile.html')) : 'computer');
-?>
 <!doctype html>
 <html lang="fr" ng-app="Portfolio">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Antoine Savignac</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/mobile.css">
 	<script type="text/javascript" src="components/angularjs/angular.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </head>
-<body ng-controller="Main">
-	<div id="line">
-		<object data="assets/svg/logo.svg" id="logo" type="image/svg+xml"></object>
-	</div>
-	<div id="mask"></div>
-	<div class="scroll cursor"></div>
-	<div id="projects">
-		<div class="wrapper">
-			<div id="EachProject" ng-repeat='project in projects'>
-				<div class="Title">{{project.title}}</div>
-				<div class="desc">
-					{{project.description}}
-				</div>
-				<div class="imgProject" ng-style="project.background"></div>
-				<div class="linkProject cursor" ng-show='{{project.event.active}}' ng-click='events("{{project.event.value}}")'></div>
-				<a class="linkProject cursor" target="_blank" ng-href='{{project.link}}' ng-hide='{{project.event.active}}'></a>
-			</div>
-			<div class="clear"></div>
-		</div>
+<body ng-controller="Main_mobile">
+	<div id="logo">
+		<object data="assets/svg/logo-mobile.svg" type="image/svg+xml"></object>
 	</div>
 	<div class="socials">
 		<a href="https://www.facebook.com/asavignac1" class="facebook" target="_blank"></a>
@@ -40,6 +20,27 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 		<a href="https://github.com/Nighthawk14" class="github" target="_blank"></a>
 		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="linkedin" target="_blank"></a>
 		<a href="assets/pdf/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
+	</div>
+	<div class="scroll cursor"></div>
+	<div id="projects">
+		<div class="wrapper">
+			<div id="EachProject" ng-repeat='project in projects'>
+				<div class="Title">{{project.title}}</div>
+				<div class="linkProject cursor" ng-show='{{project.event.active}}' ng-click='events("{{project.event.value}}")'>
+					<div class="desc">
+						{{project.description}}
+						<div class="imgProject" ng-style="project.background"></div>
+					</div>
+				</div>
+				<a class="linkProject cursor" target="_blank" ng-href='{{project.link}}' ng-hide='{{project.event.active}}'>
+					<div class="desc">
+						{{project.description}}
+						<div class="imgProject" ng-style="project.background"></div>
+					</div>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
 	</div>
 	<div id="kariboo-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-header">
@@ -63,9 +64,6 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	  	</div>
 	</div>
 	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="components/jquery-ui/ui/minified/jquery.ui.effect.min.js"></script>
-	<script type="text/javascript" src="components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

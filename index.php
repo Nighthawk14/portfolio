@@ -11,6 +11,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
 	<script type="text/javascript" src="components/angularjs/angular.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </head>
@@ -67,5 +68,14 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	<script type="text/javascript" src="components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-42237776-1', 'antoinesavignac.fr');
+	  ga('send', 'pageview');
+	</script>
 </body>
 </html>

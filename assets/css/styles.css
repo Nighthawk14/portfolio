@@ -14,6 +14,7 @@ object{position:absolute;left:34%;top:-116px;width:500px;height:150px;}
 .socials a.linkedin{background-position:-112px top;}.socials a.linkedin:hover{background-position:-112px bottom;}
 .socials a.github{background-position:-75px top;}.socials a.github:hover{background-position:-75px bottom;}
 .socials a.cv{background-position:-148px top;}.socials a.cv:hover{background-position:-148px bottom;}
+.socials a.coderbits{background-position:-186px top;}.socials a.coderbits:hover{background-position:-186px bottom;}
 #projects{margin-top:20px;top:113%;position:absolute;width:100%;background-color:#f7f7f7;border-top:1px solid #eeeeee;}#projects .wrapper{padding:40px 20px 70px;width:900px;margin:0 auto;margin-top:100px;}
 #projects .imgProject{width:170px;height:193px;position:relative;top:39px;left:91px;}
 #projects #EachProject{background:url('../svg/projectbg.svg') no-repeat;width:170px;height:308px;margin:0px 6px;display:inline-block;vertical-align:top;font-weight:300;position:relative;}#projects #EachProject .linkProject{height:160px;text-decoration:none;display:block;position:absolute;top:169px;width:100%;left:92px;z-index:1;}
@@ -22,9 +23,10 @@ object{position:absolute;left:34%;top:-116px;width:500px;height:150px;}
 .modal.fade{top:-80%;}
 .modal{width:458px;left:53%;border:1px solid #dedede;background-color:#FFF;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;}.modal input{margin-bottom:15px;}
 .modal .modal-header{border-bottom:1px solid #f6f6f6;text-align:center;padding:30px 0px 25px 0px;}
-.modal .modal-body{padding:30px 25px;overflow-y:hidden;}
+.modal .modal-body{padding:30px 25px;overflow-x:hidden;}
 .modal h1{font-family:'Oxygen',sans-serif;font-size:36px;font-weight:300;color:#565656;margin-top:25px;}
 .submit{width:100%;background-color:#e95a2d;color:#FFF;font:15px 'Oxygen',sans-serif;font-weight:700;border:none;-webkit-appearance:none;padding:14px 0px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:10px;text-align:center;z-index:2;}.submit:hover{background-color:#db542b;}
 #kariboo-modal .modal-body{background-color:#F9F9F9;font-family:'Open Sans',sans-serif;}#kariboo-modal .modal-body p{margin:10px;color:#565656;line-height:20px;}
+#kariboo-modal .modal-body img{max-width:100%;border:1px solid #999999;margin-bottom:10px;}
 #kariboo-modal .modal-body .orange{color:#e95a2d;}
 #feux-modal .submit{width:49%;display:inline-block;text-decoration:none;}

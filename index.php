@@ -8,6 +8,8 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 <head>
 	<meta charset="UTF-8">
 	<title>Antoine Savignac</title>
+	<meta name="description" content="Antoine Savignac Portfolio" />
+	<meta name="keywords" content="antoine, savignac, antoine savignac, portfolio, web, chef de projet, junior" />
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/styles.css">
@@ -40,6 +42,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 		<a href="https://twitter.com/AntoineSavignac" class="twitter" target="_blank"></a>
 		<a href="https://github.com/Nighthawk14" class="github" target="_blank"></a>
 		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="linkedin" target="_blank"></a>
+		<a href="https://coderbits.com/NightHawk" class="coderbits" target="_blank"></a>
 		<a href="assets/pdf/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
 	</div>
 	<div id="kariboo-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -51,7 +54,9 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 			<p>J'ai réalisé ce projet dans le cadre de mon <b class="orange">Master 1 à l'ESTEI</b>.</p>
 			<p>Kariboo vous permet entre autre de <b class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</b>, de gérer vos contacts ou encore de faire de simple échanges de fichier.</p>
 			<p>Ce projet est en cours de réalisation.</p><br />
-			<p>Screenshots à venir..</p>
+			<img src="assets/img/Kariboo-main.png" alt="">
+			<img src="assets/img/Kariboo-contact.png" alt="">
+			<img src="assets/img/Kariboo-music.png" alt="">
 	  	</div>
 	</div>
 	<div id="feux-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

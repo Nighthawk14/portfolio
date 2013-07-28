@@ -4,11 +4,12 @@ ul,li,ol{list-style:disc;}
 body{padding-left:10px;padding-right:10px;}
 .cursor{cursor:pointer;}
 #logo{width:250px;margin:0 auto;height:70px;margin-top:50px;}
-.socials{width:200px;margin:0 auto;margin-top:40px;}.socials a{background-image:url('../svg/sprite-rs.svg');width:36px;height:35px;display:inline-block;}.socials a.facebook{background-position:0px top;}.socials a.facebook:hover{background-position:0px bottom;}
+.socials{width:240px;margin:0 auto;margin-top:40px;}.socials a{background-image:url('../svg/sprite-rs.svg');width:36px;height:35px;display:inline-block;}.socials a.facebook{background-position:0px top;}.socials a.facebook:hover{background-position:0px bottom;}
 .socials a.twitter{background-position:-38px top;}.socials a.twitter:hover{background-position:-38px bottom;}
 .socials a.linkedin{background-position:-112px top;}.socials a.linkedin:hover{background-position:-112px bottom;}
 .socials a.github{background-position:-75px top;}.socials a.github:hover{background-position:-75px bottom;}
 .socials a.cv{background-position:-148px top;}.socials a.cv:hover{background-position:-148px bottom;}
+.socials a.coderbits{background-position:-186px top;}.socials a.coderbits:hover{background-position:-186px bottom;}
 #projects{margin-top:20px;top:100%;width:100%;}#projects .wrapper{padding:10px 10px;}
 #projects #EachProject{margin:6px 0px;display:block;font-weight:300;}#projects #EachProject .imgProject{width:70px;height:100%;position:absolute;right:0;top:0px;background-position:50%;}
 #projects #EachProject .linkProject{text-decoration:none;}

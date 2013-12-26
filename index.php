@@ -64,6 +64,18 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	  		<a href="http://www.ironweb.org" target="_blank" class="cursor submit">Iron Web</a>
 	  	</div>
 	</div>
+	<div id="mobiles-yummy-modal" class="modal fade" role="dialog" aria-hidden="true">
+		<div class="modal-header">
+	  		<h1>Sites web mobiles / Yummypets</h1>
+	  	</div>
+	  	<div class="modal-body">
+	  		<a href="http://m.yummypets.com/articles/dist/#/list/" target="_blank" class="cursor submit">Blog mobile</a>
+	  		<a href="http://m.yummypets.com/missing/#/" target="_blank" class="cursor submit">Perdu / trouvés</a>
+	  		<a href="http://m.yummypets.com/classified/#/" target="_blank" class="cursor submit">Petites annonces</a>
+	  	</div>
+	</div>
+
+	
 	<script type="text/javascript" src="dist/js/vendor-1.0.0.js"></script>
 	<script type="text/javascript" src="dist/js/app-1.0.0.js"></script>
 	<script>

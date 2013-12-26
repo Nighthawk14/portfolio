@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                     dot : true,
                     cwd: '<%= config.app %>/',
                     dest: '<%= config.dist %>/',
-                    src: ['img/**/*','svg/**/*','pdf/**/*']
+                    src: ['img/**/*','svg/**/*','pdf/**/*','lib/**/*']
                 }],
             }
         },

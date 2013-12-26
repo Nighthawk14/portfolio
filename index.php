@@ -26,7 +26,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 				<div class="desc">
 					{{project.description}}
 				</div>
-				<div class="imgProject" ng-style="project.background"></div>
+				<div class="imgProject" style="background: url('dist/img/{{project.background}}')"></div>
 				<div class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" ng-if='project.event.active' ng-click='events("{{project.event.value}}")'></div>
 				<a class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" alt="{{project.title}}" target="_blank" ng-href='{{project.link}}' ng-if='!project.event.active'></a>
 			</div>

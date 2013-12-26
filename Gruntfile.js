@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 files: [{
                     dot: true,
                     src: [
-                        '<%= config.dist %>/{,*/}*',
+                        '<%= config.dist %>',
                     ]
                 }]
             }
@@ -28,12 +28,6 @@ module.exports = function (grunt) {
                         '<%= config.app %>/css/reset.css',
                         '<%= config.app %>/css/bootstrap.min.css',
                         '<%= config.app %>/css/styles.css',
-                    ]
-                },{
-                    '<%= config.dist %>/css/mobile.css': [
-                        '<%= config.app %>/css/reset.css',
-                        '<%= config.app %>/css/bootstrap.min.css',
-                        '<%= config.app %>/css/mobile.css',
                     ]
                 }]
             }

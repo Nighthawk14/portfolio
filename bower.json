@@ -1,0 +1,27 @@
+{
+  "name": "antoinesavignac.fr",
+  "version": "1.0.0",
+  "homepage": "antoinesavignac.fr",
+  "authors": [
+    "NightHawk14 <antoine.savignac@gmail.com>"
+  ],
+  "description": "Portfolio antoine savignac web developper 2013",
+  "main": "index.php",
+  "keywords": [
+    "portfolio",
+    "antoine",
+    "savignac",
+    "web",
+    "developper",
+    "2013"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

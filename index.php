@@ -10,16 +10,12 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	<title>Antoine Savignac</title>
 	<meta name="description" content="Antoine Savignac Portfolio" />
 	<meta name="keywords" content="antoine, savignac, antoine savignac, portfolio, web, chef de projet, junior" />
-	<link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/styles.css">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
-	<script type="text/javascript" src="components/angularjs/angular.min.js"></script>
-	<script type="text/javascript" src="assets/js/app.js"></script>
+	<link rel="stylesheet" href="dist/css/app.css">
+	<link rel="icon" type="image/png" href="dist/img/favicon.png" />
 </head>
 <body ng-controller="Main">
 	<div id="line">
-		<object data="assets/svg/logo.svg" id="logo" type="image/svg+xml"></object>
+		<object data="dist/svg/logo.svg" id="logo" type="image/svg+xml"></object>
 	</div>
 	<div id="mask"></div>
 	<div class="scroll cursor"></div>
@@ -43,9 +39,9 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 		<a href="https://github.com/Nighthawk14" class="github" target="_blank"></a>
 		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="linkedin" target="_blank"></a>
 		<a href="https://coderbits.com/NightHawk" class="coderbits" target="_blank"></a>
-		<a href="assets/pdf/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
+		<a href="dist/pdf/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
 	</div>
-	<div id="kariboo-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div id="kariboo-modal" class="modal fade" role="dialog" aria-hidden="true">
 		<div class="modal-header">
 	  		<h1>Kariboo</h1>
 	  	</div>
@@ -54,12 +50,12 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 			<p>J'ai réalisé ce projet dans le cadre de mon <b class="orange">Master 1 à l'ESTEI</b>.</p>
 			<p>Kariboo vous permet entre autre de <b class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</b>, de gérer vos contacts ou encore de faire de simple échanges de fichier.</p>
 			<p>Ce projet est en cours de réalisation.</p><br />
-			<img src="assets/img/Kariboo-main.png" alt="">
-			<img src="assets/img/Kariboo-contact.png" alt="">
-			<img src="assets/img/Kariboo-music.png" alt="">
+			<img src="dist/img/Kariboo-main.png" alt="">
+			<img src="dist/img/Kariboo-contact.png" alt="">
+			<img src="dist/img/Kariboo-music.png" alt="">
 	  	</div>
 	</div>
-	<div id="feux-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div id="feux-modal" class="modal fade" role="dialog" aria-hidden="true">
 		<div class="modal-header">
 	  		<h1>Les feux verts</h1>
 	  	</div>
@@ -68,11 +64,8 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	  		<a href="http://www.ironweb.org" target="_blank" class="cursor submit">Iron Web</a>
 	  	</div>
 	</div>
-	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="components/jquery-ui/ui/minified/jquery.ui.effect.min.js"></script>
-	<script type="text/javascript" src="components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script type="text/javascript" src="dist/js/vendor-1.0.0.js"></script>
+	<script type="text/javascript" src="dist/js/app-1.0.0.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,0 +1,36 @@
+{
+  "name": "antoinesavignac.fr",
+  "version": "1.0.0",
+  "description": "Portfolio antoine Savignac 2013",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Nighthawk14/portfolio_2013.git"
+  },
+  "keywords": [
+    "portfolio",
+    "antoine",
+    "savignac",
+    "web",
+    "developper"
+  ],
+  "author": "Antoine savignac (antoine.savignac@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nighthawk14/portfolio_2013/issues"
+  },
+  "homepage": "https://github.com/Nighthawk14/portfolio_2013",
+  "devDependencies": {
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

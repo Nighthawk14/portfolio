@@ -18,6 +18,13 @@ function Main($scope)
 			break;
 		}
 	};
+
+	$scope.flip = function($event, $element){
+		console.log($event);
+		console.log($element);
+		console.log(angular.element(this));
+	};
+
 	$scope.projects = {
 		0: {
 			title: "Palm",

@@ -35,7 +35,7 @@ $('.scroll').on('click', function(){
 
 function anim(){
 	$('#mask').animate({
-	    'left': $(window).width()*3,
+		'left': $(window).width()*3,
 	    'top': -$(window).height()*3+100
 	  }, {
 	    duration: 3000,

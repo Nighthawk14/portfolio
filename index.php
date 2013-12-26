@@ -25,14 +25,14 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	<div class="scroll cursor"></div>
 	<div id="projects">
 		<div class="wrapper">
-			<div id="EachProject" ng-repeat='project in projects'>
+			<div id="project-{{$index}}" ng-class="(project.hover) ? 'project active' : 'project'" ng-repeat='project in projects'>
 				<div class="Title">{{project.title}}</div>
 				<div class="desc">
 					{{project.description}}
 				</div>
 				<div class="imgProject" ng-style="project.background"></div>
-				<div class="linkProject cursor" ng-show='{{project.event.active}}' ng-click='events("{{project.event.value}}")'></div>
-				<a class="linkProject cursor" target="_blank" ng-href='{{project.link}}' ng-hide='{{project.event.active}}'></a>
+				<div class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" ng-if='project.event.active' ng-click='events("{{project.event.value}}")'></div>
+				<a class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" alt="{{project.title}}" target="_blank" ng-href='{{project.link}}' ng-if='!project.event.active'></a>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -1,5 +1,5 @@
 <?php 
-require_once('components/Mobile-detect/Mobile_Detect.php');
+require_once('dist/lib/Mobile-detect/Mobile_Detect.php');
 $detect = new Mobile_Detect;
 $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mobile.html') : header('Location: mobile.html')) : 'computer');
 ?>

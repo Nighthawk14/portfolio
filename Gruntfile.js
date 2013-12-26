@@ -31,8 +31,7 @@ module.exports = function (grunt) {
                     ]
                 },{
                     '<%= config.dist %>/css/mobile.css': [
-                        '<%= config.app %>/css/reset.css',
-                        '<%= config.app %>/css/bootstrap.min.css',
+                        '<%= config.dist %>/css/styles.css',
                         '<%= config.app %>/css/mobile.css',
                     ]
                 }]

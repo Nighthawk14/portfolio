@@ -10,10 +10,12 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	<title>Antoine Savignac</title>
 	<meta name="description" content="Antoine Savignac Portfolio" />
 	<meta name="keywords" content="antoine, savignac, antoine savignac, portfolio, web, chef de projet, junior" />
+	<link rel="stylesheet" href="dist/css/vendor.css">
 	<link rel="stylesheet" href="dist/css/app.css">
 	<link rel="icon" type="image/png" href="dist/img/favicon.png" />
 </head>
 <body ng-controller="Main">
+	<div id="home"></div>
 	<div id="line">
 		<object data="dist/svg/logo.svg" id="logo" type="image/svg+xml"></object>
 	</div>
@@ -26,21 +28,29 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 				<div class="desc">
 					{{project.description}}
 				</div>
-				<div class="imgProject" style="background: url('dist/img/{{project.background}}')"></div>
+				<div class="imgProject" ng-if="project.background" style="background: url('dist/img/{{project.background}}')"></div>
 				<div class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" ng-if='project.event.active' ng-click='events("{{project.event.value}}")'></div>
 				<a class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" alt="{{project.title}}" target="_blank" ng-href='{{project.link}}' ng-if='!project.event.active'></a>
 			</div>
-			<div class="clear"></div>
+			<div clear></div>
 		</div>
 	</div>
+	<!-- <div id="love"></div> -->
 	<div class="socials">
-		<a href="https://www.facebook.com/asavignac1" class="facebook" target="_blank"></a>
-		<a href="https://twitter.com/AntoineSavignac" class="twitter" target="_blank"></a>
-		<a href="https://github.com/Nighthawk14" class="github" target="_blank"></a>
-		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="linkedin" target="_blank"></a>
-		<a href="https://coderbits.com/NightHawk" class="coderbits" target="_blank"></a>
-		<a href="dist/pdf/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
+		<a href="https://www.facebook.com/asavignac1" class="nav-link facebook" target="_blank"></a>
+		<a href="https://twitter.com/AntoineSavignac" class="nav-link twitter" target="_blank"></a>
+		<a href="https://github.com/Nighthawk14" class="nav-link github" target="_blank"></a>
+		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="nav-link linkedin" target="_blank"></a>
+		<a href="https://coderbits.com/NightHawk" class="nav-link coderbits" target="_blank"></a>
+		<a href="dist/pdf/cv-antoine_savignac.pdf" class="nav-link cv" target="_blank"></a>
 	</div>
+	<nav>
+		<ul>
+			<li><a href="#home" class="nav-link home"></a></li>
+			<li><a href="#projects" class="nav-link projects"></a></li>
+			<!--  <li><a href="#love" class="nav-link love"></a></li>-->
+		</ul>
+	</nav>
 	<div id="kariboo-modal" class="modal fade" role="dialog" aria-hidden="true">
 		<div class="modal-header">
 	  		<h1>Kariboo</h1>
@@ -69,15 +79,15 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	  		<h1>Sites web mobiles / Yummypets</h1>
 	  	</div>
 	  	<div class="modal-body">
-	  		<a href="http://m.yummypets.com/articles/dist/#/list/" target="_blank" class="cursor submit">Blog mobile</a>
+	  		<a href="http://m.yummypets.com/articles/dist/#!/list/" target="_blank" class="cursor submit">Blog mobile</a>
 	  		<a href="http://m.yummypets.com/missing/#/" target="_blank" class="cursor submit">Perdu / trouvés</a>
 	  		<a href="http://m.yummypets.com/classified/#/" target="_blank" class="cursor submit">Petites annonces</a>
 	  	</div>
 	</div>
 
 	
-	<script type="text/javascript" src="dist/js/vendor-1.0.0.js"></script>
-	<script type="text/javascript" src="dist/js/app-1.0.0.js"></script>
+	<script type="text/javascript" src="dist/js/vendor.js"></script>
+	<script type="text/javascript" src="dist/js/app.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -11,33 +11,40 @@ $(document).ready(function(){
 	});
 
 	$('.socials').css('top',$(window).height()/2 - $('.socials').height()/2);
+	$('nav').css('top',$(window).height()/2 - $('nav').height()/2);
+
+	$('nav a').on('click', function(e){
+		e.preventDefault();
+		var top;
+		switch($(this).attr('href'))
+		{
+			case '#projects':
+				top = parseInt($('#projects').offset().top+30);
+			break;
+
+			default:
+				top = $($(this).attr('href')).offset().top;
+			break;
+		}
+		$.scrollTo(top,800,{axis:'y'});
+	});
 });
 $(window).resize(function(){
 	calcDiagonal();
 	$('.socials').css('top',$(window).height()/2 - $('.socials').height()/2);
+	$('nav').css('top',$(window).height()/2 - $('nav').height()/2);
 });
 
 $('.scroll').on('click', function(){
-	if($(this).hasClass('top'))
-	{
-		$(this).removeClass('top');
-		$(this).css('top','80%');
-		$.scrollTo(0,800);
-	}
-	else
-	{
-		$(this).addClass('top');
-		$(this).css('top',$('#projects').position().top+50);
-		var pos = $('#projects').position().top+150;
-		$.scrollTo({ top:pos, left:0},800);
-	}
+	var top = parseInt($('#projects').offset().top+30);
+		$.scrollTo(top,800,{axis:'y'});
 });
 
 function anim(){
 	$('#mask').animate({
 		'left': $(window).width()*3,
-	    'top': -$(window).height()*3+100
-	  }, {
+		'top': -$(window).height()*3+100
+	}, {
 	    duration: 3000,
 	    specialEasing: {
 	      'left': 'easeInOutCubic',

@@ -1,6 +1,15 @@
 'use strict';
 
-var app = angular.module('Portfolio', ['Portfolio.controllers']);
+var app = angular.module('Portfolio', ['Portfolio.controllers','Portfolio.directives']);
+
+angular.module('Portfolio.directives',[])
+.directive('clear', function(){
+	return {
+		restrict: 'AE',
+		replace: true,
+		template: '<div class="clear"></div>'
+	};
+});
 
 angular.module('Portfolio.controllers',[])
 .controller('Main', ['$scope', function($scope){
@@ -55,12 +64,12 @@ angular.module('Portfolio.controllers',[])
 			link: "http://www.palm-analytics.com",
 			background:'palm-bg.png'
 		},
-		{
+		/*{
 			title: "Benoit Dartigues",
 			description: "PHP - MySQL",
 			link: "http://www.benoitdartigues.fr/",
 			background:'benoit-bg.png'
-		},
+		},*/
 		{
 			title: "Semaine-digitale",
 			description: "ChartJs - RaphaelJs - CSS",

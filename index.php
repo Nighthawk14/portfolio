@@ -70,6 +70,13 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 	  		<h1>Les feux verts</h1>
 	  	</div>
 	  	<div class="modal-body">
+	  		<p><b class="orange">Les feux verts</b> est une application réalisée pour la mairie de Quebec, lors d'un concours
+	  			nommé <b class="orange">Iron Web</b> récompensant la meilleure application réalisée en moins de 72h.</p>
+	  		<p>Nous avons (équipe de 6 personnes) remporté les prix de :
+	  			<p class="center"><b class="orange">Meilleure application en moins de 72h</b></p>
+	  			<p class="center"><b class="orange">Meilleure application desktop</b></p>
+	  			<p class="center"><b class="orange">Meilleure application tablette</b></p> 
+	  		</p>
 	  		<a href="http://www.lesfeuxverts.com" target="_blank" class="cursor submit">Les feux verts</a>
 	  		<a href="http://www.ironweb.org" target="_blank" class="cursor submit">Iron Web</a>
 	  	</div>

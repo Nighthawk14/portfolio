@@ -37,7 +37,7 @@ $(window).resize(function(){
 
 $('.scroll').on('click', function(){
 	var top = parseInt($('#projects').offset().top+30);
-		$.scrollTo(top,800,{axis:'y'});
+	$.scrollTo(top,800,{axis:'y'});
 });
 
 function anim(){
@@ -45,15 +45,15 @@ function anim(){
 		'left': $(window).width()*3,
 		'top': -$(window).height()*3+100
 	}, {
-	    duration: 3000,
-	    specialEasing: {
-	      'left': 'easeInOutCubic',
-	      'top': 'easeInOutCubic'
-	    },
-	    complete: function() {
-	      	$(this).css('display','none');
-	      	is_intro = false;
-	    }
+		duration: 3000,
+		specialEasing: {
+			'left': 'easeInOutCubic',
+			'top': 'easeInOutCubic'
+		},
+		complete: function() {
+			$(this).css('display','none');
+			is_intro = false;
+		}
 	});
 }
 

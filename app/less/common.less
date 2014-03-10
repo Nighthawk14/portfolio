@@ -8,16 +8,28 @@
 	.modal-body{
 		background-color: #F9F9F9;
 		font-family: 'Open Sans', sans-serif;
-		p{
-			margin: 10px;
-			color: #565656;
-			line-height: 20px;
-		}
+		
 
 		img{
 			max-width: 100%;
 			border:1px solid #999999;
 			margin-bottom: 10px;
+		}
+		
+	}
+}
+
+.modal{
+	.modal-body{
+		font-family: 'Open Sans', sans-serif;
+		p{
+			margin: 10px;
+			color: #565656;
+			line-height: 20px;
+
+			&.center{
+				text-align: center;
+			}
 		}
 		.orange{
 			color: @orange;

@@ -1,27 +1,16 @@
 {
-  "name": "antoinesavignac.fr",
-  "version": "1.0.0",
-  "homepage": "antoinesavignac.fr",
-  "authors": [
-    "NightHawk14 <antoine.savignac@gmail.com>"
-  ],
-  "description": "Portfolio antoine savignac web developper 2013",
-  "main": "index.php",
-  "keywords": [
-    "portfolio",
-    "antoine",
-    "savignac",
-    "web",
-    "developper",
-    "2013"
-  ],
-  "license": "ISC",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "name": "antoinesavignacfr",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.16",
+    "json3": "~3.3.1",
+    "es5-shim": "~3.1.0",
+    "jquery": "~2.1.1",
+    "jquery.scrollTo": "~1.4.12"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16"
+  },
+  "appPath": "app"
 }

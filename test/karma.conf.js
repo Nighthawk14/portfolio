@@ -18,6 +18,7 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-scroll/angular-scroll.js',
       'bower_components/jquery/dist/jquery.js',
       'bower_components/jquery.scrollTo/jquery.scrollTo.min.js',
       'app/scripts/**/*.js',

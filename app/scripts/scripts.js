@@ -14,23 +14,6 @@ $(document).ready(function(){
   });
 
   $('.socials').css('top',$(window).height()/2 - $('.socials').height()/2);
-  $('nav').css('top',$(window).height()/2 - $('nav').height()/2);
-
-  $('nav a').on('click', function(e){
-    e.preventDefault();
-    var top;
-    switch($(this).attr('href'))
-    {
-      case '#projects':
-        top = parseInt($('#projects').offset().top+30);
-      break;
-
-      default:
-        top = $($(this).attr('href')).offset().top;
-      break;
-    }
-    $.scrollTo(top,800,{axis:'y'});
-  });
 });
 $(window).resize(function(){
   $('.socials').css('top',$(window).height()/2 - $('.socials').height()/2);

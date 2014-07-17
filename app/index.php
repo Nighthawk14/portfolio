@@ -1,7 +1,7 @@
 <?php
 require_once('../vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php');
 $detect = new Mobile_Detect;
-$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mobile.html') : header('Location: mobile.html')) : 'computer');
+$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mobile.html') : header('Location: mobile.html')) : 'desktop');
 ?>
 <!doctype html>
 <html class="no-js">
@@ -60,16 +60,19 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <!-- endbower -->
     <script type="text/javascript" src="bower_components/jquery.ui/ui/core.js"></script>
     <script type="text/javascript" src="bower_components/jquery.ui/ui/effect.js"></script>
-    <script type="text/javascript" src="scripts/vendor/bootstrap.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/main.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/project.js"></script>
     <script src="scripts/directives/project.js"></script>
+    <script src="scripts/directives/line.js"></script>
+    <script src="scripts/directives/nav.js"></script>
     <!-- endbuild -->
 </body>
 </html>

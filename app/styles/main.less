@@ -2,8 +2,14 @@
 ul,li,ol{
   list-style: disc;
 }
-html, body {
-  overflow-x:hidden
+body {
+  overflow-x:hidden;
+  height: auto;
+  width: 100%;
+
+  &.modal-open{
+    height: 100%;
+  }
 }
 
 @orange:#E95A2D;
@@ -211,7 +217,7 @@ html, body {
     width: 170px;
     height: 193px;
     position: relative;
-    top: 39px;
+    top: 31px;
     left: 91px;
 
     &.mobile-yummy{
@@ -285,19 +291,15 @@ html, body {
   }
 }
 
-.modal.fade{
-  top: -150%;
-}
 
 .modal{
-  width: 458px;
-  left: 53%;
-  border: 1px solid #dedede;
-  background-color: #FFF;
-
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+  .modal-content{
+    border: 1px solid #dedede;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #FFF;
+  }
 
   input{
     margin-bottom: 15px;

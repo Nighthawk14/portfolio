@@ -8,7 +8,7 @@
  * Controller of the antoinesavignacfrApp
  */
 angular.module('antoinesavignacfrApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', ['$scope',function ($scope) {
     $scope.events = function(e){
       switch(e){
         case 'kariboo':
@@ -85,4 +85,4 @@ angular.module('antoinesavignacfrApp')
         _class:'ipassemploi'
       },
     ];
-  });
+  }]);

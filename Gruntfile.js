@@ -176,7 +176,7 @@ module.exports = function (grunt) {
       app: {
         src: ['<%= yeoman.app %>/index.php'],
         ignorePath:  /..\//,
-        exclude: [/jquery.scrollTo.js/,/json3.js/]
+        exclude: [/json3.js/]
       }
     },
 

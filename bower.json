@@ -6,7 +6,6 @@
     "json3": "~3.3.1",
     "es5-shim": "~3.1.0",
     "jquery": "~2.1.1",
-    "jquery.scrollTo": "~1.4.12",
     "bootstrap": "~3.2.0",
     "ionicons": "~1.5.2",
     "jquery.ui": "~1.11.0",

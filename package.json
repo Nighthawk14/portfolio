@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
+    "connect-php": "0.0.1",
+    "gateway": "^0.2.1",
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
     "grunt-concurrent": "^0.5.0",

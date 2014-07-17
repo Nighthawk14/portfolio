@@ -1,5 +1,5 @@
 <?php
-require_once('lib/Mobile_Detect.php');
+require_once('../vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php');
 $detect = new Mobile_Detect;
 $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mobile.html') : header('Location: mobile.html')) : 'computer');
 ?>
@@ -14,9 +14,11 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
+    <link rel="stylesheet" href="styles/reset.css">
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/common.css">
     <!-- endbuild -->
   </head>
   <body ng-app="antoinesavignacfrApp">
@@ -26,20 +28,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">antoinesavignacfr</h3>
-      </div>
-
-      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+      <div ng-include="'views/main.html'" ng-controller="MainCtrl as main"></div>
     </div>
 
 
@@ -50,7 +39,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-42237776-1', 'antoinesavignac.fr');
        ga('send', 'pageview');
     </script>
 
@@ -65,6 +54,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <!-- endbower -->
     <script type="text/javascript" src="scripts/vendor/jquery-ui-effect.js"></script>

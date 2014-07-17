@@ -1,23 +1,63 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div ng-include="'partials/line.html'" id="home"></div>
+<div id="projects">
+  <div class="wrapper">
+    <div id="project-{{$index}}" project ng-repeat="project in projects" ng-class="(project.hover) ? 'project active' : 'project'"></div>
+  </div>
 </div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<!-- <div id="love"></div> -->
+<div class="socials">
+  <a href="https://www.facebook.com/asavignac1" class="nav-link facebook" target="_blank"></a>
+  <a href="https://twitter.com/AntoineSavignac" class="nav-link twitter" target="_blank"></a>
+  <a href="https://github.com/Nighthawk14" class="nav-link github" target="_blank"></a>
+  <a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="nav-link linkedin" target="_blank"></a>
+  <a href="https://coderbits.com/NightHawk" class="nav-link coderbits" target="_blank"></a>
+  <a href="pdf/cv-antoine_savignac.pdf" class="nav-link cv" target="_blank"></a>
 </div>
+<nav>
+  <ul>
+    <li><a href="#home" class="nav-link home"></a></li>
+    <li><a href="#projects" class="nav-link projects"></a></li>
+    <!--  <li><a href="#love" class="nav-link love"></a></li>-->
+  </ul>
+</nav>
+<div id="kariboo-modal" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+      <h1>Kariboo</h1>
+    </div>
+    <div class="modal-body">
+      <p><b class="orange">Kariboo</b> est une application mobile IOS développée en Objective-C. Elle permet d'éffectuer des échanges de données entre son mobile et son ordinateur grâce à un réseau wifi.</p>
+    <p>J'ai réalisé ce projet dans le cadre de mon <b class="orange">Master 1 à l'ESTEI</b>.</p>
+    <p>Kariboo vous permet entre autre de <b class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</b>, de gérer vos contacts ou encore de faire de simple échanges de fichier.</p>
+    <p>Ce projet est en cours de réalisation.</p><br />
+    <img src="images/Kariboo-main.png" alt="">
+    <img src="images/Kariboo-contact.png" alt="">
+    <img src="images/Kariboo-music.png" alt="">
+    </div>
+</div>
+<div id="feux-modal" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+      <h1>Les feux verts</h1>
+    </div>
+    <div class="modal-body">
+      <p><b class="orange">Les feux verts</b> est une application réalisée pour la mairie de Quebec, lors d'un concours
+        nommé <b class="orange">Iron Web</b> récompensant la meilleure application réalisée en moins de 72h.</p>
+      <p>Nous avons (équipe de 6 personnes) remporté les prix de :
+        <p class="center"><b class="orange">Meilleure application en moins de 72h</b></p>
+        <p class="center"><b class="orange">Meilleure application desktop</b></p>
+        <p class="center"><b class="orange">Meilleure application tablette</b></p> 
+      </p>
+      <a href="http://www.lesfeuxverts.com" target="_blank" class="cursor submit">Les feux verts</a>
+      <a href="http://www.ironweb.org" target="_blank" class="cursor submit">Iron Web</a>
+    </div>
+</div>
+<div id="mobiles-yummy-modal" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+      <h1>Sites web mobiles / Yummypets</h1>
+    </div>
+    <div class="modal-body">
+      <a href="http://m.yummypets.com/articles/#!/list/" target="_blank" class="cursor submit">Blog mobile</a>
+      <a href="http://m.yummypets.com/missing/#/" target="_blank" class="cursor submit">Perdu / trouvés</a>
+      <a href="http://m.yummypets.com/classified/#/" target="_blank" class="cursor submit">Petites annonces</a>
+    </div>
+</div>
+<script type="text/javascript" src="scripts/scripts.js"></script>

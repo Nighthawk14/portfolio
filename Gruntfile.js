@@ -175,7 +175,8 @@ module.exports = function (grunt) {
       },
       app: {
         src: ['<%= yeoman.app %>/index.php'],
-        ignorePath:  /..\//
+        ignorePath:  /..\//,
+        exclude: [/jquery.scrollTo.js/,/json3.js/]
       }
     },
 
@@ -186,6 +187,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '!<%= yeoman.dist %>/images/logo.svg',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -279,7 +281,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.{html,php}'],
+          src: ['*.{html,php}', 'views/{,*/}*.{html,php}','partials/{,*/}*.{html,php}'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -317,10 +319,11 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            '*.html',
-            'views/{,*/}*.html',
+            '*.{html,php}',
+            '{views,partials}/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+            'scripts/{line,scripts}.js'
           ]
         }, {
           expand: true,

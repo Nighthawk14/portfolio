@@ -1,0 +1,7 @@
+<div class="Title">{{project.title}}</div>
+<div class="desc">
+  {{project.description}}
+</div>
+<div class="imgProject" ng-class="project._class"></div>
+<div class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" ng-if='project.event.active' ng-click='events("{{project.event.value}}")'></div>
+<a class="linkProject cursor" ng-mouseover="project.hover = true;" ng-mouseleave="project.hover = false;" alt="{{project.title}}" target="_blank" ng-href='{{project.link}}' ng-if='!project.event.active'></a>

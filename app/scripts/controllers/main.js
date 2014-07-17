@@ -32,57 +32,57 @@ angular.module('antoinesavignacfrApp')
         title: 'Sites mobiles',
         description: 'AngularJs - Grunt - RequireJs',
         event: {active:true, value:'mobilesYummy'},
-        background: 'mobile-yummy.png'
+        _class: 'mobile-yummy'
       },
       {
         title: 'City Dashboard',
         description: 'NodeJs - AngularJs',
         link: 'http://www.city-dashboard.com',
-        background:'city-bg.png'
+        _class:'city-dashboard'
       },
       {
         title: 'Kariboo',
         description: 'Objective C - AngularJs',
         link: '#',
         event: {active:true,value:'kariboo'},
-        background:'kariboo-bg.png'
+        _class:'kariboo'
       },
       {
         title: 'Les Feux verts',
         description: 'IronWeb - FrontEnd - JSON',
         link: 'http://www.lesfeuxverts.com',
         event: {active:true,value:'feux-verts'},
-        background:'feux-bg.png'
+        _class:'feux-vert'
       },
       {
         title: 'Palm',
         description:'Php - Google API - D3JS',
         link: 'http://www.palm-analytics.com',
-        background:'palm-bg.png'
+        _class:'palm'
       },
       /*{
         title: 'Benoit Dartigues',
         description: 'PHP - MySQL',
         link: 'http://www.benoitdartigues.fr/',
-        background:'benoit-bg.png'
+        _class:'benoit-bg.png'
       },*/
       {
         title: 'Semaine-digitale',
         description: 'ChartJs - RaphaelJs - CSS',
         link: 'http://villedebordeaux.fr/dataviz',
-        background:'semaine-bg.png'
+        _class:'semaine-digitale'
       },
       {
         title: 'Daubert-Panasyuk',
         description: 'Wordpress - AngularJs',
         link: 'http://daubert-panasyuk.com/',
-        background:'daubert-bg.png'
+        _class:'daubert'
       },
       {
         title: 'Ipass Emploi',
         description: 'CodeIgniter - Réseau social',
         link: 'http://ipassemploi.com/',
-        background:'ipassemploi-bg.png'
+        _class:'ipassemploi'
       },
     ];
   });

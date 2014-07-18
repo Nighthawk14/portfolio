@@ -68,10 +68,11 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <!-- build:js({.tmp,app}) scripts/main.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/project.js"></script>
-    <script src="scripts/directives/project.js"></script>
+    <script src="scripts/controllers/tech.js"></script>
+    <script src="scripts/directives/tech.js"></script>
     <script src="scripts/directives/line.js"></script>
     <script src="scripts/directives/nav.js"></script>
+    <script src="scripts/directives/timeline.js"></script>
     <!-- endbuild -->
 </body>
 </html>

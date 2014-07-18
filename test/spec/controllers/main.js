@@ -16,8 +16,4 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should create a project list', function(){
-    expect(scope.projects).toEqual(jasmine.any(Array));
-  });
-
 });

@@ -1,7 +1,8 @@
 <div line id="home"></div>
-<div id="projects">
+<div ng-include="'views/timeline.html'"></div>
+<div id="technos" ng-controller="TechCtrl">
   <div class="wrapper">
-    <div id="project-{{$index}}" project class="project" ng-repeat="project in projects"></div>
+    <div id="tech-{{$index}}" tech class="tech" ng-repeat="tech in technos"></div>
   </div>
 </div>
 <!-- <div id="love"></div> -->

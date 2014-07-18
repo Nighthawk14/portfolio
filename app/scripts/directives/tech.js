@@ -2,19 +2,19 @@
 
 /**
  * @ngdoc directive
- * @name antoinesavignacfrApp.directive:Project
+ * @name antoinesavignacfrApp.directive:tech
  * @description
- * # Project
+ * # tech
  */
 angular.module('antoinesavignacfrApp')
-  .directive('project',[function () {
+  .directive('tech',[function () {
     var base = 6;
     var _index = 0;
     var _row = 0;
 
     var getOffset = function(){return -27*_row;};
     return {
-      templateUrl: 'partials/project.html',
+      templateUrl: 'partials/tech.html',
       restrict: 'EA',
       link: function($scope, iElm) {
         var i = $scope.$index;
@@ -36,20 +36,17 @@ angular.module('antoinesavignacfrApp')
 
         
         if($scope.$last){
-          var $w = $('#projects').find('.wrapper');
+          var $w = $('#technos').find('.wrapper');
           $w.height($w.height()+(getOffset()));
-          $('#projects').height(($(iElm).offset().top+$(iElm).height())-($('#projects').offset().top));
+          $('#technos').height(($(iElm).offset().top+$(iElm).height())-($('#technos').offset().top));
         }
         
       }
     };
   }])
-  .directive('projectMobile',[function () {
+  .directive('techMobile',[function () {
     return {
-      templateUrl: 'partials/project-mobile.html',
-      restrict: 'EA',
-      link: function() {
-       
-      }
+      templateUrl: 'partials/tech-mobile.html',
+      restrict: 'EA'
     };
   }]);

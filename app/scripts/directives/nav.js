@@ -7,7 +7,7 @@
  * # nav
  */
 angular.module('antoinesavignacfrApp')
-  .directive('nav',['$document',function ($document) {
+  .directive('nav',['$document','$location',function ($document,$location) {
     return {
       templateUrl: 'partials/nav.html',
       restrict: 'A',
@@ -16,18 +16,29 @@ angular.module('antoinesavignacfrApp')
         $(element).css('top',$(window).height()/2 - $(element).height()/2);
         $('nav a').on('click', function(e){
           e.preventDefault();
-          var top;
-          switch($(this).attr('href'))
+          var offset,elem;
+          var tag = $(this).attr('data-element');
+          switch(tag)
           {
-            case '#projects':
-              top = parseInt($('#projects').offset().top+70);
+            case 'techs':
+              elem = $('#technos');
+              offset = -30;
+            break;
+
+            case 'projects':
+              elem = $('#timeline');
+              offset = 30;
             break;
 
             default:
-              top = $($(this).attr('href')).offset().top;
+              elem = $('#home');
+              offset=0;
             break;
           }
-          $document.scrollTop(top, 800);
+          $document.scrollTo(elem, offset,800).then(function(){
+            $location.hash(tag);
+            //scope.$apply();
+          });
         });
       }
     };

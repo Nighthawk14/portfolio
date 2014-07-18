@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: Project', function () {
+describe('Directive: tech', function () {
 
   // load the directive's module
   beforeEach(module('antoinesavignacfrApp'));
@@ -13,7 +13,7 @@ describe('Directive: Project', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<div project></div>');
+    element = angular.element('<div tech></div>');
     element = $compile(element)(scope);
   }));
 });

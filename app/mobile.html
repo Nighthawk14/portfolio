@@ -34,9 +34,9 @@
     <a href="/cv-antoine_savignac.pdf" class="cv" target="_blank"></a>
   </div>
   <div class="scroll cursor"></div>
-  <div id="projects">
+  <div id="technos" ng-controller="TechCtrl">
     <div class="wrapper">
-      <div id="project-{{$index}}" project-mobile class="project" ng-repeat="project in projects"></div>
+      <div id="tech-{{$index}}" tech-mobile class="tech" ng-repeat="tech in technos"></div>
     </div>
   </div>
   <div ng-include="'partials/modals.html'"></div>
@@ -71,8 +71,8 @@
   <!-- build:js({.tmp,app}) scripts/main.js -->
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/project.js"></script>
-  <script src="scripts/directives/project.js"></script>
+  <script src="scripts/controllers/tech.js"></script>
+  <script src="scripts/directives/tech.js"></script>
   <script src="scripts/directives/line.js"></script>
   <script src="scripts/directives/nav.js"></script>
   <!-- endbuild -->

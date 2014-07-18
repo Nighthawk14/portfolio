@@ -1,0 +1,14 @@
+
+<div class="Title">{{project.title}}</div>
+<div class="linkProject cursor" ng-show='{{project.event.active}}' ng-click='events("{{project.event.value}}")'>
+  <div class="desc">
+    {{project.description}}
+    <div class="imgProject" ng-class="project._class"></div>
+  </div>
+</div>
+<a class="linkProject cursor" target="_blank" ng-href='{{project.link}}' ng-hide='{{project.event.active}}'>
+  <div class="desc">
+    {{project.description}}
+    <div class="imgProject" ng-class="project._class"></div>
+  </div>
+</a>

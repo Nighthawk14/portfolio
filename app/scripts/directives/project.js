@@ -43,4 +43,13 @@ angular.module('antoinesavignacfrApp')
         
       }
     };
+  }])
+  .directive('projectMobile',[function () {
+    return {
+      templateUrl: 'partials/project-mobile.html',
+      restrict: 'EA',
+      link: function() {
+       
+      }
+    };
   }]);

@@ -8,7 +8,7 @@
  * Controller of the antoinesavignacfrApp
  */
 angular.module('antoinesavignacfrApp')
-  .controller('MainCtrl', ['$scope','$location','$rootScope',function ($scope,$location,$rootScope) {
+  .controller('MainCtrl', ['$scope',function ($scope) {
     $scope.events = function(e){
       switch(e){
         case 'kariboo':
@@ -27,11 +27,6 @@ angular.module('antoinesavignacfrApp')
         break;
       }
     };
-    $rootScope.$on('hash', function(ev,data){
-      console.log(data);
-      //$location.hash('bob');
-      //$rootScope.$apply();
-    });
     $scope.projects = [
       {
         name:'bob'

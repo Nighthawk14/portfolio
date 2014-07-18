@@ -13,8 +13,8 @@ angular.module('antoinesavignacfrApp')
       restrict: 'EA',
       link: function postLink() {
         $('.scroll').on('click', function(){
-          var someElement = angular.element(document.getElementById('technos'));
-          $document.scrollToElement(someElement, -30, 800);
+          var someElement = angular.element(document.getElementById('timeline'));
+          $document.scrollToElement(someElement, 30, 800);
         });
       }
     };

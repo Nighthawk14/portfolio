@@ -1,8 +1,15 @@
 <div line id="home"></div>
 <div ng-include="'views/timeline.html'"></div>
 <div id="technos" ng-controller="TechCtrl">
+
   <div class="wrapper">
-    <div id="tech-{{$index}}" tech class="tech" ng-repeat="tech in technos"></div>
+    <div class="filters">
+      <span class="js" ng-click="techFilter($event)">javascript</span> / 
+      <span class="dev" ng-click="techFilter($event)">dévelopement</span> / 
+      <span class="data" ng-click="techFilter($event)">données</span> / 
+      <span class="inte" ng-click="techFilter($event)">intégration</span>
+    </div>
+    <div id="tech-{{$index}}" tech class="tech" ng-class="(tech.disabled === true) ? 'disabled' : ''" ng-repeat="tech in technos"></div>
   </div>
 </div>
 <!-- <div id="love"></div> -->

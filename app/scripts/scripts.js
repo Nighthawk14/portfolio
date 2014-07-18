@@ -6,6 +6,8 @@ $(document).ready(function(){
     width:$(window).width()
   });
 
+  $(document).scrollTop(0);
+
   $('div[id^=EachProject]').each(function(){
     var ul = $(this).find('ul');
     ul.css('left',$(this).width()/2 - ul.width()/2);

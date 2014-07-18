@@ -1,8 +1,6 @@
 'use strict';
-$.scrollTo(0,1);
 
 $(document).ready(function(){
-  $.scrollTo(0,1);
   $('#home').css({
     height:$(window).height(),
     width:$(window).width()

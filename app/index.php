@@ -58,7 +58,6 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <!-- endbower -->

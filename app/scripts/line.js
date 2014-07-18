@@ -42,11 +42,6 @@ $(document).ready(function(){
   anim();
 });
 
-$('.scroll').on('click', function(){
-  var top = parseInt($('#projects').offset().top+70);
-  console.log(top);
-  $.scrollTo(top,800,{axis:'y'});
-});
 $(window).on('resize', function(){
   calcDiagonal();
 });

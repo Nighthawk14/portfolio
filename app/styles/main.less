@@ -13,6 +13,9 @@ body {
 }
 
 @orange:#E95A2D;
+@grey:#F7F7F7;
+@projectW:132px;
+@projectH:150px;
 
 .cursor{
   cursor: pointer;
@@ -202,23 +205,20 @@ body {
 }
 
 #projects{
-  padding: 40px 0px;
   width: 100%;
   background-color: #f7f7f7;
   border-top: 1px solid #eeeeee;
 
   .wrapper{
-    padding: 40px 20px 70px;
-    width: 820px; // 910 for 5 per lines
+    padding: 40px 20px;
+    width: 904px;
     margin: 0 auto;
   }
 
   .imgProject{
-    width: 170px;
-    height: 193px;
-    position: relative;
-    top: 31px;
-    left: 91px;
+    width: @projectW;
+    height: @projectH;
+    background-size: 100% auto;
 
     &.mobile-yummy{
       background-image:url('../images/mobile-yummy.png');
@@ -241,15 +241,24 @@ body {
   }
 
   .project{
-    background: url('../images/projectbg.svg') no-repeat;
-    width: 170px;
-    height: 308px;
+    
+    width: @projectW;
+    height: @projectH;
     margin: 0px 6px;
     display: inline-block;
     vertical-align: top;
     font-weight: 300;
     position: relative;
     transition: all .2s;
+
+    &.odd{
+      left:(@projectW/2)+6;
+    }
+
+    .back{
+      background: url('../images/projectbg.svg') no-repeat;
+      background-size: 100% auto;
+    }
 
     &.active{
       background: url('../images/projectbg_hover.svg') no-repeat;
@@ -272,7 +281,6 @@ body {
     .Title{
       font-family: 'Open Sans';
       color: #FFFFFF;
-      margin-top: 60px;
       text-align: center;
       font-size: 20px;
     }
@@ -360,4 +368,48 @@ nav{
       .nav-link;
     }
   }
+}
+
+/** FLIP **/
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+  /* flip the pane when hovered */
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+.flip-container, .front, .back {
+  width: @projectW;
+  height: @projectH;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  transform-style:preserve-3d;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }

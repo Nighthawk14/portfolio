@@ -355,6 +355,8 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:styles',
+        'imagemin',
+        'svgmin'
       ]
     },
 
@@ -401,8 +403,6 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'imagemin',
-    'svgmin',
     'autoprefixer',
     'concat',
     'ngmin',

@@ -9,6 +9,11 @@
  */
 angular.module('antoinesavignacfrApp')
   .controller('MainCtrl', ['$scope',function ($scope) {
+    $scope.bob = 'bobby';
+    $scope.lang = 'fr';
+    $scope.$watch('lang', function(){
+      
+    });
     $scope.events = function(e){
       switch(e){
         case 'kariboo':
@@ -27,16 +32,4 @@ angular.module('antoinesavignacfrApp')
         break;
       }
     };
-    $scope.projects = [
-      {
-        name:'bob'
-      },
-      {
-        _class:'timeline-inverted'
-      },
-      {
-        _class:'timeline-inverted'
-      }
-
-    ];
   }]);

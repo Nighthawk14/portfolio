@@ -28,6 +28,7 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+    pkg: grunt.file.readJSON('package.json'),
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -188,6 +189,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '!<%= yeoman.dist %>/images/{logo,logo-mobile}.svg',
+          '!<%= yeoman.dist %>/images/projets/*',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -234,15 +236,13 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
+    uglify: {
+      options:{
+        preserveComments:'some',
+        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+          '<%= grunt.template.today("yyyy-mm-dd") %> */'
+      }
+    },
     // concat: {
     //   dist: {}
     // },
@@ -330,6 +330,11 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        },{
+          expand:true,
+          cwd:'bower_components/bootstrap/dist/fonts',
+          dest:'<%= yeoman.dist %>/fonts',
+          src:['*']
         }]
       },
       styles: {

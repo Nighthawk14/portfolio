@@ -12,4 +12,19 @@ angular.module('antoinesavignacfrApp')
       templateUrl: 'partials/timeline.html',
       restrict: 'EA'
     };
+  })
+  .directive('description', function(){
+    return {
+      template:'<p></p>',
+      restrict:'EA',
+      scope:true,
+      replace:true,
+      link: function(scope,elem){
+        scope.$parent.$parent.$parent.$watch('lang', function(newValue){
+          if(scope.project.description){
+            $(elem).html(scope.project.description[newValue]);
+          }
+        });
+      }
+    };
   });

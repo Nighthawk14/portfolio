@@ -4,12 +4,15 @@
 
   <div class="wrapper">
     <div class="filters">
-      <span class="js" ng-click="techFilter($event)">javascript</span> / 
-      <span class="dev" ng-click="techFilter($event)">dévelopement</span> / 
-      <span class="data" ng-click="techFilter($event)">données</span> / 
-      <span class="inte" ng-click="techFilter($event)">intégration</span>
+      <i class="glyphicon glyphicon-th-list"></i>
+      <span class="js" ng-click="techFilter($event)" ng-class="(filter == 'js') ? 'active' : ''">javascript</span> / 
+      <span class="dev" ng-click="techFilter($event)" ng-class="(filter == 'dev') ? 'active' : ''">dévelopement</span> / 
+      <span class="data" ng-click="techFilter($event)" ng-class="(filter == 'data') ? 'active' : ''">données</span> / 
+      <span class="inte" ng-click="techFilter($event)" ng-class="(filter == 'inte') ? 'active' : ''">intégration</span>
     </div>
-    <div id="tech-{{$index}}" tech class="tech" ng-class="(tech.disabled === true) ? 'disabled' : ''" ng-repeat="tech in technos"></div>
+    <div class="techs">
+      <div id="tech-{{$index}}" tech class="tech" ng-class="(tech.disabled) ? 'disabled' : ''" ng-repeat="tech in technos"></div>
+    </div>
   </div>
 </div>
 <!-- <div id="love"></div> -->
@@ -19,8 +22,7 @@
   <a href="https://github.com/Nighthawk14" class="nav-link github" target="_blank"></a>
   <a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="nav-link linkedin" target="_blank"></a>
   <a href="https://coderbits.com/NightHawk" class="nav-link coderbits" target="_blank"></a>
-  <a href="cv-antoine_savignac.pdf" class="nav-link cv" target="_blank"></a>
+  <a href="/cv-antoine-savignac.pdf" class="nav-link cv" target="_blank"></a>
 </div>
 <div nav></div>
-<div ng-include="'partials/modals.html'" ></div>
 <script type="text/javascript" src="scripts/scripts.js"></script>

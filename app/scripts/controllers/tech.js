@@ -133,25 +133,25 @@ angular.module('antoinesavignacfrApp')
       {
         title: 'MongoDB',
         description: 'Données',
-        tag:['data','dev'],
+        tag:['data'],
         _class: 'mongo'
       },
       {
         title: 'MySQL',
         description: 'Données',
-        tag:['data','dev'],
+        tag:['data'],
         _class: 'mysql'
       },
       {
         title: 'Redis',
         description: 'Données',
-        tag:['data','dev'],
+        tag:['data'],
         _class: 'redis'
       },
       {
         title: 'Lucene Solr',
         description: 'Données',
-        tag:['data','dev'],
+        tag:['data'],
         _class: 'solr'
       },
       {
@@ -211,7 +211,16 @@ angular.module('antoinesavignacfrApp')
     ];
 
     $scope.techFilter = function(ev){
+
       var filter = $(ev.currentTarget).attr('class');
+      if($scope.filter === filter){
+        angular.forEach($scope.technos, function(value){
+          value.disabled = false;
+        });
+        $scope.filter = null;
+        return;
+      }
+      $scope.filter = filter;
       var tags = [];
 
       switch(filter){
@@ -231,15 +240,14 @@ angular.module('antoinesavignacfrApp')
       angular.forEach($scope.technos, function(value){
         var isTagged = false;
         for(var i in tags){
-          if(value.tag.indexOf(tags[i]) == -1){
+          if(value.tag.indexOf(tags[i]) === -1){
             isTagged = true;
+            break;
           }else
           {
-            isTagged = false;
+            break;
           }
         }
-        console.log(value);
-        console.log(isTagged);
         value.disabled = isTagged;
       });
     };

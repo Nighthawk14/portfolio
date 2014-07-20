@@ -129,6 +129,7 @@ body {
   width: 36px;
   height: 35px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .socials{
@@ -205,6 +206,12 @@ body {
     background-position:-299px bottom;
   }
 }
+.fr{
+  background-position: -335px bottom;
+}
+.en{
+  background-position: -372px bottom;
+}
 
 #technos{
   width: 100%;
@@ -214,14 +221,29 @@ body {
     margin: 0 auto;
   }
 
+  .techs{
+    position: relative;
+    top: 20px;
+  }
+
   .filters{
     font-size: 20px;
     text-transform: uppercase;
-    color: @grey;
+    color: #EEEEEE;
     text-align: center;
     font-family: @open;
     margin-bottom: 20px;
+    i{
+      color: @orange;
+      font-size: 30px;
+      position: relative;
+      top: 7px;
+      margin-right: 20px;
+    }
     span{
+      &.caption{
+        color: #333;
+      }
       transition: all .3s ease 0s;
       &.active,&:hover{
         color: @orange;
@@ -525,10 +547,23 @@ nav{
   margin-top: 0;
   color: inherit;
 }
-.timeline-body > p,
+.timeline-body,
 .timeline-body > ul {
     padding:20px;
     margin-bottom: 0;
+}
+.timeline-body{
+  span.orange{
+    color: @orange;
+    font-weight: 700;
+  }
+  img{
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  h3{
+    margin-top: 0px;
+  }
 }
 .timeline-body > p + p {
   margin-top: 5px;

@@ -60,6 +60,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/multiline/browser.js"></script>
     <!-- endbower -->
     <script type="text/javascript" src="bower_components/jquery.ui/ui/core.js"></script>
     <script type="text/javascript" src="bower_components/jquery.ui/ui/effect.js"></script>
@@ -69,6 +70,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/tech.js"></script>
+    <script src="scripts/controllers/project.js"></script>
     <script src="scripts/directives/tech.js"></script>
     <script src="scripts/directives/line.js"></script>
     <script src="scripts/directives/nav.js"></script>

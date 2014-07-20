@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "57ba8212c58d62d7371c1056ea5c0b18",
+    "hash": "48b2731ec45f132073ea0799ae9ff167",
     "packages": [
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -42,7 +43,7 @@
                 {
                     "name": "Serban Ghita",
                     "email": "serbanghita@gmail.com",
-                    "homepage": "http://mobiledetect.net",
+                    "homepage": "http://ghita.org",
                     "role": "Developer"
                 }
             ],

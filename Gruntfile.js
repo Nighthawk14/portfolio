@@ -175,7 +175,7 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>'
       },
       app: {
-        src: ['<%= yeoman.app %>/index.php'],
+        src: ['<%= yeoman.app %>/index.php','<%= yeoman.app %>/mobile.html'],
         ignorePath:  /..\//,
         exclude: [/json3.js/]
       }

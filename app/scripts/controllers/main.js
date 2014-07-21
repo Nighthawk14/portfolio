@@ -9,9 +9,9 @@
  */
 angular.module('antoinesavignacfrApp')
   .controller('MainCtrl', ['$scope','$translate',function ($scope,$translate) {
-    $scope.lang = 'fr';
     $scope.changeLanguage = function (key) {
       $translate.use(key);
       $scope.lang = key;
     };
+    $scope.changeLanguage('fr');
   }]);

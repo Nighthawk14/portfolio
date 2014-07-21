@@ -5,10 +5,10 @@
   <div class="wrapper">
     <div class="filters">
       <i class="glyphicon glyphicon-th-list"></i>
-      <span class="js" ng-click="techFilter($event)" ng-class="(filter == 'js') ? 'active' : ''">javascript</span> / 
-      <span class="dev" ng-click="techFilter($event)" ng-class="(filter == 'dev') ? 'active' : ''">dévelopement</span> / 
-      <span class="data" ng-click="techFilter($event)" ng-class="(filter == 'data') ? 'active' : ''">données</span> / 
-      <span class="inte" ng-click="techFilter($event)" ng-class="(filter == 'inte') ? 'active' : ''">intégration</span>
+      <span class="js" ng-click="techFilter($event)" ng-class="(filter == 'js') ? 'active ng-binding' : 'ng-binding'">{{ 'JS' | translate }}</span> / 
+      <span class="dev" ng-click="techFilter($event)" ng-class="(filter == 'dev') ? 'active ng-binding' : 'ng-binding'">{{ 'DEV' | translate }}</span> / 
+      <span class="data" ng-click="techFilter($event)" ng-class="(filter == 'data') ? 'active ng-binding' : 'ng-binding'">{{ 'DATA' | translate }}</span> / 
+      <span class="inte" ng-click="techFilter($event)" ng-class="(filter == 'inte') ? 'active ng-binding' : 'ng-binding'">{{ 'INTE' | translate }}</span>
     </div>
     <div class="techs">
       <div id="tech-{{$index}}" tech class="tech" ng-class="(tech.disabled) ? 'disabled' : ''" ng-repeat="tech in technos"></div>

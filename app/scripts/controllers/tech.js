@@ -211,8 +211,7 @@ angular.module('antoinesavignacfrApp')
     ];
 
     $scope.techFilter = function(ev){
-
-      var filter = $(ev.currentTarget).attr('class');
+      var filter = ($(ev.currentTarget).attr('class').split(' '))[0];
       if($scope.filter === filter){
         angular.forEach($scope.technos, function(value){
           value.disabled = false;

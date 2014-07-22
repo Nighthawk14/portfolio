@@ -15,13 +15,19 @@ app.config(function ($translateProvider) {
     JS: 'Javascript',
     DEV: 'Développement',
     DATA: 'Données',
-    INTE: 'Integration'
+    INTE: 'Integration',
+    HOME:'Accueil',
+    PROJECTS:'Projets',
+    TECHS:'Technologies'
   });
   $translateProvider.translations('en', {
     JS: 'Javascript',
     DEV: 'Development',
     DATA: 'Data',
-    INTE: 'Integration'
+    INTE: 'Integration',
+    HOME:'Home',
+    PROJECTS:'Projects',
+    TECHS:'Technologies'
   });
   $translateProvider.preferredLanguage('en');
 });

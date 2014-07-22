@@ -16,7 +16,4 @@ describe('Controller: TechCtrl', function () {
     });
   }));
 
-  it('should create a project list', function(){
-    expect(scope.technos).toEqual(jasmine.any(Array));
-  });
 });

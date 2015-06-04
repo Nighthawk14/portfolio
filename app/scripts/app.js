@@ -18,7 +18,8 @@ app.config(function ($translateProvider) {
     INTE: 'Integration',
     HOME:'Accueil',
     PROJECTS:'Projets',
-    TECHS:'Technologies'
+    TECHS:'Technologies',
+    TOOLS:'Outils'
   });
   $translateProvider.translations('en', {
     JS: 'Javascript',
@@ -27,7 +28,8 @@ app.config(function ($translateProvider) {
     INTE: 'Integration',
     HOME:'Home',
     PROJECTS:'Projects',
-    TECHS:'Technologies'
+    TECHS:'Technologies',
+    TOOLS:'Tools'
   });
   $translateProvider.preferredLanguage('en');
 });

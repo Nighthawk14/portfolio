@@ -2,8 +2,7 @@
 
 $(document).ready(function(){
   $('#home').css({
-    height:$(window).height(),
-    width:$(window).width()
+    height:$(window).height()
   });
 
   $(document).scrollTop(0);

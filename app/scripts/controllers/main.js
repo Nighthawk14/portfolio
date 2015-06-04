@@ -13,5 +13,5 @@ angular.module('antoinesavignacfrApp')
       $translate.use(key);
       $scope.lang = key;
     };
-    $scope.changeLanguage('fr');
+    $scope.changeLanguage('en');
   }]);

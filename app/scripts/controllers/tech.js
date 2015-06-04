@@ -41,6 +41,12 @@ angular.module('antoinesavignacfrApp')
         _class: 'sails'
       },
       {
+        title: 'Loopback',
+        description: 'Javascript',
+        tag:['js'],
+        _class: 'loopback'
+      },
+      {
         title: 'Total.js',
         description: 'Javascript',
         tag:['js'],
@@ -96,7 +102,7 @@ angular.module('antoinesavignacfrApp')
       },
       {
         title: 'Yeoman',
-        description: 'Outils',
+        description: 'TOOLS',
         tag:['dev','inte'],
         _class: 'yeoman'
       },
@@ -126,31 +132,55 @@ angular.module('antoinesavignacfrApp')
       },
       {
         title: 'Bower',
-        description: 'Outils',
+        description: 'TOOLS',
         tag:['inte','dev'],
         _class: 'bower'
       },
       {
         title: 'MongoDB',
-        description: 'Données',
+        description: 'DATA',
         tag:['data'],
         _class: 'mongo'
       },
       {
+        title: 'Docker',
+        description: 'DevOps',
+        tag:['dev'],
+        _class: 'docker'
+      },
+      {
+        title: 'AWS',
+        description: 'DevOps',
+        tag:['dev'],
+        _class: 'aws'
+      },
+      {
+        title: 'Nginx',
+        description: 'DevOps',
+        tag:['dev'],
+        _class: 'nginx'
+      },
+      {
+        title: 'MariaDB',
+        description: 'DATA',
+        tag:['data'],
+        _class: 'mariadb'
+      },
+      {
         title: 'MySQL',
-        description: 'Données',
+        description: 'DATA',
         tag:['data'],
         _class: 'mysql'
       },
       {
         title: 'Redis',
-        description: 'Données',
+        description: 'DATA',
         tag:['data'],
         _class: 'redis'
       },
       {
         title: 'Lucene Solr',
-        description: 'Données',
+        description: 'DATA',
         tag:['data'],
         _class: 'solr'
       },
@@ -178,24 +208,24 @@ angular.module('antoinesavignacfrApp')
         tag:['dev'],
         _class: 'php'
       },
-      {
-        title: 'CodeIgniter',
-        description: 'PHP',
-        tag:['dev'],
-        _class: 'codeigniter'
-      },
-      {
-        title: 'Symfony',
-        description: 'PHP',
-        tag:['dev'],
-        _class: 'symfony'
-      },
-      {
-        title: 'Zend',
-        description: 'PHP',
-        tag:['dev'],
-        _class: 'zend'
-      },
+      // {
+      //   title: 'CodeIgniter',
+      //   description: 'PHP',
+      //   tag:['dev'],
+      //   _class: 'codeigniter'
+      // },
+      // {
+      //   title: 'Symfony',
+      //   description: 'PHP',
+      //   tag:['dev'],
+      //   _class: 'symfony'
+      // },
+      // {
+      //   title: 'Zend',
+      //   description: 'PHP',
+      //   tag:['dev'],
+      //   _class: 'zend'
+      // },
       {
         title: 'Ruby',
         description: '',
@@ -204,7 +234,7 @@ angular.module('antoinesavignacfrApp')
       },
       {
         title: 'Heroku',
-        description: 'Déploiement',
+        description: 'DevOps',
         tag:['dev'],
         _class: 'heroku'
       },
@@ -223,7 +253,7 @@ angular.module('antoinesavignacfrApp')
       var tags = [];
 
       switch(filter){
-        case 'js': 
+        case 'js':
           tags = ['js'];
         break;
         case 'dev':

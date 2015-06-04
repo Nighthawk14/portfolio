@@ -18,7 +18,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
     <!-- endbower -->
-    
+
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -54,12 +54,12 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
     <![endif]-->
 
     <!-- build:js(.) scripts/vendor.js -->
-    
+
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <script src="bower_components/multiline/browser.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <!-- endbower -->

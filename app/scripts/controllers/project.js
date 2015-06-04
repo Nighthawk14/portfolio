@@ -14,6 +14,38 @@ angular.module('antoinesavignacfrApp')
 
     $scope.projects = [
       {
+        image:'verusdaat.jpg',
+        title:{
+          fr:'VerusDaat',
+          en:'VerusDaat'
+        },
+        description:{
+          fr:multiline(function(){
+            /*@preserve
+            Je suis actuellement <span class="orange">Lead FrontEnd developer</span> pour le projet VerusDaat. Je suis en charge de gérer l'équipe frontEnd ainsi que de la <span class="orange">mise en place des nouvelles features</span>.
+            J'agis également en tant que <span class="orange">Full stack developer</span> participant a l'élaboration de <span class="orange">l'API en Node.Js</span> ainsi que de la définition de la base de donnée.
+            Enfin je suis responsable de l'ensemble du <span class="orange">DevOps</span>, de la mise en place de l'architecture sur <span class="orange">AWS</span> au déploiement de nos applications ainsi que de la sécurité.
+            Ce project est actuellement en dévelopement.
+             */
+          console.log();}),
+          en:multiline(function(){
+            /*@preserve
+            I'm currently <span class="orange">Lead FrontEnd developer</span> for the VerusDaat project. I'm in charge of <span class="orange">managing the FrontEnd Team</span> as well as <span class="orange">the set up of new features</span>.
+            I'm also working as <span class="orange">Full stack developer</span> participating in the development of the <span class="orange">API in Node.Js</span> as well as the creation of the databases.
+            Finally I'm responsible of the all <span class="orange">DevOps</span>, from the set up of our <span class="orange">architecture on AWS</span> to the <span class="orange">deployment of our applications</span> including the security of our all environments.
+            This project is currently in development.
+            */
+          console.log();})
+        },
+        // url:{
+        //   main:{
+        //     url:'http://',
+        //     fr:'Yummypets',
+        //     en:'Yummypets'
+        //   }
+        // }
+      },
+      {
         image:'chat-yummypets.jpg',
         title:{
           fr:'Yummypets - TChat',
@@ -60,7 +92,7 @@ angular.module('antoinesavignacfrApp')
           en:multiline(function(){
             /*@preserve
             Yummypets is the <span class="orange">first community platform for pet owners</span>.
-            I participated in the <span class="orange">maintenance and updates</span> of the website <span class="orange">as Backend (PHP / Zend), FrontEnd</span>, and the creating of new modules.
+            I participated in the <span class="orange">maintenance and updates</span> of the website <span class="orange">as Backend (PHP / Zend), FrontEnd</span>, and the creation of new features.
             */
           console.log();})
         },
@@ -70,8 +102,7 @@ angular.module('antoinesavignacfrApp')
             fr:'Yummypets',
             en:'Yummypets'
           }
-        },
-        inverted:true
+        }
       },
       {
         image:'riohero.jpg',
@@ -140,8 +171,7 @@ angular.module('antoinesavignacfrApp')
             fr:'Perdu / Trouvé',
             en:'Missing'
           }
-        },
-        inverted:true
+        }
       },
       {
         image:'petsfriendly.jpg',
@@ -198,8 +228,7 @@ angular.module('antoinesavignacfrApp')
             fr:'Jeux concours',
             en:'Contests'
           }
-        },
-        inverted:true
+        }
       },
       {
         image:'klesia.jpg',
@@ -241,8 +270,7 @@ angular.module('antoinesavignacfrApp')
             I have made some minor modifications on these services. The core is in <span class="orange">Sinatra (Ruby)</span>.
             */
           console.log();})
-        },
-        inverted:true
+        }
       },
       {
         image:'city-dashboard.jpg',
@@ -305,8 +333,7 @@ angular.module('antoinesavignacfrApp')
             fr:'Iron Web',
             en:'Iron Web'
           }
-        },
-        inverted:true
+        }
       },
       {
         image:'kariboo.jpg',
@@ -355,10 +382,13 @@ angular.module('antoinesavignacfrApp')
             fr:'Site web',
             en:'Website'
           }
-        },
-        inverted:true
+        }
       }
     ];
+
+    for(var i = 1; i < $scope.projects.length; i = i+2) {
+      $scope.projects[i].inverted = true;
+    }
 
     $scope.pr = this;
   });

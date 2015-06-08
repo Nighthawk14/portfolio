@@ -161,6 +161,12 @@ angular.module('antoinesavignacfrApp')
         _class: 'nginx'
       },
       {
+        title: 'Chef',
+        description: 'DevOps',
+        tag:['dev'],
+        _class: 'chef'
+      },
+      {
         title: 'MariaDB',
         description: 'DATA',
         tag:['data'],

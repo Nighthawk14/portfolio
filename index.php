@@ -42,7 +42,7 @@ $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? header('Location: mo
 		<a href="https://github.com/Nighthawk14" class="nav-link github" target="_blank"></a>
 		<a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="nav-link linkedin" target="_blank"></a>
 		<a href="https://coderbits.com/NightHawk" class="nav-link coderbits" target="_blank"></a>
-		<a href="dist/pdf/cv-antoine_savignac.pdf" class="nav-link cv" target="_blank"></a>
+		<a href="https://drive.google.com/file/d/0ByTZqMiGXKIAaFBOLVJRdG5GdTg/view?usp=sharing" class="nav-link cv" target="_blank"></a>
 	</div>
 	<nav>
 		<ul>

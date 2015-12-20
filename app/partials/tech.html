@@ -1,0 +1,13 @@
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      <div class="imgTech" ng-class="tech._class"></div>
+    </div>
+    <div class="back">
+      <div class="Title">{{tech.title}}</div>
+      <div class="desc">
+        {{tech.description | translate}}
+      </div>
+    </div>
+  </div>
+</div>

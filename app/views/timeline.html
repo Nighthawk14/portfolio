@@ -1,0 +1,11 @@
+<div class="timelineContainer" ng-controller="ProjectCtrl">
+  <div class="container">
+      <div class="page-header text-center">
+          <h1 id="timeline" ng-bind="($parent.lang=='fr') ? 'Projets' : 'Projects'">Projets</h1>
+      </div>
+      <ul class="timeline">
+        <li timeline ng-repeat="project in projects" ng-class="(project.inverted) ? 'timeline-inverted' : ''"></li>
+        <li class="clearfix" style="float: none;"></li>
+      </ul>
+  </div>
+</div>

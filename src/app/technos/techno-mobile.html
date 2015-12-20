@@ -1,0 +1,13 @@
+<div class="title">{{techno.title}}</div>
+<div class="linkTech cursor" [hidden]='!techno.event.active' (click)='events("{{techno.event.value}}")'>
+  <div class="desc">
+    {{techno.description}}
+    <div class="imgTech" *ngClass="techno.CSSClass"></div>
+  </div>
+</div>
+<a class="linkTech cursor" target="_blank" href='{{techno.link}}' [hidden]='techno.event.active'>
+  <div class="desc">
+    {{techno.description}}
+    <div class="imgTech" *ngClass="techno.CSSClass"></div>
+  </div>
+</a>

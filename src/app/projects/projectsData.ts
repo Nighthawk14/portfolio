@@ -74,7 +74,7 @@ export projects = [
       fr:`
         Yummypets est la premiére <span class="orange">plateforme communautaire</span> pour propriétaire d'animaux de compagnie du monde.
         Je participe à la <span class="orange">maintenance</span> et <span class="orange">les mises a jour</span> réguliére du site autant <span class="orange">BackEnd (PHP / Zend) que FrontEnd</span>, ainsi qu'a l'ajout de nouveaux modules.
-      `
+      `,
       en:`
         Yummypets is the <span class="orange">first community platform for pet owners</span>.
         I participated in the <span class="orange">maintenance and updates</span> of the website <span class="orange">as Backend (PHP / Zend), FrontEnd</span>, and the creation of new features.
@@ -99,7 +99,7 @@ export projects = [
         Rio Hero est une application mobile <span class="orange">Android / IOS</span> réalisé pour la coupe du monde de football 2014.
         Elle permet aux utilisateurs de <span class="orange">noter les joueurs</span> aprés chaque rencontre et de voir ensuite les <span class="orange">différents classements</span> proposés.
         Elle à été réalisée avec <span class="orange">AngularJS</span> et compilée avec <span class="orange">Cordova</span>.
-      `
+      `,
       en:`
         Rio Hero is an <span class="orange">Android / IOS</span> mobile application created for the 2014 Football World Cup.
         It allows users to <span class="orange">mark players</span> after each match and check out the <span class="orange">numerous rankings</span> proposed.
@@ -125,7 +125,7 @@ export projects = [
         Les sites mobiles de Yummypets sont les versions <span class="orange">optimisées pour mobile</span> des différents sites de la plateforme Yummypets (Blog, annonces, perdu/trouvé).
         J'ai réalisé ces sites avec <span class="orange">AngularJS</span>.
         Aucun BackEnd n'est présent car les données viennent directement des <span class="orange">Web Services de Yummypets</span>.
-      `
+      `,
       en:`
         Yummypets mobile websites are <span class="orange">mobile optimized versions</span> of the differents websites of the Yummypets platform (Blog, classified ads, missing Pets).
         These mobile websites are executed <span class="orange">AngularJS</span> and need no BackEnd since data comes directly from <span class="orange">Yummypets Web Services</span>.
@@ -160,7 +160,7 @@ export projects = [
         La plateforme Pets Friendly est une application web permettant la recherche de <span class="orange">lieux acceptant les animaux de compagnie</span> autour de vous.
         J'ai réalisé l'UX avec <span class="orange">AngularJS</span>, ainsi que <span class="orange">l'API Google maps</span>.
         Le BackEnd à été fait en PHP (Cake) et les données étaient stockées dans <span class="orange">mongoDB</span> avec une réplication dans <span class="orange">Solr</span>.
-      `
+      `,
       en:`
         Pets Friendly is a web application allowing to geolocated <span class="orange">"pet Friendly" places</span> around you.
         The UX was made with <span class="orange">AngularJS</span>, and <span class="orange">Google maps API</span>.
@@ -185,7 +185,7 @@ export projects = [
       fr:`
         Les jeux concours de yummypets sont des <span class="orange">sites évenementiels</span> pour les utilisateurs de la plateforme.
         Ils sont réalisé en <span class="orange">PHP (Zend)</span>.
-      `
+      `,
       en:`
         Yummypets contests are <span class="orange">event websites</span> for users. They are created in <span class="orange">PHP (Zend)</span>.
       `
@@ -208,7 +208,7 @@ export projects = [
       fr:`
         Ce projet est composé d'un <span class="orange">tchat texte et vidéo</span> permettant aux utilisateurs de suivre un flux vidéo et de pouvoir écrire dans un espace texte partagé.
         Le flux vidéo était géré par ustream.tv, j'ai réalisé le tchat en <span class="orange">Javascript (Node.Js) avec socket.io</span>.
-      `
+      `,
       en:`
         This project combines and <span class="orange">instant messaging</span> and <span class="orange">a video chat</span> allowing users to watch a video stream and to write some questions.
         The video stream was manage by ustream.tv and I have executed the chat in <span class="orange">Javascript (Node.Js) with socket.io</span>.
@@ -225,7 +225,7 @@ export projects = [
       fr:`
         Les <span class="orange">web services de yummypets</span> permettent la répartition des données entre les sites internet et les applications mobiles.
         J'ai effectuer des modifications mineures sur ces services. Ils sont réalisés avec <span class="orange">Sinatra (Ruby)</span>.
-      `
+      `,
       en:`
         <span class="orange">Yummypets web services</span> allows data distribution between websites and mobile applications.
         I have made some minor modifications on these services. The core is in <span class="orange">Sinatra (Ruby)</span>.
@@ -242,7 +242,7 @@ export projects = [
       fr:`
         Le city dashboard est une application web, représentant les <span class="orange">données d'une ville en particulier (transports, méteo, informations)</span>.
         J'ai réalisé l'api permettant la récolte des données (open data, web scrapping, api) avec <span class="orange">Node.Js</span>, et la partie FrontEnd avec <span class="orange">AngularJS</span>.
-      `
+      `,
       en:`
         City Dashboard is a web application, which brings together <span class="orange">all the data (transports, weather, news) of one's city</span>.
         I have executed the data collection api (open data, web scrapping, api) with <span class="orange">Node.Js</span>, and the FrontEnd with <span class="orange">AngularJS</span>.
@@ -267,7 +267,7 @@ export projects = [
         En février 2013, j'ai participé à <span class="orange">l'Iron Web, un concours international de la meilleure application en 72h à Quebec</span>.
         Nous avons remporté les prix de <span class="orange">meilleure application (tablet, desktop, globale)</span> en équipe.
         Les feux verts est une application permettant la <span class="orange">remontée de données urbaines par les citoyens</span> à la ville via un protocole ouvert (Open 311).
-      `
+      `,
       en:`
         In february 2013, I participated to the <span class="orange">Iron Web competition in Quebec</span>.
         We have won awards for <span class="orange">best team application (tablet, desktop, global)</span>.
@@ -298,7 +298,7 @@ export projects = [
         <span class="orange">Kariboo</span> est une application mobile IOS développée en Objective-C. Elle permet d'éffectuer des échanges de données entre son mobile et son ordinateur grâce à un réseau wifi.
         Kariboo vous permet entre autre de <span class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</span>, de gérer vos contacts ou encore de faire de simple échanges de fichier.
         J'ai réalisé ce projet dans le cadre de mon <span class="orange">Master 1 à l'ESTEI</span>.
-        <img src="images/projets/Kariboo-music.png">`
+        <img src="images/projets/Kariboo-music.png">`,
        en:`
         <span class="orange">Kariboo</span> is an IOS application developed in Objective-C. It allows data exchange between your smartphone and your computer through a wifi network.
         Kariboo also allows you <span class="orange">to play music or videos from your smartphone on your computer</span>, to manage your contacts or even to make file exchanges.
@@ -315,7 +315,7 @@ export projects = [
     description:{
       fr:`
       <span class="orange">Palm</span> est une application web basée sur Google analytics, vous permettant d'éffectuer une représentation <span class="orange">graphique de vos données analytics</span>.
-      J'ai réalisé la partie FrontEnd avec <span class="orange">D3.JS</span>, une librairie faite pour traiter visuellement des données, et la partie BackEnd (connexion à l'API analytics et récolte / traitement des données) en <span class="orange">PHP</span>.`
+      J'ai réalisé la partie FrontEnd avec <span class="orange">D3.JS</span>, une librairie faite pour traiter visuellement des données, et la partie BackEnd (connexion à l'API analytics et récolte / traitement des données) en <span class="orange">PHP</span>.`,
      en:`
       <span class="orange">Palm</span> is a web application based on Google analytics. It allows you to make a <span class="orange">graphical représentation of your analytics datas</span>.
       I have executed the FrontEnd part with <span class="orange">D3.JS</span>, a library made ​​for visually processing data, and the BackEnd part (analytics api connection and data collection / treatment) with <span class="orange">PHP</span>.`

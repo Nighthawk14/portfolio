@@ -1,5 +1,5 @@
 import {Component, Injectable} from 'angular2/core';
-var technos = require('./technos.json');
+var technosData = require('./technos.json');
 import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
 @Component({
@@ -33,9 +33,9 @@ class Techno {
 })
 @Injectable()
 export class Technos {
-  technos: Array<Techno>;
+  technos = [];
   ngOnInit() {
-    technos.forEach(techno => {
+    technosData.forEach(techno => {
       this.technos.push(new Techno(techno));
     })
   }

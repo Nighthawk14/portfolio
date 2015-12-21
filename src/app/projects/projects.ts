@@ -1,7 +1,7 @@
 import {Injectable, Component} from 'angular2/core';
 import {Project} from './project';
 import {TranslatePipe} from 'ng2-translate/ng2-translate';
-var projects = require('./projectsData.ts');
+var projectsData = require('./projectsData.ts');
 
 @Component({
   selector: 'projects',
@@ -10,13 +10,13 @@ var projects = require('./projectsData.ts');
 })
 @Injectable()
 export class Projects {
-  projects: Array<Project>;
-  addProject(project: Project) {
+  projects = [];
+  addProject(project) {
     this.projects.push(project);
-  },
+  }
   ngOnInit() {
-    projects.map(project => {
+    projectsData.map(project => {
       this.addProject(new Project(project));
-    })
+    });
   }
 }

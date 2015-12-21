@@ -18,7 +18,7 @@ import 'rxjs';
 
 // Other vendors for example jQuery or Lodash
 
-import 'jquery';
+//import 'jquery';
 // import 'lodash';
 // import 'bootstrap';
 // import 'angular-scroll';

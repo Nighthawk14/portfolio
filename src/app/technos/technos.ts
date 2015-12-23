@@ -8,10 +8,11 @@ import {TranslatePipe} from 'ng2-translate/ng2-translate';
   template: require('./techno.html')
 })
 class Techno {
-  title: string;
-  description: string;
-  tags: Array<string>;
-  CSSClass: string;
+  title: String;
+  description: String;
+  tags: Array<String>;
+  CSSClass: String;
+
   private base = 6;
   private index = 0;
   private row = 0;
@@ -33,10 +34,10 @@ class Techno {
 })
 @Injectable()
 export class Technos {
-  technos = [];
+  technos: Array<Techno> = [];
   ngOnInit() {
     technosData.forEach(techno => {
-      this.technos.push(new Techno(techno));
+      this.technos.push(techno);
     })
   }
 }

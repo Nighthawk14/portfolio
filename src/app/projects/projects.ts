@@ -10,13 +10,13 @@ var projectsData = require('./projectsData.ts');
 })
 @Injectable()
 export class Projects {
-  projects = [];
+  projects: Array<Project> = [];
   addProject(project) {
     this.projects.push(project);
   }
   ngOnInit() {
     projectsData.map(project => {
-      this.addProject(new Project(project));
+      this.addProject(project);
     });
   }
 }

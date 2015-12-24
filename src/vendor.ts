@@ -19,7 +19,7 @@ import 'rxjs';
 // Other vendors for example jQuery or Lodash
 
 import 'ng2-translate/ng2-translate';
-//import 'jquery';
+import 'jquery';
 // import 'lodash';
 // import 'bootstrap';
 // import 'angular-scroll';

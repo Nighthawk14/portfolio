@@ -1,5 +1,6 @@
-<div class="title">{{techno.title}}</div>
-<div class="linkTech cursor" [hidden]='!techno.event.active' (click)='events("{{techno.event.value}}")'>
+{{techno | json}}
+<!-- <div class="title">{{techno.title}}</div>
+<div class="linkTech cursor" [hidden]='!techno.event.active'>
   <div class="desc">
     {{techno.description}}
     <div class="imgTech" *ngClass="techno.CSSClass"></div>
@@ -10,4 +11,4 @@
     {{techno.description}}
     <div class="imgTech" *ngClass="techno.CSSClass"></div>
   </div>
-</a>
+</a> -->

@@ -1,12 +1,15 @@
 import {Injectable, Component} from 'angular2/core';
 import {Project} from './project';
-import {TranslatePipe} from 'ng2-translate/ng2-translate';
-var projectsData = require('./projectsData.ts');
+// import {TranslatePipe} from 'ng2-translate/ng2-translate';
+// var projectsData = require('./projectsData.ts');
+import {ProjectData} from './projectsData';
 
 @Component({
   selector: 'projects',
-  pipes: [TranslatePipe],
-  template: require('./projects.html')
+//   pipes: [TranslatePipe],
+  template: require('./projects.html'),
+  directives: [Project],
+  providers: [ProjectData]
 })
 @Injectable()
 export class Projects {
@@ -14,9 +17,11 @@ export class Projects {
   addProject(project) {
     this.projects.push(project);
   }
-  ngOnInit() {
-    projectsData.map(project => {
-      this.addProject(project);
-    });
+  constructor(projectsData: ProjectData) {
+    let projects = projectsData.getData();
+    projects.map((project, index) => {
+      project.inverted = (index % 2 === 1 && index) ? true : false;
+    })
+    this.projects = projects;
   }
 }

@@ -1,0 +1,18 @@
+<div class="timeline-badge primary"><i class="ion-ios7-circle-filled"></i></div>
+<div class="timeline-panel">
+  <div class="timeline-heading">
+    <img class="img-responsive" [src]="'images/project/' + project.image" />
+  </div>
+  <div class="timeline-body">
+    <h3></h3>
+    <p>{{project.description | multiLang}}</p>
+    <div class="links" *ngIf="project.urls.length > 0">
+      <hr>
+      <a [href]="url.url" *ngFor="#url of project.urls" target="_blank">
+        {{url.copy | multiLang}}
+        <i class="ion-log-out"></i>
+        <div class="clear"></div>
+      </a>
+    </div>
+  </div>
+</div>

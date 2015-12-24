@@ -1,34 +1,26 @@
-import {Injectable} from 'angular2/core';
+import {Component} from 'angular2/core';
+import {MultiLangPipe} from '../commons/multiLang/multiLangPipe';
 
 class MultiLangCopy {
   fr: string;
   en: string;
 }
 
-@Injectable()
 class Url {
   copy: MultiLangCopy;
   url: string;
-
-  constructor(url) {
-    this.url = url.url;
-    this.copy = {fr: url.fr, en: url.en};
-  }
 }
 
-@Injectable()
+@Component({
+  selector: 'project',
+  pipes: [MultiLangPipe],
+  template: require('./project.html'),
+  inputs: ['project'],
+})
 export class Project {
   description: MultiLangCopy;
   image: string;
   title: MultiLangCopy;
-  urls: Array<Url> = [];
-
-  constructor(project) {
-    this.description = project.description;
-    this.title = project.title;
-    this.image = project.image;
-    project.url.map(url => {
-      this.urls.push(url);
-    });
-  }
+  urls: Array<Url>;
+  inverted?: Boolean;
 }

@@ -1,11 +1,12 @@
 import {Component, Injectable} from 'angular2/core';
 var technosData = require('./technos.json');
-import {TranslatePipe} from 'ng2-translate/ng2-translate';
+// import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
 @Component({
   selector: 'techno',
-  pipes: [TranslatePipe],
-  template: require('./techno.html')
+//   pipes: [TranslatePipe],
+  template: require('./techno.html'),
+  inputs: ['techno']
 })
 class Techno {
   title: String;
@@ -22,20 +23,19 @@ class Techno {
   }
 }
 
-@Component({
-  selector: 'techno-mobile',
-  template: require('./techno-mobile.html')
-})
+// @Component({
+//   selector: 'techno-mobile',
+//   template: require('./techno-mobile.html')
+// })
 
 @Component({
   selector: 'technos',
   template: require('./technos.html'),
   directives: [Techno]
 })
-@Injectable()
 export class Technos {
   technos: Array<Techno> = [];
-  ngOnInit() {
+  constructor() {
     technosData.forEach(techno => {
       this.technos.push(techno);
     })

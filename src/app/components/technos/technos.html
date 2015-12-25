@@ -1,3 +1,20 @@
-<div class="techs">
-  <techno id="techno-{{i}}" class="tech" [ngClass]="{disabled: techno.disabled}" *ngFor="#techno of technos; #i = index" [techno]="techno"></techno>
+<div class="wrapper">
+    <div class="filters">
+      <i class="glyphicon glyphicon-th-list"></i>
+<!--       <span class="js" (click)="techFilter($event)" [ngClass]="{active: (filter === 'js')}">{{ 'JS' | translate }}</span> / 
+      <span class="dev" (click)="techFilter($event)" [ngClass]="{active: (filter === 'dev')}">{{ 'DEV' | translate }}</span> / 
+      <span class="data" (click)="techFilter($event)" [ngClass]="{active: (filter === 'data')}">{{ 'DATA' | translate }}</span> / 
+      <span class="inte" (click)="techFilter($event)" [ngClass]="{active: (filter === 'inte')}">{{ 'INTE' | translate }}</span> -->
+      <span class="js"  (click)="techFilter($event, 'js')" [ngClass]="{active: (filter === 'js')}">{{ 'JS' }}</span> / 
+      <span class="dev" (click)="techFilter($event, 'dev')" [ngClass]="{active: (filter === 'dev')}">{{ 'DEV' }}</span> / 
+      <span class="data" (click)="techFilter($event, 'data')" [ngClass]="{active: (filter === 'data')}">{{ 'DATA' }}</span> / 
+      <span class="inte" (click)="techFilter($event, 'inte')" [ngClass]="{active: (filter === 'inte')}">{{ 'INTE' }}</span>
+    </div>
+  <div class="techs">
+    <techno id="techno-{{index}}" class="tech" [ngClass]="{disabled: techno.disabled}" 
+            *ngFor="#techno of technos; #index = index; #last = last" 
+            [index]="index"
+            [last]="last"
+            [techno]="techno"></techno>
+  </div>
 </div>

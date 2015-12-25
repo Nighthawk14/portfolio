@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {MultiLangPipe} from '../commons/multiLang/multiLangPipe';
+import {MultiLangPipe} from '../../commons/multiLang/multiLangPipe';
 
 class MultiLangCopy {
   fr: string;

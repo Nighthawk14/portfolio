@@ -9,7 +9,8 @@ import {ProjectData} from './projectsData';
 //   pipes: [TranslatePipe],
   template: require('./projects.html'),
   directives: [Project],
-  providers: [ProjectData]
+  providers: [ProjectData],
+  styles: [ require('../../styles/projects/_projects.scss')]
 })
 @Injectable()
 export class Projects {

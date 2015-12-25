@@ -6,7 +6,8 @@ var technosData = require('./technos.json');
   selector: 'techno',
 //   pipes: [TranslatePipe],
   template: require('./techno.html'),
-  inputs: ['techno']
+  inputs: ['techno'],
+  styles: [require('../../styles/technos/_technos.scss')]
 })
 class Techno {
   title: String;

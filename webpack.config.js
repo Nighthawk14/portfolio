@@ -60,6 +60,12 @@ module.exports = {
 
       // support for .html as raw text
       { test: /\.html$/,  loader: 'raw-loader' },
+      
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        loader: 'raw-loader!sass-loader'
+      }
     ],
     noParse: [ /.+zone\.js\/dist\/.+/, /.+angular2\/bundles\/.+/ ]
   },

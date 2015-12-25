@@ -1,14 +1,15 @@
 import {Injectable, Component} from 'angular2/core';
 import {TranslateService} from 'ng2-translate/ng2-translate';
-import {Projects} from './projects/projects.ts';
-import {Line} from './line/line';
-import {Technos} from './technos/technos';
+import {Projects} from './components/projects/projects.ts';
+//import {Line} from './components/line/line';
+import {Technos} from './components/technos/technos';
 
 @Injectable()
 @Component({
   selector: 'app',
   template: require('./app.html'),
-  directives: [Projects, Technos, Line]
+  directives: [Projects, Technos],
+  styles: [require('./styles/app/_app.scss')]
 })
 export class App {
     constructor() {

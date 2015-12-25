@@ -10,6 +10,7 @@ body {
   overflow-x:hidden;
   height: auto;
   width: 100%;
+  font-family: $open;
 
   &.modal-open{
     height: 100%;

@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, View, Input, Injectable} from 'angular2/core';
 import {MultiLangPipe} from '../../commons/multiLang/multiLangPipe';
 
 class MultiLangCopy {
@@ -11,11 +11,34 @@ class Url {
   url: string;
 }
 
+@Injectable()
+@Component({
+  selector: 'project-description',
+  providers: [MultiLangPipe],
+  pipes: [MultiLangPipe],
+  template: `<p [innerHtml]="descriptionHTML"></p>`,
+  styles: [ require('../../styles/projects/_description.scss')]
+})
+class ProjectDescription {
+  @Input('description') description;
+  descriptionHTML: string = "";
+  multiLangPipe: MultiLangPipe;
+   
+  constructor(multiLangPipe: MultiLangPipe) {
+    this.multiLangPipe = multiLangPipe;
+  }
+  ngOnInit() {
+    this.descriptionHTML = this.multiLangPipe.transform(this.description, null);
+  }
+}
+
 @Component({
   selector: 'project',
   pipes: [MultiLangPipe],
+  directives: [ProjectDescription],
   template: require('./project.html'),
   inputs: ['project'],
+  styles: [ require('../../styles/projects/_project.scss')]
 })
 export class Project {
   description: MultiLangCopy;

@@ -4,8 +4,8 @@
     <img class="img-responsive" [src]="'images/projects/' + project.image" />
   </div>
   <div class="timeline-body">
-    <h3></h3>
-    <p>{{project.description | multiLang}}</p>
+    <h3>{{project.title | multiLang}}</h3>
+    <project-description [description]="project.description"></project-description>
     <div class="links" *ngIf="project.urls.length > 0">
       <hr>
       <a [href]="url.url" *ngFor="#url of project.urls" target="_blank">

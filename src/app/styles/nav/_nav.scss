@@ -1,6 +1,6 @@
 .nav-link{
   background-image: url('/images/sprite-rs.svg');
-  width: 36px;
+  width: 37px;
   height: 35px;
   display: inline-block;
   cursor: pointer;
@@ -20,4 +20,32 @@ nav{
       @extend .nav-link;
     }
   }
+}
+
+.home{
+  background-position: -261px top;
+  &:hover
+  {
+    background-position: -261px bottom;
+  }
+}
+.technos{
+  background-position: -224px top;
+  &:hover
+  {
+    background-position:-224px bottom;
+  }
+}
+.projets{
+  background-position: -299px top;
+  &:hover
+  {
+    background-position:-299px bottom;
+  }
+}
+.fr{
+  background-position: -335px bottom;
+}
+.en{
+  background-position: -373px bottom;
 }

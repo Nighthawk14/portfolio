@@ -1,15 +1,17 @@
-import {Injectable, Component} from 'angular2/core';
+import {Injectable, Component, ViewEncapsulation} from 'angular2/core';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 import {Projects} from './components/projects/projects.ts';
 //import {Line} from './components/line/line';
 import {Technos} from './components/technos/technos';
+import {Nav} from './components/nav/nav';
 
 @Injectable()
 @Component({
   selector: 'app',
   template: require('./app.html'),
-  directives: [Projects, Technos],
-  styles: [require('./styles/app/_app.scss')]
+  directives: [Projects, Technos, Nav],
+  styles: [require('./styles/app/_app.scss')],
+  encapsulation: ViewEncapsulation.None
 })
 export class App {
     constructor() {

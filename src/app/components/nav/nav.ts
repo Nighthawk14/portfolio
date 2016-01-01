@@ -1,4 +1,5 @@
-import {Component} from 'angular2/core';
+import {Component, ElementRef} from 'angular2/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: '[nav]',
@@ -6,6 +7,12 @@ import {Component} from 'angular2/core';
   styles: [require('../../styles/nav/_nav.scss')]
 })
 export class Nav {
+  
+  elementRef: ElementRef;
+  root: any;
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
   moveTo(tag) {
     let {elem, offset} = this.getOffset(tag);
 //     $document.scrollTo(elem, offset,800).then(function(){
@@ -13,8 +20,18 @@ export class Nav {
 //   });
   }
   
-  ngOnInit() {
-//     $(element).css('top',$(window).height()/2 - $(element).height()/2);
+  ngAfterViewInit() {
+    this.root = $(this.elementRef.nativeElement);
+    let nav = this.root.find('nav');
+    console.log($(window).height()/2)
+    console.log(nav.height());
+    setTimeout(() => {
+      console.log(nav.height());
+    }, 2000);
+    nav.css('top', ($(window).height()/2) - (nav.height() / 2));
+    //this.renderer.setElementStyle(this.elementRef, 'top', '150px');
+    //let nav = $(this.elementRef.nativeElement).find('nav');
+    //nav.css('top', $(window).height()/2 - nav.height()/2);
   }
   
   private getOffset(tag) {

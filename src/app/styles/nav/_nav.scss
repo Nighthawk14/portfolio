@@ -49,3 +49,57 @@ nav{
 .en{
   background-position: -373px bottom;
 }
+
+.socials{
+  display: inline-block;
+  width: 40px;
+  position: fixed;
+  right: 0px;
+  a{
+    @extend .nav-link;
+  }
+
+}
+
+.facebook{
+  background-position: 0px top;
+  &:hover
+  {
+    background-position:0px bottom;
+  }
+}
+.twitter{
+  background-position: -38px top;
+  &:hover
+  {
+    background-position:-38px bottom;
+  }
+}
+.linkedin{
+  background-position: -112px top;
+  &:hover
+  {
+    background-position:-112px bottom;
+  }
+}
+.github{
+  background-position: -75px top;
+  &:hover
+  {
+    background-position:-75px bottom;
+  }
+}
+.cv{
+  background-position: -148px top;
+  &:hover
+  {
+    background-position:-148px bottom;
+  }
+}
+.coderbits{
+  background-position: -186px top;
+  &:hover
+  {
+    background-position:-186px bottom;
+  }
+}

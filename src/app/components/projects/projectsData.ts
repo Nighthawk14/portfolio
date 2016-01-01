@@ -330,12 +330,12 @@ export class ProjectData {
           <span class="orange">Kariboo</span> est une application mobile IOS développée en Objective-C. Elle permet d'éffectuer des échanges de données entre son mobile et son ordinateur grâce à un réseau wifi.
           Kariboo vous permet entre autre de <span class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</span>, de gérer vos contacts ou encore de faire de simple échanges de fichier.
           J'ai réalisé ce projet dans le cadre de mon <span class="orange">Master 1 à l'ESTEI</span>.
-          <img src="images/projets/Kariboo-music.png">`,
+          <img src="images/projects/kariboo-music.png">`,
          en:`
           <span class="orange">Kariboo</span> is an IOS application developed in Objective-C. It allows data exchange between your smartphone and your computer through a wifi network.
           Kariboo also allows you <span class="orange">to play music or videos from your smartphone on your computer</span>, to manage your contacts or even to make file exchanges.
           I have executed this project under my <span class="orange">Master degree at ESTEI</span>.
-          <img src="images/projets/Kariboo-music.png">`
+          <img src="images/projects/kariboo-music.png">`
       },
       urls:[]
     },

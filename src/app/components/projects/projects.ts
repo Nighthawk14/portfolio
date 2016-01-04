@@ -1,7 +1,6 @@
 import {Injectable, Component} from 'angular2/core';
 import {Project} from './project';
 // import {TranslatePipe} from 'ng2-translate/ng2-translate';
-// var projectsData = require('./projectsData.ts');
 import {ProjectData} from './projectsData';
 
 @Component({

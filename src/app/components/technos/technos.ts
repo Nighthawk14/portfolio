@@ -2,6 +2,22 @@ import {Component, Injectable, Input} from 'angular2/core';
 var technosData = require('./technos.json');
 // import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
+class TechnoPosition {
+  private row: number = 0;
+  private base:number = 6;
+  
+  getBase(index) {
+    let addClear = false;
+    if((index % this.base) === 0 && index !== 0) {
+      this.base = (this.base === 6) ? 5 : 6;
+      addClear = true;
+      this.row++;
+    }
+    
+    return {this.base, this.row, addClear};
+  }
+}
+
 @Injectable()
 @Component({
   selector: 'techno',
@@ -16,23 +32,27 @@ class Techno {
   tags: Array<String>;
   CSSClass: String;
   disabled?: Boolean = false;
+  technoPosition: TechnoPosition;
   
   @Input('index') private index: number;
   @Input('last') private last: Boolean;
   private base: number = 6;
   private row: number = 0;
+  
+  constructor(@Host() technoPosition: TechnoPosition) {
+    this.technoPosition = technoPosition;
+  }
 
   ngOnInit() {
-    if((this.index % this.base) === 0 && this.index !== 0) {
-      this.base = (this.base === 6) ? 5 : 6;
-      //$(iElm).before('<div class="clear"></div>');
-      this.row++;
+    let {base, row, addClear} = this.technoPosition.getBase(this.index)
+    if(addClear) {
+      this.root.before('<div class="clear"></div>');
     }
-    let _class = (this.base === 6) ? 'even' : 'odd';
-//   $(iElm).addClass(_class);
+    let _class = (base === 6) ? 'even' : 'odd';
+    this.root.addClass(_class);
 
-    if(this.index >= 6){
-      //$(iElm).css('top', this.getOffset());
+    if(row > 0){
+      this.root.css('top', this.getOffset(row));
     }
 
 //     if(this.last){
@@ -43,7 +63,7 @@ class Techno {
   }
 
   private getOffset() {
-    return -27 * this.row;
+    return -27 * row;
   }
 }
 
@@ -56,6 +76,7 @@ class Techno {
   selector: 'technos',
   template: require('./technos.html'),
   directives: [Techno],
+  viewProviders: [TechnoPosition],
   styles: [require('../../styles/technos/_technos.scss')]
 })
 export class Technos {

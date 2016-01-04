@@ -1,4 +1,5 @@
 import {Component, ElementRef} from 'angular2/core';
+import {TranslateService} from 'ng2-translate/ng2-translate';
 import * as $ from 'jquery';
 import 'jquery.scrollTo';
 
@@ -10,11 +11,16 @@ import 'jquery.scrollTo';
 export class Nav {
 
   elementRef: ElementRef;
+  translate: TranslateService;
   root: any;
-  constructor(elementRef: ElementRef) {
+  nav: any;
+  constructor(elementRef: ElementRef, translate: TranslateService) {
     this.elementRef = elementRef;
+    this.translate = translate;
   }
-  moveTo(tag) {
+
+  moveTo(event, tag) {
+    event.preventDefault();
     let {elem, offset} = this.getOffset(tag);
     $(document).scrollTo(elem, {offset:offset, duration:800, onAfter: () => {
        history.pushState({}, '', elem);
@@ -23,16 +29,26 @@ export class Nav {
 
   ngOnInit() {
     this.root = $(this.elementRef.nativeElement);
+    this.nav = this.root.find('nav');
+    $(window).resize(() => {
+      this.nav.css('top',$(window).height()/2 - this.nav.height()/2);
+    });
   }
 
   ngAfterViewInit() {
-    let nav = this.root.find('nav');
     setTimeout(() => {
-      nav.css('top', ($(window).height()/2) - (nav.height() / 2));
+      this.nav.css('top', ($(window).height()/2) - (this.nav.height() / 2));
     }, 100);
 
-
     //nav.find('.nav-link').tooltip();
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang);
+  }
+
+  isNavLangHidden(lang: string) {
+    return this.translate.currentLang === lang;
   }
 
   private getOffset(tag) {
@@ -71,7 +87,4 @@ export class Nav {
 //     });
 //   });
 // };
-// scope.$parent.$parent.$watch('lang', function(){
-//   setTranslation();
-// });
 // $(element).find('.nav-link').tooltip();

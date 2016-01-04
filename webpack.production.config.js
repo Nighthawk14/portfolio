@@ -3,22 +3,29 @@
 /*
  * Helper: root(), and rootDir() are defined at the bottom
  */
-var path = require('path');
-// Webpack Plugins
-var ProvidePlugin = require('webpack/lib/ProvidePlugin');
-var DefinePlugin  = require('webpack/lib/DefinePlugin');
-var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
-var CopyWebpackPlugin  = require('copy-webpack-plugin');
-var HtmlWebpackPlugin  = require('html-webpack-plugin');
-var ENV = process.env.ENV = process.env.NODE_ENV = 'development';
+ var path = require('path');
+ // Webpack Plugins
+ var webpack = require('webpack');
+ var ProvidePlugin = require('webpack/lib/ProvidePlugin');
+ var DefinePlugin = require('webpack/lib/DefinePlugin');
+ var OccurenceOrderPlugin = require('webpack/lib/optimize/OccurenceOrderPlugin');
+ var DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
+ var UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+ var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+ var CopyWebpackPlugin = require('copy-webpack-plugin');
+ var HtmlWebpackPlugin = require('html-webpack-plugin');
+ var WebpackMd5Hash    = require('webpack-md5-hash');
+ var ENV = process.env.NODE_ENV = process.env.ENV = 'production';
+ var HOST = process.env.HOST || '0.0.0.0';
+ var PORT = process.env.PORT || 8080;
 var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
 // Webpack Plugins
 var metadata = {
   title: 'Antoine Savignac',
   baseUrl: '/',
-  host: '0.0.0.0',
-  port: 3000,
+  host: HOST,
+  port: PORT,
   ENV: ENV
 };
 
@@ -39,9 +46,9 @@ module.exports = {
   // Config for our build files
   output: {
     path: root('dist'),
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].map',
-    chunkFilename: '[id].chunk.js'
+    filename: '[name].[chunkhash].bundle.js',
+    sourceMapFilename: '[name].[chunkhash].bundle.map',
+    chunkFilename: '[id].[chunkhash].chunk.js'
   },
 
   resolve: {
@@ -50,13 +57,26 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [{ test: /\.ts$/, loader: 'tslint-loader', exclude: [/node_modules/] }],
+    preLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint-loader',
+        exclude: [
+          /node_modules/
+        ]
+      }
+    ],
     loaders: [
       // Support for .ts files.
       {
         test: /\.ts$/,
         loader: 'ts-loader',
         query: {
+          // remove TypeScript helpers to be injected below by DefinePlugin
+          'compilerOptions': {
+            'removeComments': true,
+            'noEmitHelpers': true,
+          },
           'ignoreDiagnostics': [
             2403, // 2403 -> Subsequent variable declarations
             2300, // 2300 -> Duplicate identifier
@@ -93,34 +113,70 @@ module.exports = {
         return [autoprefixer, precss];
   },
   plugins: [
-    new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity }),
+    new WebpackMd5Hash(),
+    new DedupePlugin(),
+    new OccurenceOrderPlugin(true),
+    new CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.[chunkhash].bundle.js',
+      minChunks: Infinity
+    }),
     // static assets
-    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ]),
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets'
+      }
+    ]),
     // generating html
-    new HtmlWebpackPlugin({ template: 'src/index.html', inject: false }),
-    // replace
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
     new DefinePlugin({
+      // Environment helpers
       'process.env': {
         'ENV': JSON.stringify(metadata.ENV),
         'NODE_ENV': JSON.stringify(metadata.ENV)
+      },
+      // TypeScript helpers
+      '__metadata': 'Reflect.metadata',
+      '__decorate': 'Reflect.decorate'
+    }),
+    new ProvidePlugin({
+      // '__metadata': 'ts-helper/metadata',
+      // '__decorate': 'ts-helper/decorate',
+      '__awaiter': 'ts-helper/awaiter',
+      '__extends': 'ts-helper/extends',
+      '__param': 'ts-helper/param',
+      'Reflect': 'es7-reflect-metadata/dist/browser'
+    }),
+    new UglifyJsPlugin({
+      // beautify: true,
+      // mangle: false,
+      comments: false,
+      compress : {
+        screw_ie8 : true
+      },
+      mangle: {
+        screw_ie8 : true
       }
     })
+   // include uglify in production
   ],
 
   // Other module loader config
   tslint: {
-    emitErrors: false,
-    failOnHint: false
+    emitErrors: true,
+    failOnHint: true
   },
-  // our Webpack Development Server config
-  devServer: {
-    port: metadata.port,
-    host: metadata.host,
-    contentBase: 'src/assets',
-    historyApiFallback: true,
-    watchOptions: { aggregateTimeout: 300, poll: 1000 }
-  },
-  node: {global: 'window', progress: false, crypto: 'empty', module: false, clearImmediate: false, setImmediate: false}
+  node: {
+    global: 'window',
+    progress: false,
+    crypto: 'empty',
+    module: false,
+    clearImmediate: false,
+    setImmediate: false
+  }
 };
 
 // Helper functions

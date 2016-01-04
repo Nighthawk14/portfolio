@@ -1,11 +1,11 @@
 import {Injectable, Component} from 'angular2/core';
 import {Project} from './project';
-// import {TranslatePipe} from 'ng2-translate/ng2-translate';
+import {TranslatePipe} from 'ng2-translate/ng2-translate';
 import {ProjectData} from './projectsData';
 
 @Component({
   selector: 'projects',
-//   pipes: [TranslatePipe],
+  pipes: [TranslatePipe],
   template: require('./projects.html'),
   directives: [Project],
   providers: [ProjectData],

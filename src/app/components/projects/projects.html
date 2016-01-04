@@ -1,8 +1,7 @@
 <div class="timelineContainer">
   <div class="container">
       <div class="page-header text-center">
-<!--           <h1 id="timeline">{{'PROJECTS' | translate}}</h1> -->
-        <h1 id="timeline">{{'PROJECTS'}}</h1>
+          <h1 id="timeline">{{'PROJECTS' | translate}}</h1>
       </div>
       <ul class="timeline">
         <li *ngFor="#project of projects" [ngClass]="{'timeline-inverted': project.inverted}">

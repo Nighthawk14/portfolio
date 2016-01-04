@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-  <title>Antoine Savignac</title>
+  <title>{%= o.webpackConfig.metadata.title %}</title>
   <meta name="description" content="Antoine Savignac Portfolio" />
   <meta name="keywords" content="antoine, savignac, antoine savignac, portfolio, web, chef de projet, junior" />
 
@@ -30,11 +30,15 @@
   <!-- end favicon -->
 
   <!-- base url -->
-  <base href="/">
+  <base href="{%= o.webpackConfig.metadata.baseUrl %}">
+
+  {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+  <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
+  {% } %}
 
 </head>
 <body>
-  
+
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -42,13 +46,6 @@
   <app>
     Loading...
   </app>
-
-  <!-- Common files to be cached -->
-  <script src="/__build__/common.js"></script>
-  <!-- Vendor files -->
-  <script src="/__build__/vendor.js"></script>
-  <!-- App script -->
-  <script src="/__build__/app.js"></script>
 
   <!-- Google Analytics: change UA-71073175-1 to be your site's ID -->
   <script>
@@ -60,6 +57,16 @@
      ga('create', 'UA-42237776-1', 'antoinesavignac.fr');
      ga('send', 'pageview');
   </script>
+
+  {% if (o.webpackConfig.metadata.ENV === 'development') { %}
+  <!-- Webpack Dev Server reload -->
+  <script src="http://{%= o.webpackConfig.metadata.host %}:{%= o.webpackConfig.metadata.port %}/webpack-dev-server.js"></script>
+  {% } %}
+
+  <!-- Webpack HtmlWebpackPlugin manually inject scripts -->
+  {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+  <script src="{%= o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+  {% } %}
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 import {Component, Injectable, Input, ElementRef, Host} from 'angular2/core';
 var technosData = require('./technos.json');
 import * as $ from 'jquery';
-// import {TranslatePipe} from 'ng2-translate/ng2-translate';
+import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
 class TechnoPosition {
   private row: number = 0;
@@ -29,7 +29,7 @@ class TechnoPosition {
 @Injectable()
 @Component({
   selector: 'techno',
-//   pipes: [TranslatePipe],
+  pipes: [TranslatePipe],
   template: require('./techno.html'),
   inputs: ['techno'],
   styles: [require('../../styles/technos/_techno.scss')]
@@ -55,10 +55,6 @@ class Techno {
   ngOnInit() {
     this.root = $(this.elementRef.nativeElement);
     let {base, row, addClear} = this.technoPosition.getBase(this.index);
-    console.log('index', this.index);
-    console.log('base', base);
-    console.log('row', row);
-    console.log('addClear', addClear);
     if(addClear) {
       this.root.before('<div class="clear"></div>');
     }
@@ -89,6 +85,7 @@ class Techno {
   selector: 'technos',
   template: require('./technos.html'),
   directives: [Techno],
+  pipes: [TranslatePipe],
   viewProviders: [TechnoPosition],
   styles: [require('../../styles/technos/_technos.scss')]
 })

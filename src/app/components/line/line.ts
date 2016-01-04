@@ -6,21 +6,21 @@ class LineDrawing {
   angle;
   triggerAnimation() {
     console.log(this.mask);
-//     this.mask.animate(
-//       {
-//         'left': $(window).width()*3,
-//         'top': -$(window).height()*3+100
-//       },
-//       {
-//         duration: 3000,
-//         specialEasing: {
-//           'left': 'easeInOutCubic',
-//           'top': 'easeInOutCubic'
-//       },
-//       complete: function() {
-//         $(this).css('display','none');
-//       }
-//     });
+    this.mask.animate(
+      {
+        'left': $(window).width()*3,
+        'top': -$(window).height()*3+100
+      },
+      {
+        duration: 3000,
+        specialEasing: {
+          'left': 'easeInOutCubic',
+          'top': 'easeInOutCubic'
+      },
+      complete: function() {
+        $(this).css('display','none');
+      }
+    });
   }
   calculateDiagonale() {
     let scrW = $('window').width();
@@ -34,7 +34,7 @@ class LineDrawing {
     this.setAngle(lineElement);
     this.mask.css('top',(scrH / 2)-$('#mask').height()/2);
   }
-  
+
   setAngle(element) {
 //     let cssProperties = 'scale(1) rotate(' + (-1) * angle + 'deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)';
 //     element.css('-webkit-transform', cssProperties);
@@ -64,4 +64,3 @@ export class Line {
 //     });
   }
 }
-

@@ -27,12 +27,12 @@ body {
   &.right .tooltip-arrow {
     border-right-color: $orange;
   }
-  
+
   .tooltip-inner{
     border-radius: 0px;
     background-color: $orange;
   }
-  
+
 }
 
 ul,li{
@@ -62,7 +62,7 @@ h3 {
       color: $orange;
     }
   }
-  
+
   .modal-content{
     border: 1px solid #dedede;
     -webkit-border-radius: 0px;
@@ -97,4 +97,6 @@ h3 {
 
 #technos {
   width: 100%;
+  display: block;
+  overflow-y: hidden;
 }

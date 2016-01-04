@@ -1,5 +1,6 @@
 import {Component, ElementRef} from 'angular2/core';
 import * as $ from 'jquery';
+import 'jquery.scrollTo';
 
 @Component({
   selector: '[nav]',
@@ -7,7 +8,7 @@ import * as $ from 'jquery';
   styles: [require('../../styles/nav/_nav.scss')]
 })
 export class Nav {
-  
+
   elementRef: ElementRef;
   root: any;
   constructor(elementRef: ElementRef) {
@@ -15,25 +16,25 @@ export class Nav {
   }
   moveTo(tag) {
     let {elem, offset} = this.getOffset(tag);
-//     $document.scrollTo(elem, offset,800).then(function(){
-//     $location.hash(tag);
-//   });
+    $(document).scrollTo(elem, {offset:offset, duration:800, onAfter: () => {
+       history.pushState({}, '', elem);
+    }});
   }
-  
-  ngAfterViewInit() {
+
+  ngOnInit() {
     this.root = $(this.elementRef.nativeElement);
-    let nav = this.root.find('nav');
-    console.log($(window).height()/2)
-    console.log(nav.height());
-    setTimeout(() => {
-      console.log(nav.height());
-    }, 2000);
-    nav.css('top', ($(window).height()/2) - (nav.height() / 2));
-    //this.renderer.setElementStyle(this.elementRef, 'top', '150px');
-    //let nav = $(this.elementRef.nativeElement).find('nav');
-    //nav.css('top', $(window).height()/2 - nav.height()/2);
   }
-  
+
+  ngAfterViewInit() {
+    let nav = this.root.find('nav');
+    setTimeout(() => {
+      nav.css('top', ($(window).height()/2) - (nav.height() / 2));
+    }, 100);
+
+
+    //nav.find('.nav-link').tooltip();
+  }
+
   private getOffset(tag) {
     let elem;
     let offset;
@@ -41,12 +42,12 @@ export class Nav {
     {
       case 'techs':
         elem = '#technos';
-        offset = -30;
+        offset = 0;
       break;
 
       case 'projects':
         elem = '#timeline';
-        offset = 30;
+        offset = -30;
       break;
 
       default:
@@ -54,7 +55,7 @@ export class Nav {
         offset = 0;
       break;
     }
-    
+
     return {elem, offset};
   }
 }
@@ -74,12 +75,3 @@ export class Nav {
 //   setTranslation();
 // });
 // $(element).find('.nav-link').tooltip();
-// $(element).css('top',$(window).height()/2 - $(element).height()/2);
-// $('nav a').on('click', function(e){
-//   e.preventDefault();
-//   var offset,elem;
-//   var tag = $(this).attr('data-element');
-//   $document.scrollTo(elem, offset,800).then(function(){
-//     $location.hash(tag);
-//   });
-// });

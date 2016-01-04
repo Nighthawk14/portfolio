@@ -18,7 +18,7 @@ export class App {
         let userLang = navigator.language.split('-')[0]; // use navigator lang if available
         console.log(userLang);
 //         translate.setDefaultLang('en');
-      
+
 //         translate.setTranslation('fr', {
 //           JS: 'Javascript',
 //           DEV: 'Développement',

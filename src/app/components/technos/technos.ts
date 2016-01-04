@@ -1,20 +1,28 @@
-import {Component, Injectable, Input} from 'angular2/core';
+import {Component, Injectable, Input, ElementRef, Host} from 'angular2/core';
 var technosData = require('./technos.json');
+import * as $ from 'jquery';
 // import {TranslatePipe} from 'ng2-translate/ng2-translate';
 
 class TechnoPosition {
   private row: number = 0;
   private base:number = 6;
-  
+  private loopIndex: number = -1;
+
   getBase(index) {
     let addClear = false;
-    if((index % this.base) === 0 && index !== 0) {
+    this.loopIndex++;
+    if(this.loopIndex === this.base) {
       this.base = (this.base === 6) ? 5 : 6;
       addClear = true;
       this.row++;
+      this.loopIndex = 0;
     }
-    
-    return {this.base, this.row, addClear};
+
+    return {
+      base:this.base,
+      row: this.row,
+      addClear: addClear
+    };
   }
 }
 
@@ -33,18 +41,24 @@ class Techno {
   CSSClass: String;
   disabled?: Boolean = false;
   technoPosition: TechnoPosition;
-  
+  elementRef: ElementRef;
+  root: any;
+
   @Input('index') private index: number;
   @Input('last') private last: Boolean;
-  private base: number = 6;
-  private row: number = 0;
-  
-  constructor(@Host() technoPosition: TechnoPosition) {
+
+  constructor(@Host() technoPosition: TechnoPosition, elementRef: ElementRef) {
     this.technoPosition = technoPosition;
+    this.elementRef = elementRef;
   }
 
   ngOnInit() {
-    let {base, row, addClear} = this.technoPosition.getBase(this.index)
+    this.root = $(this.elementRef.nativeElement);
+    let {base, row, addClear} = this.technoPosition.getBase(this.index);
+    console.log('index', this.index);
+    console.log('base', base);
+    console.log('row', row);
+    console.log('addClear', addClear);
     if(addClear) {
       this.root.before('<div class="clear"></div>');
     }
@@ -55,14 +69,13 @@ class Techno {
       this.root.css('top', this.getOffset(row));
     }
 
-//     if(this.last){
-//       var $w = $('#technos').find('.wrapper');
-//       $w.height($w.height()+(getOffset()));
-//       $('#technos').height(($(iElm).offset().top+$(iElm).height())-($('#technos').offset().top));
-//     }
+    if(this.last){
+      var $w = $('#technos').find('.wrapper');
+      $w.height($w.height()+(this.getOffset(row)));
+    }
   }
 
-  private getOffset() {
+  private getOffset(row: number) {
     return -27 * row;
   }
 }
@@ -82,6 +95,7 @@ class Techno {
 export class Technos {
   technos: Array<Techno> = [];
   filter: string;
+
   constructor() {
     technosData.forEach(techno => {
       this.technos.push(techno);

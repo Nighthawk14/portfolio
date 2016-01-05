@@ -76,11 +76,6 @@ class Techno {
   }
 }
 
-// @Component({
-//   selector: 'techno-mobile',
-//   template: require('./techno-mobile.html')
-// })
-
 @Component({
   selector: 'technos',
   template: require('./technos.html'),

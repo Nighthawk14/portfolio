@@ -38,7 +38,7 @@
    width: $techW;
    height: $techH;
    background-size: 100% auto;
-  
+
   /*&.mobile-yummy{
     background-image:url('/images/mobile-yummy.png');
   }
@@ -180,6 +180,12 @@
   }
   &.chef{
     background-image:url('/images/logos/chef-logo.png');
+  }
+  &.grails{
+    background-image:url('/images/logos/grails-logo.png');
+  }
+  &.webpack{
+    background-image:url('/images/logos/webpack-logo.png');
   }
 }
 

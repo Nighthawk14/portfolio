@@ -1,7 +1,6 @@
-import {Component, Injectable, ElementRef} from 'angular2/core';
+import {Component, ElementRef} from 'angular2/core';
 import * as $ from 'jquery';
 import 'jquery-ui';
-
 
 class LineDrawing {
   mask = $('#mask');
@@ -36,9 +35,8 @@ class LineDrawing {
     lineElement.css('left', ( -1 ) * ((length - scrW) / 2) );
     lineElement.css('width', length);
     lineElement.css('top', (scrH / 2));
-
     this.setAngle(lineElement);
-    this.mask.css('top',(scrH / 2)-$('#mask').height()/2);
+    this.mask.css('top',(scrH / 2)-2000);
   }
 
   setAngle(element) {
@@ -51,7 +49,6 @@ class LineDrawing {
   }
 }
 
-@Injectable()
 @Component({
   selector: 'line',
   template: require('./line.html'),
@@ -66,12 +63,8 @@ export class Line {
     this.line = line;
   }
   ngAfterContentInit() {
-    $(document).ready(() => {
-      setTimeout(() => {
-        this.line.calculateDiagonale();
-        this.line.triggerAnimation();
-      }, 100);
-    });
+    this.line.calculateDiagonale();
+    this.line.triggerAnimation();
   }
   ngOnInit() {
     $(this.elementRef.nativeElement).css({
@@ -80,5 +73,9 @@ export class Line {
     $(window).bind('resize', () => {
       this.line.calculateDiagonale();
     });
+  }
+
+  moveToProjects() {
+    $(document).scrollTo('#timeline', {offset:-30, duration:800});
   }
 }

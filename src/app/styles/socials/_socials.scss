@@ -1,3 +1,5 @@
+@import '../nav/nav';
+
 .socials{
   display: inline-block;
   width: 40px;
@@ -6,7 +8,6 @@
   a{
     @extend .nav-link;
   }
-
 }
 
 .facebook{

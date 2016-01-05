@@ -49,12 +49,21 @@
     "CSSClass":"loopback"
   },
   {
-    "title":"Total.js",
-    "description":"Javascript",
+    "title":"Webpack",
+    "description":"Module builder",
     "tags":[
-      "js"
+      "js",
+      "dev"
     ],
-    "CSSClass":"totaljs"
+    "CSSClass":"webpack"
+  },
+  {
+    "title":"Grails",
+    "description":"Groovy/Java framework",
+    "tags":[
+      "dev"
+    ],
+    "CSSClass":"grails"
   },
   {
     "title":"Backbone",

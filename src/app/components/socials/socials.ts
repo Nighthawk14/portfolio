@@ -1,4 +1,5 @@
 import {Component, ElementRef} from 'angular2/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'socials',
@@ -7,13 +8,25 @@ import {Component, ElementRef} from 'angular2/core';
 })
 export class Socials {
   root: any;
+  socials: any;
+
   constructor(elementRef: ElementRef) {
     this.root = elementRef.nativeElement;
   }
+
+  private getTopPosition() {
+    return $(window).height()/2 - this.socials.height()/2;
+  }
+
+  ngOnInit() {
+    this.socials = $(this.root).find('.socials');
+    $(window).resize(() => {
+      this.socials.css('top', this.getTopPosition());
+    });
+  }
   ngAfterViewInit() {
-    let socials = $(this.root);
     setTimeout(() => {
-      socials.css('top', ($(window).height()/2) - (socials.height() / 2));
+      this.socials.css('top', this.getTopPosition());
     }, 100);
   }
 }

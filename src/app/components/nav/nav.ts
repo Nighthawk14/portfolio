@@ -1,6 +1,10 @@
 import {Component, ElementRef} from 'angular2/core';
-import {TranslateService} from 'ng2-translate/ng2-translate';
+import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
 import * as $ from 'jquery';
+//TODO: find another way to do that
+//TODO: issue is in bootstrap "jQuery is not defined"
+window['jQuery'] = $;
+import 'bootstrap';
 import 'jquery.scrollto';
 import {Socials} from '../socials/socials';
 
@@ -8,6 +12,7 @@ import {Socials} from '../socials/socials';
   selector: '[nav]',
   template: require('./nav.html'),
   directives: [Socials],
+  pipes: [TranslatePipe],
   styles: [require('../../styles/nav/_nav.scss')]
 })
 export class Nav {
@@ -19,6 +24,15 @@ export class Nav {
   constructor(elementRef: ElementRef, translate: TranslateService) {
     this.elementRef = elementRef;
     this.translate = translate;
+    this.listenLangForTooltip();
+  }
+
+  private listenLangForTooltip() {
+    this.translate.onLangChange.subscribe((params: {lang: string, translations: any}) => {
+      this.nav.find('.nav-link').each((index, value) => {
+        $(value).attr('data-original-title', params.translations[$(value).attr('data-key')]);
+      });
+    });
   }
 
   moveTo(event, tag) {
@@ -29,20 +43,24 @@ export class Nav {
     }});
   }
 
+  private getTopPosition() {
+    return $(window).height()/2 - this.nav.height()/2;
+  }
+
   ngOnInit() {
     this.root = $(this.elementRef.nativeElement);
     this.nav = this.root.find('nav');
     $(window).resize(() => {
-      this.nav.css('top',$(window).height()/2 - this.nav.height()/2);
+      this.nav.css('top', this.getTopPosition());
     });
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.nav.css('top', ($(window).height()/2) - (this.nav.height() / 2));
+      this.nav.css('top', this.getTopPosition());
     }, 100);
 
-    //nav.find('.nav-link').tooltip();
+    this.nav.find('.nav-link').tooltip();
   }
 
   changeLang(lang: string) {
@@ -77,16 +95,3 @@ export class Nav {
     return {elem, offset};
   }
 }
-
-// var setTranslation = function(){
-//   $(element).find('.nav-link').each(function(k,value){
-//     var key = $(value).attr('data-key');
-//     $translate(key).then(function (translation) {
-//       $(value).attr({
-//         'data-original-title':translation,
-//         'title':translation
-//       });
-//     });
-//   });
-// };
-// $(element).find('.nav-link').tooltip();

@@ -1,12 +1,14 @@
-<div class="flip-container" (ontouchstart)="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      <div class="imgTech" [ngClass]="techno.CSSClass"></div>
-    </div>
-    <div class="back">
-      <div class="title">{{techno.title}}</div>
-      <div class="desc">
-        {{techno.description}}
+<div class="techno_desktop">
+  <div class="flip-container" (ontouchstart)="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        <div class="imgTech" [ngClass]="techno.CSSClass"></div>
+      </div>
+      <div class="back">
+        <div class="title">{{techno.title}}</div>
+        <div class="desc">
+          {{techno.description}}
+        </div>
       </div>
     </div>
   </div>

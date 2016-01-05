@@ -1,11 +1,13 @@
 import {Component, ElementRef} from 'angular2/core';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 import * as $ from 'jquery';
-import 'jquery.scrollTo';
+import 'jquery.scrollto';
+import {Socials} from '../socials/socials';
 
 @Component({
   selector: '[nav]',
   template: require('./nav.html'),
+  directives: [Socials],
   styles: [require('../../styles/nav/_nav.scss')]
 })
 export class Nav {

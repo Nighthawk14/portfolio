@@ -3,17 +3,9 @@
     <li><a href="#" data-toggle="tooltip" data-placement="right" data-key="HOME" class="nav-link home" (click)="moveTo($event, 'home')"></a></li>
     <li><a href="#" data-toggle="tooltip" data-placement="right" data-key="PROJECTS" class="nav-link projets" (click)="moveTo($event, 'projects')"></a></li>
     <li><a href="#" data-toggle="tooltip" data-placement="right" data-key="TECHS" class="nav-link technos" (click)="moveTo($event, 'techs')"></a></li>
-<!--     <li><div class="nav-link fr" ng-show="$parent.lang=='en'" ng-click="changeLanguage('fr')"></div></li>
-    <li><div class="nav-link en" ng-show="$parent.lang=='fr'" ng-click="changeLanguage('en')"></div></li> -->
-     <li><div class="nav-link fr" [style.display]="isNavLangHidden('fr')?'none':'inherit'" (click)="changeLang('fr')"></div></li>
+    <li><div class="nav-link fr" [style.display]="isNavLangHidden('fr')?'none':'inherit'" (click)="changeLang('fr')"></div></li>
     <li><div class="nav-link en" [style.display]="isNavLangHidden('en')?'none':'inherit'" (click)="changeLang('en')"></div></li>
   </ul>
 </nav>
-<div class="socials">
-  <a href="https://www.facebook.com/asavignac1" class="nav-link facebook" target="_blank"></a>
-  <a href="https://twitter.com/AntoineSavignac" class="nav-link twitter" target="_blank"></a>
-  <a href="https://github.com/Nighthawk14" class="nav-link github" target="_blank"></a>
-  <a href="http://fr.linkedin.com/pub/antoine-savignac/3b/884/613/" class="nav-link linkedin" target="_blank"></a>
-  <a href="https://coderbits.com/NightHawk" class="nav-link coderbits" target="_blank"></a>
-  <a href="https://drive.google.com/file/d/0ByTZqMiGXKIAaFBOLVJRdG5GdTg/view?usp=sharing" class="nav-link cv" target="_blank"></a>
-</div>
+<socials></socials>
+

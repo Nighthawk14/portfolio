@@ -20,12 +20,12 @@ body{
 }
 
 .socials{
-  
+
   width: 276px;
   margin:0 auto;
   margin-top: 40px;
   a,div{
-    background-image: url('/images/sprite-rs.svg');
+    background-image: url('/assets/images/sprite-rs.svg');
     width: 36px;
     height: 35px;
     display: inline-block;
@@ -134,9 +134,9 @@ body{
       background-color: #f7f7f7;
       border: 1px solid #eeeeee;
     }
-    
+
   }
-} 
+}
 
 .modal.fade{
   top: -80%;
@@ -150,11 +150,11 @@ body{
   -moz-border-radius: 0px;
   border-radius: 0px;
   overflow-y:scroll;
-  
+
   input{
     margin-bottom: 15px;
   }
-  
+
   .modal-header{
     border-bottom: 1px solid #f6f6f6;
     text-align: center;

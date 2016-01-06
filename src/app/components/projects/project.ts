@@ -56,5 +56,5 @@ export class Project {
   image: string;
   title: MultiLangCopy;
   urls: Array<Url>;
-  inverted?: Boolean;
+  inverted: Boolean;
 }

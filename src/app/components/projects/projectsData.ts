@@ -1,7 +1,7 @@
 import {Project} from './project';
 
 export class ProjectData {
-  data: Array<Project> = [
+  data: Array<any> = [
     {
       image:'nowtv.jpg',
       title:{
@@ -60,7 +60,7 @@ export class ProjectData {
              J'ai réalisé la partie FrontEnd avec <span class="orange">AngularJS, RequireJS et Strophe</span> ainsi que la partie BackEnd qui se compose de <span class="orange">deux Web Services en Node.Js</span>.
              J'ai aussi mis en place et configurer le <span class="orange">serveur XMPP (Prosody)</span>.
              Les données du Tchat sont stockées dans une <span class="orange">base de donnée MySQL</span>.`,
-        en: `Responsible of creating an <span class="orange">instant messaging service</span> for Yummypets platform with a number of users 
+        en: `Responsible of creating an <span class="orange">instant messaging service</span> for Yummypets platform with a number of users
             <span class="orange">exceeding 150 000</span>. I made the FrontEnd part with <span class="orange">AngularJS, RequireJS and Strophe</span> and the BackEnd part which is composed of <span class="orange">two Web Services in Node.Js</span>.
             I also set up and configured the <span class="orange">XMPP server (Prosody)</span>. The chat's data are stored in a <span class="orange">MySQL database</span>.`
       },
@@ -330,12 +330,12 @@ export class ProjectData {
           <span class="orange">Kariboo</span> est une application mobile IOS développée en Objective-C. Elle permet d'éffectuer des échanges de données entre son mobile et son ordinateur grâce à un réseau wifi.
           Kariboo vous permet entre autre de <span class="orange">lire les musiques / videos de votre téléphone portable sur votre ordinateur</span>, de gérer vos contacts ou encore de faire de simple échanges de fichier.
           J'ai réalisé ce projet dans le cadre de mon <span class="orange">Master 1 à l'ESTEI</span>.
-          <img src="images/projects/kariboo-music.png">`,
+          <img src="assets/images/projects/kariboo-music.png">`,
          en:`
           <span class="orange">Kariboo</span> is an IOS application developed in Objective-C. It allows data exchange between your smartphone and your computer through a wifi network.
           Kariboo also allows you <span class="orange">to play music or videos from your smartphone on your computer</span>, to manage your contacts or even to make file exchanges.
           I have executed this project under my <span class="orange">Master degree at ESTEI</span>.
-          <img src="images/projects/kariboo-music.png">`
+          <img src="assets/images/projects/kariboo-music.png">`
       },
       urls:[]
     },

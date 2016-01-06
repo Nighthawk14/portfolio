@@ -1,7 +1,7 @@
 @import "../variables";
 
 .back{
-  background: url('/images/techbg.svg') no-repeat;
+  background: url('/assets/images/techbg.svg') no-repeat;
   background-size: 100% auto;
 }
 
@@ -40,152 +40,152 @@
    background-size: 100% auto;
 
   /*&.mobile-yummy{
-    background-image:url('/images/mobile-yummy.png');
+    background-image:url('/assets/images/mobile-yummy.png');
   }
   &.city-dashboard{
-    background-image:url('/images/city-bg.png');
+    background-image:url('/assets/images/city-bg.png');
   }&.kariboo{
-    background-image:url('/images/kariboo-bg.png');
+    background-image:url('/assets/images/kariboo-bg.png');
   }&.feux-vert{
-    background-image:url('/images/feux-bg.png');
+    background-image:url('/assets/images/feux-bg.png');
   }&.palm{
-    background-image:url('/images/palm-bg.png');
+    background-image:url('/assets/images/palm-bg.png');
   }&.semaine-digitale{
-    background-image:url('/images/semaine-bg.png');
+    background-image:url('/assets/images/semaine-bg.png');
   }&.daubert{
-    background-image:url('/images/daubert-bg.png');
+    background-image:url('/assets/images/daubert-bg.png');
   }&.ipassemploi{
-    background-image:url('/images/ipassemploi-bg.png');
+    background-image:url('/assets/images/ipassemploi-bg.png');
   }*/
 
   /*
   &.class{
-    background-image:url('/images/logos/');
+    background-image:url('/assets/images/logos/');
   }
    */
 
   &.angular{
-    background-image:url('/images/logos/angular-logo.png');
+    background-image:url('/assets/images/logos/angular-logo.png');
   }
   &.node{
-    background-image:url('/images/logos/node-logo.png');
+    background-image:url('/assets/images/logos/node-logo.png');
   }
   &.grunt{
-    background-image:url('/images/logos/grunt-logo.png');
+    background-image:url('/assets/images/logos/grunt-logo.png');
   }
   &.express{
-    background-image:url('/images/logos/express-logo.png');
+    background-image:url('/assets/images/logos/express-logo.png');
   }
   &.sails{
-    background-image:url('/images/logos/sails-logo.png');
+    background-image:url('/assets/images/logos/sails-logo.png');
   }
   &.totaljs{
-    background-image:url('/images/logos/totaljs-logo.png');
+    background-image:url('/assets/images/logos/totaljs-logo.png');
   }
   &.kraken{
-    background-image:url('/images/logos/kraken-logo.png');
+    background-image:url('/assets/images/logos/kraken-logo.png');
   }
   &.backbone{
-    background-image:url('/images/logos/backbone-logo.png');
+    background-image:url('/assets/images/logos/backbone-logo.png');
   }
   &.cordova{
-    background-image:url('/images/logos/cordova-logo.png');
+    background-image:url('/assets/images/logos/cordova-logo.png');
   }
   &.karma{
-    background-image:url('/images/logos/karma-logo.png');
+    background-image:url('/assets/images/logos/karma-logo.png');
   }
   &.jquery{
-    background-image:url('/images/logos/jquery-logo.png');
+    background-image:url('/assets/images/logos/jquery-logo.png');
   }
   &.require{
-    background-image:url('/images/logos/require-logo.png');
+    background-image:url('/assets/images/logos/require-logo.png');
   }
   &.yeoman{
-    background-image:url('/images/logos/yeoman-logo.png');
+    background-image:url('/assets/images/logos/yeoman-logo.png');
   }
   &.ionic{
-    background-image:url('/images/logos/ionic-logo.png');
+    background-image:url('/assets/images/logos/ionic-logo.png');
   }
   &.lodash{
-    background-image:url('/images/logos/lodash-logo.png');
+    background-image:url('/assets/images/logos/lodash-logo.png');
   }
   &.socket-io{
-    background-image:url('/images/logos/socketio-logo.png');
+    background-image:url('/assets/images/logos/socketio-logo.png');
   }
   &.d3{
-    background-image:url('/images/logos/d3-logo.png');
+    background-image:url('/assets/images/logos/d3-logo.png');
   }
   &.bower{
-    background-image:url('/images/logos/bower-logo.png');
+    background-image:url('/assets/images/logos/bower-logo.png');
   }
   &.mongo{
-    background-image:url('/images/logos/mongo-logo.png');
+    background-image:url('/assets/images/logos/mongo-logo.png');
   }
   &.mysql{
-    background-image:url('/images/logos/mysql-logo.png');
+    background-image:url('/assets/images/logos/mysql-logo.png');
   }
   &.redis{
-    background-image:url('/images/logos/redis-logo.png');
+    background-image:url('/assets/images/logos/redis-logo.png');
   }
   &.solr{
-    background-image:url('/images/logos/solr-logo.png');
+    background-image:url('/assets/images/logos/solr-logo.png');
   }
   &.php{
-    background-image:url('/images/logos/php-logo.png');
+    background-image:url('/assets/images/logos/php-logo.png');
   }
   &.codeigniter{
-    background-image:url('/images/logos/codeigniter-logo.png');
+    background-image:url('/assets/images/logos/codeigniter-logo.png');
   }
   &.symfony{
-    background-image:url('/images/logos/symfony-logo.png');
+    background-image:url('/assets/images/logos/symfony-logo.png');
   }
   &.zend{
-    background-image:url('/images/logos/zend-logo.png');
+    background-image:url('/assets/images/logos/zend-logo.png');
   }
   &.prosody{
-    background-image:url('/images/logos/prosody-logo.png');
+    background-image:url('/assets/images/logos/prosody-logo.png');
   }
   &.xmpp{
-    background-image:url('/images/logos/xmpp-logo.png');
+    background-image:url('/assets/images/logos/xmpp-logo.png');
   }
   &.ruby{
-    background-image:url('/images/logos/ruby-logo.png');
+    background-image:url('/assets/images/logos/ruby-logo.png');
   }
   &.new-relic{
-    background-image:url('/images/logos/newrelic-logo.png');
+    background-image:url('/assets/images/logos/newrelic-logo.png');
   }
   &.heroku{
-    background-image:url('/images/logos/heroku-logo.png');
+    background-image:url('/assets/images/logos/heroku-logo.png');
   }
   &.html5{
-    background-image:url('/images/logos/html5-logo.png');
+    background-image:url('/assets/images/logos/html5-logo.png');
   }
   &.css3{
-    background-image:url('/images/logos/css3-logo.png');
+    background-image:url('/assets/images/logos/css3-logo.png');
   }
   &.aws{
-    background-image:url('/images/logos/aws-logo.png');
+    background-image:url('/assets/images/logos/aws-logo.png');
   }
   &.mariadb{
-    background-image:url('/images/logos/mariadb-logo.png');
+    background-image:url('/assets/images/logos/mariadb-logo.png');
   }
   &.loopback{
-    background-image:url('/images/logos/loopback-logo.png');
+    background-image:url('/assets/images/logos/loopback-logo.png');
   }
   &.docker{
-    background-image:url('/images/logos/docker-logo.png');
+    background-image:url('/assets/images/logos/docker-logo.png');
   }
   &.nginx{
-    background-image:url('/images/logos/nginx-logo.png');
+    background-image:url('/assets/images/logos/nginx-logo.png');
   }
   &.chef{
-    background-image:url('/images/logos/chef-logo.png');
+    background-image:url('/assets/images/logos/chef-logo.png');
   }
-  &.grails{
-    background-image:url('/images/logos/grails-logo.png');
+  &.groovy{
+    background-image:url('/assets/images/logos/groovy-logo.png');
   }
   &.webpack{
-    background-image:url('/images/logos/webpack-logo.png');
+    background-image:url('/assets/images/logos/webpack-logo.png');
   }
 }
 
@@ -195,10 +195,10 @@
 .flip-container {
   perspective: 1000;
 }
-  /* flip the pane when hovered */
-  .flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
   width: $techW;

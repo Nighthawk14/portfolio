@@ -46,7 +46,7 @@ object{
 }
 
 .scroll{
-  background: url('/images/arrow-intro.svg') no-repeat 50%;
+  background: url('/assets/images/arrow-intro.svg') no-repeat 50%;
   background-color: $orange;
   width: 50px;
   height: 50px;
@@ -73,7 +73,7 @@ object{
   }
 
   &:hover{
-    background: url('/images/arrow-intro_o.svg') no-repeat 50%;
+    background: url('/assets/images/arrow-intro_o.svg') no-repeat 50%;
     border: 1px solid $orange;
     background-color: #FFFFFF;
   }

@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 //TODO: issue is in bootstrap "jQuery is not defined"
 window['jQuery'] = $;
 import 'bootstrap';
-import 'jquery.scrollto';
+import 'jquery.scrollTo';
 import {Socials} from '../socials/socials';
 
 @Component({

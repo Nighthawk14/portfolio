@@ -39,7 +39,7 @@ class Techno {
   description: String;
   tags: Array<String>;
   CSSClass: String;
-  disabled?: Boolean = false;
+  disabled: Boolean = false;
   technoPosition: TechnoPosition;
   elementRef: ElementRef;
   root: any;

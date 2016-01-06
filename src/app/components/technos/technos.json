@@ -58,12 +58,12 @@
     "CSSClass":"webpack"
   },
   {
-    "title":"Grails",
-    "description":"Groovy/Java framework",
+    "title":"Groovy",
+    "description":"Java platform language",
     "tags":[
       "dev"
     ],
-    "CSSClass":"grails"
+    "CSSClass":"groovy"
   },
   {
     "title":"Backbone",

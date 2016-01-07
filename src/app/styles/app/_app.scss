@@ -1,5 +1,6 @@
 @import '../variables';
-@import '~bootstrap/dist/css/bootstrap';
+$icon-font-path: "/assets/fonts/";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 $ionicons-font-path: "/assets/fonts";
 @import '~ionicons/scss/ionicons';
 

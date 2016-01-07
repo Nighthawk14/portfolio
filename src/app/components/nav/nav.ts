@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 //TODO: find another way to do that
 //TODO: issue is in bootstrap "jQuery is not defined"
 window['jQuery'] = $;
-import 'bootstrap';
+import 'bootstrap-sass';
 import 'jquery.scrollTo';
 import {Socials} from '../socials/socials';
 

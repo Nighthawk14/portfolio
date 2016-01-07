@@ -12,7 +12,7 @@ export class ProjectData {
         fr: `Je suis actuellement <span class="orange">Full stack software developer</span> pour Sky sur le projet NOWTV. Travaillant en <span class="orange">pair-programming</span> dans une equipe de 8 developpeurs sur toute la partie "content discovery" / "playout" / "signup".
              Je travaille dans un environnement <span class="orange">AGILE (Scrum)</span> comprenant "daily stand-ups", "refactoring / retrospective sessions" etc.
              Nous travaillons en <span class="orange">TDD (unit, functional, integration)</span> sur un stack comprenant <span class="orange">Groovy</span> pour le backEnd et <span class="orange">AngularJS</span> pour le frontEnd.`,
-        en: `I'm currently working as a <span class="orange">Full stack software developer</span> for Sky on the NOWTV project. Working in <span class="orange">pair-programming</span> in a 8 developers team on different aspects of the app: "content discovery" / "playout" / "signup".
+        en: `I'm currently working as a <span class="orange">Full stack software developer</span> for Sky on the NOWTV project. Working in <span class="orange">pair-programming</span> in a team of 8 developers on different aspects of the app: "content discovery" / "playout" / "signup".
              I'm working in a full <span class="orange">AGILE (Scrum)</span> environment including "daily stand-ups", "refactoring / retrospective sessions" etc.
              We are working with <span class="orange">TDD (unit, functional, integration)</span> on a stack containing <span class="orange">Groovy</span> on the backEnd and <span class="orange">AngularJS</span> on the frontEnd.`
       },

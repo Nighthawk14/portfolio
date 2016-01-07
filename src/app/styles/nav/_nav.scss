@@ -1,0 +1,51 @@
+.nav-link{
+  background-image: url('/assets/images/sprite-rs.svg');
+  width: 37px;
+  height: 35px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+nav{
+  position: fixed;
+  left: 10px;
+  width: 40px;
+  display: inline-block;
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  li{
+    a{
+      @extend .nav-link;
+    }
+  }
+}
+
+.home{
+  background-position: -261px top;
+  &:hover
+  {
+    background-position: -261px bottom;
+  }
+}
+.technos{
+  background-position: -224px top;
+  &:hover
+  {
+    background-position:-224px bottom;
+  }
+}
+.projets{
+  background-position: -299px top;
+  &:hover
+  {
+    background-position:-299px bottom;
+  }
+}
+.fr{
+  background-position: -335px bottom;
+}
+.en{
+  background-position: -373px bottom;
+}

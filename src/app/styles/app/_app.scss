@@ -1,0 +1,121 @@
+@import '../variables';
+$icon-font-path: "/assets/fonts/";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$ionicons-font-path: "/assets/fonts";
+@import '~ionicons/scss/ionicons';
+
+body {
+  overflow-x:hidden;
+  height: auto;
+  width: 100%;
+  font-family: $open;
+  line-height:1.5;
+
+  &.modal-open{
+    height: 100%;
+  }
+}
+
+.cursor{
+  cursor: pointer;
+}
+.tooltip{
+  &.right .tooltip-arrow {
+    border-right-color: $orange;
+  }
+
+  .tooltip-inner{
+    border-radius: 0px;
+    background-color: $orange;
+  }
+
+}
+
+ul,li{
+  list-style-type: none !important;
+}
+
+/* h1 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.17em;
+} */
+
+.modal{
+  .modal-body{
+    font-family: $open;
+    p{
+      margin: 10px;
+      color: #565656;
+      line-height: 20px;
+
+      &.center{
+        text-align: center;
+      }
+    }
+    .orange{
+      color: $orange;
+    }
+  }
+
+  .modal-content{
+    border: 1px solid #dedede;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #FFF;
+  }
+
+  input{
+    margin-bottom: 15px;
+  }
+
+  .modal-header{
+    border-bottom: 1px solid #f6f6f6;
+    text-align: center;
+    padding:30px 0px 25px 0px;
+  }
+
+  .modal-body{
+    padding: 30px 25px;
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-family: $oxygen;
+    font-size: 36px;
+    font-weight: 300;
+    color: #565656;
+    margin-top: 25px;
+  }
+}
+
+app, #home, #technos {
+    display: block;
+}
+
+#line{
+  position:relative;
+  top:0;
+  height:9px;
+  width:0;
+  background:$orange;
+  left:0;
+  -moz-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -webkit-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -o-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  -ms-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+
+#home{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#technos {
+  width: 100%;
+  overflow-y: hidden;
+}

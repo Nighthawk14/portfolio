@@ -4,12 +4,13 @@ import {Projects} from './components/projects/projects.ts';
 import {Line} from './components/line/line';
 import {Technos} from './components/technos/technos';
 import {Nav} from './components/nav/nav';
+import {MobileHome} from './components/mobile-home/mobile-home';
 
 @Injectable()
 @Component({
   selector: 'app',
   template: require('./app.html'),
-  directives: [Projects, Technos, Nav, Line],
+  directives: [Projects, Technos, Nav, Line, MobileHome],
   styles: [require('./styles/app/_app.scss')],
   encapsulation: ViewEncapsulation.None
 })

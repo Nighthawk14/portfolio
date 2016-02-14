@@ -1,14 +1,15 @@
-import {Component, ElementRef} from 'angular2/core';
+import {Component, ElementRef, Input} from 'angular2/core';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'socials',
   template: require('./socials.html'),
-  styles: [require('../../styles/socials/_socials.scss')]
+  styles: [require('../../styles/socials/_socials.scss'), require('../../styles/socials/_mobile.scss')]
 })
 export class Socials {
   root: any;
   socials: any;
+  @Input('mobile') mobile: Boolean = false;
 
   constructor(elementRef: ElementRef) {
     this.root = elementRef.nativeElement;
@@ -21,12 +22,16 @@ export class Socials {
   ngOnInit() {
     this.socials = $(this.root).find('.socials');
     $(window).resize(() => {
-      this.socials.css('top', this.getTopPosition());
+      if(!this.mobile) {
+        this.socials.css('top', this.getTopPosition());
+      }
     });
   }
   ngAfterViewInit() {
     setTimeout(() => {
-      this.socials.css('top', this.getTopPosition());
+      if(!this.mobile) {
+        this.socials.css('top', this.getTopPosition());
+      }
     }, 100);
   }
 }

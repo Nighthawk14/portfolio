@@ -1,0 +1,64 @@
+@import "../../assets/styles/variables";
+
+.wrapper{
+  padding: 40px 20px;
+  width: 904px;
+  margin: 0 auto;
+}
+
+.filters{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #DDDDDD;
+  text-align: center;
+  font-family: $open;
+  margin-bottom: 20px;
+  i{
+    color: $orange;
+    font-size: 30px;
+    position: relative;
+    top: 7px;
+    margin-right: 20px;
+  }
+  span{
+    &.caption{
+      color: #333;
+    }
+    transition: all .3s ease 0s;
+    &.active,&:hover{
+      color: $orange;
+    }
+    cursor: pointer;
+  }
+}
+
+.techs{
+  position: relative;
+  top: 20px;
+
+  .tech{
+
+    width: $techW;
+    height: $techH;
+    margin: 0px 6px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 300;
+    position: relative;
+    transition: all .2s;
+
+    &.disabled{
+      opacity: .2;
+    }
+
+    &.odd{
+      left:($techW/2)+6;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .wrapper {
+    display: none;
+  }
+}

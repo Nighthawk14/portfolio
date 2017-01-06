@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {TranslateModule, TranslateService} from 'ng2-translate/ng2-translate';
+import {HttpModule} from '@angular/http';
+import {TranslateModule, TranslateService} from "ng2-translate/ng2-translate";
 
 import { AppComponent } from './app.component';
 import { TechnosComponent } from './technos/technos.component';
@@ -28,6 +29,7 @@ import { LineComponent } from './line/line.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     TranslateModule.forRoot()
   ],
   providers: [],

@@ -125,3 +125,8 @@ app, #home, #technos {
     display: none;
   }
 }
+@media screen and (min-width: 800px) {
+  #mobile-home {
+    display:none;
+  }
+}

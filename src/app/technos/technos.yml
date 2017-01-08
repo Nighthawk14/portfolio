@@ -10,16 +10,47 @@
   tags:
   - js
   CSSClass: node
-- title: Grunt
+- title: Webpack
+  description: Module builder
+  tags:
+  - js
+  - dev
+  CSSClass: webpack
+- title: Redux
   description: Javascript
   tags:
   - js
-  CSSClass: grunt
+  - dev
+  CSSClass: redux
 - title: Express
   description: Javascript
   tags:
   - js
   CSSClass: express
+- title: Jasmine
+  description: Testing framework
+  tags:
+  - js
+  - dev
+  CSSClass: jasmine
+- title: Protractor
+  description: Testing framework
+  tags:
+  - js
+  - dev
+  CSSClass: protractor
+- title: TypeScript
+  description: Javascript
+  tags:
+  - js
+  - dev
+  CSSClass: typescript
+- title: Koa
+  description: Javascript
+  tags:
+  - js
+  - dev
+  CSSClass: koa
 - title: Sails.js
   description: Javascript
   tags:
@@ -30,12 +61,11 @@
   tags:
   - js
   CSSClass: loopback
-- title: Webpack
-  description: Module builder
+- title: Grunt
+  description: Javascript
   tags:
   - js
-  - dev
-  CSSClass: webpack
+  CSSClass: grunt
 - title: Groovy
   description: Java platform language
   tags:

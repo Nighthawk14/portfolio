@@ -63,129 +63,180 @@
     background-image:url('/assets/images/logos/');
   }
    */
+  @include technoImage('angular');
+  @include technoImage('node');
+  @include technoImage('grunt');
+  @include technoImage('express');
+  @include technoImage('sails');
+  @include technoImage('totaljs');
+  @include technoImage('kraken');
+  @include technoImage('backbone');
+  @include technoImage('cordova');
+  @include technoImage('karma');
+  @include technoImage('jquery');
+  @include technoImage('require');
+  @include technoImage('yeoman');
+  @include technoImage('ionic');
+  @include technoImage('lodash');
+  @include technoImage('socket');
+  @include technoImage('d3');
+  @include technoImage('bower');
+  @include technoImage('mongo');
+  @include technoImage('mysql');
+  @include technoImage('redis');
+  @include technoImage('solr');
+  @include technoImage('php');
+  @include technoImage('codeigniter');
+  @include technoImage('symfony');
+  @include technoImage('zend');
+  @include technoImage('prosody');
+  @include technoImage('xmpp');
+  @include technoImage('ruby');
+  @include technoImage('new');
+  @include technoImage('heroku');
+  @include technoImage('html5');
+  @include technoImage('css3');
+  @include technoImage('aws');
+  @include technoImage('mariadb');
+  @include technoImage('loopback');
+  @include technoImage('docker');
+  @include technoImage('nginx');
+  @include technoImage('chef');
+  @include technoImage('groovy');
+  @include technoImage('webpack');
+  @include technoImage('redux');
+  @include technoImage('typescript');
+  @include technoImage('koa');
+  @include technoImage('protractor');
 
-  &.angular{
-    background-image:url('/assets/images/logos/angular-logo.png');
-  }
-  &.node{
-    background-image:url('/assets/images/logos/node-logo.png');
-  }
-  &.grunt{
-    background-image:url('/assets/images/logos/grunt-logo.png');
-  }
-  &.express{
-    background-image:url('/assets/images/logos/express-logo.png');
-  }
-  &.sails{
-    background-image:url('/assets/images/logos/sails-logo.png');
-  }
-  &.totaljs{
-    background-image:url('/assets/images/logos/totaljs-logo.png');
-  }
-  &.kraken{
-    background-image:url('/assets/images/logos/kraken-logo.png');
-  }
-  &.backbone{
-    background-image:url('/assets/images/logos/backbone-logo.png');
-  }
-  &.cordova{
-    background-image:url('/assets/images/logos/cordova-logo.png');
-  }
-  &.karma{
-    background-image:url('/assets/images/logos/karma-logo.png');
-  }
-  &.jquery{
-    background-image:url('/assets/images/logos/jquery-logo.png');
-  }
-  &.require{
-    background-image:url('/assets/images/logos/require-logo.png');
-  }
-  &.yeoman{
-    background-image:url('/assets/images/logos/yeoman-logo.png');
-  }
-  &.ionic{
-    background-image:url('/assets/images/logos/ionic-logo.png');
-  }
-  &.lodash{
-    background-image:url('/assets/images/logos/lodash-logo.png');
-  }
-  &.socket-io{
-    background-image:url('/assets/images/logos/socketio-logo.png');
-  }
-  &.d3{
-    background-image:url('/assets/images/logos/d3-logo.png');
-  }
-  &.bower{
-    background-image:url('/assets/images/logos/bower-logo.png');
-  }
-  &.mongo{
-    background-image:url('/assets/images/logos/mongo-logo.png');
-  }
-  &.mysql{
-    background-image:url('/assets/images/logos/mysql-logo.png');
-  }
-  &.redis{
-    background-image:url('/assets/images/logos/redis-logo.png');
-  }
-  &.solr{
-    background-image:url('/assets/images/logos/solr-logo.png');
-  }
-  &.php{
-    background-image:url('/assets/images/logos/php-logo.png');
-  }
-  &.codeigniter{
-    background-image:url('/assets/images/logos/codeigniter-logo.png');
-  }
-  &.symfony{
-    background-image:url('/assets/images/logos/symfony-logo.png');
-  }
-  &.zend{
-    background-image:url('/assets/images/logos/zend-logo.png');
-  }
-  &.prosody{
-    background-image:url('/assets/images/logos/prosody-logo.png');
-  }
-  &.xmpp{
-    background-image:url('/assets/images/logos/xmpp-logo.png');
-  }
-  &.ruby{
-    background-image:url('/assets/images/logos/ruby-logo.png');
-  }
-  &.new-relic{
-    background-image:url('/assets/images/logos/newrelic-logo.png');
-  }
-  &.heroku{
-    background-image:url('/assets/images/logos/heroku-logo.png');
-  }
-  &.html5{
-    background-image:url('/assets/images/logos/html5-logo.png');
-  }
-  &.css3{
-    background-image:url('/assets/images/logos/css3-logo.png');
-  }
-  &.aws{
-    background-image:url('/assets/images/logos/aws-logo.png');
-  }
-  &.mariadb{
-    background-image:url('/assets/images/logos/mariadb-logo.png');
-  }
-  &.loopback{
-    background-image:url('/assets/images/logos/loopback-logo.png');
-  }
-  &.docker{
-    background-image:url('/assets/images/logos/docker-logo.png');
-  }
-  &.nginx{
-    background-image:url('/assets/images/logos/nginx-logo.png');
-  }
-  &.chef{
-    background-image:url('/assets/images/logos/chef-logo.png');
-  }
-  &.groovy{
-    background-image:url('/assets/images/logos/groovy-logo.png');
-  }
-  &.webpack{
-    background-image:url('/assets/images/logos/webpack-logo.png');
+  // &.angular{
+  //   background-image:url('/assets/images/logos/angular-logo.png');
+  // }
+  // &.node{
+  //   background-image:url('/assets/images/logos/node-logo.png');
+  // }
+  // &.grunt{
+  //   background-image:url('/assets/images/logos/grunt-logo.png');
+  // }
+  // &.express{
+  //   background-image:url('/assets/images/logos/express-logo.png');
+  // }
+  // &.sails{
+  //   background-image:url('/assets/images/logos/sails-logo.png');
+  // }
+  // &.totaljs{
+  //   background-image:url('/assets/images/logos/totaljs-logo.png');
+  // }
+  // &.kraken{
+  //   background-image:url('/assets/images/logos/kraken-logo.png');
+  // }
+  // &.backbone{
+  //   background-image:url('/assets/images/logos/backbone-logo.png');
+  // }
+  // &.cordova{
+  //   background-image:url('/assets/images/logos/cordova-logo.png');
+  // }
+  // &.karma{
+  //   background-image:url('/assets/images/logos/karma-logo.png');
+  // }
+  // &.jquery{
+  //   background-image:url('/assets/images/logos/jquery-logo.png');
+  // }
+  // &.require{
+  //   background-image:url('/assets/images/logos/require-logo.png');
+  // }
+  // &.yeoman{
+  //   background-image:url('/assets/images/logos/yeoman-logo.png');
+  // }
+  // &.ionic{
+  //   background-image:url('/assets/images/logos/ionic-logo.png');
+  // }
+  // &.lodash{
+  //   background-image:url('/assets/images/logos/lodash-logo.png');
+  // }
+  // &.socket-io{
+  //   background-image:url('/assets/images/logos/socketio-logo.png');
+  // }
+  // &.d3{
+  //   background-image:url('/assets/images/logos/d3-logo.png');
+  // }
+  // &.bower{
+  //   background-image:url('/assets/images/logos/bower-logo.png');
+  // }
+  // &.mongo{
+  //   background-image:url('/assets/images/logos/mongo-logo.png');
+  // }
+  // &.mysql{
+  //   background-image:url('/assets/images/logos/mysql-logo.png');
+  // }
+  // &.redis{
+  //   background-image:url('/assets/images/logos/redis-logo.png');
+  // }
+  // &.solr{
+  //   background-image:url('/assets/images/logos/solr-logo.png');
+  // }
+  // &.php{
+  //   background-image:url('/assets/images/logos/php-logo.png');
+  // }
+  // &.codeigniter{
+  //   background-image:url('/assets/images/logos/codeigniter-logo.png');
+  // }
+  // &.symfony{
+  //   background-image:url('/assets/images/logos/symfony-logo.png');
+  // }
+  // &.zend{
+  //   background-image:url('/assets/images/logos/zend-logo.png');
+  // }
+  // &.prosody{
+  //   background-image:url('/assets/images/logos/prosody-logo.png');
+  // }
+  // &.xmpp{
+  //   background-image:url('/assets/images/logos/xmpp-logo.png');
+  // }
+  // &.ruby{
+  //   background-image:url('/assets/images/logos/ruby-logo.png');
+  // }
+  // &.new-relic{
+  //   background-image:url('/assets/images/logos/newrelic-logo.png');
+  // }
+  // &.heroku{
+  //   background-image:url('/assets/images/logos/heroku-logo.png');
+  // }
+  // &.html5{
+  //   background-image:url('/assets/images/logos/html5-logo.png');
+  // }
+  // &.css3{
+  //   background-image:url('/assets/images/logos/css3-logo.png');
+  // }
+  // &.aws{
+  //   background-image:url('/assets/images/logos/aws-logo.png');
+  // }
+  // &.mariadb{
+  //   background-image:url('/assets/images/logos/mariadb-logo.png');
+  // }
+  // &.loopback{
+  //   background-image:url('/assets/images/logos/loopback-logo.png');
+  // }
+  // &.docker{
+  //   background-image:url('/assets/images/logos/docker-logo.png');
+  // }
+  // &.nginx{
+  //   background-image:url('/assets/images/logos/nginx-logo.png');
+  // }
+  // &.chef{
+  //   background-image:url('/assets/images/logos/chef-logo.png');
+  // }
+  // &.groovy{
+  //   background-image:url('/assets/images/logos/groovy-logo.png');
+  // }
+  // &.webpack{
+  //   background-image:url('/assets/images/logos/webpack-logo.png');
+  // }
+}
+
+@mixin technoImage($name) {
+  &.#{$name}{
+    background-image:url('/assets/images/logos/#{$name}-logo.png');
   }
 }
 

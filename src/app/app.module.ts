@@ -13,6 +13,7 @@ import { ProjectDescriptionComponent } from './projects/project-description/proj
 import { NavComponent } from './nav/nav.component';
 import { SocialsComponent } from './socials/socials.component';
 import { LineComponent } from './line/line.component';
+import { MobileHomeComponent } from './mobile-home/mobile-home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LineComponent } from './line/line.component';
     ProjectDescriptionComponent,
     NavComponent,
     SocialsComponent,
-    LineComponent
+    LineComponent,
+    MobileHomeComponent
   ],
   imports: [
     BrowserModule,

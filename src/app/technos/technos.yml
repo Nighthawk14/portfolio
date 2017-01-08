@@ -40,7 +40,7 @@
   - dev
   CSSClass: protractor
 - title: TypeScript
-  description: Javascript
+  description: Superset of Javascript
   tags:
   - js
   - dev

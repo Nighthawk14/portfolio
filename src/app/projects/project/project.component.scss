@@ -99,34 +99,14 @@ li.timeline-inverted .timeline-badge{
 
 @media (max-width: 767px) {
   .timeline-panel {
-    width: calc(100% - 70px);
+    width: 100%;
   }
 
-  .timeline-badge {
-    left: 28px;
-    margin-left: 0;
-    top: 16px;
+  .timeline-badge, .timeline-panel:after, .timeline-panel:before {
+    display: none;
   }
 
   .timeline-panel {
     float: right;
-  }
-
-  .timeline-panel:before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto;
-  }
-
-  .timeline-panel:after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto;
-  }
-
-  li.timeline-inverted .timeline-badge{
-    left: 28px;
   }
 }

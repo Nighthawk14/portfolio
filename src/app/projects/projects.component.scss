@@ -62,13 +62,13 @@
 
 @media (max-width: 767px) {
   ul.timeline:before {
-    left: 40px;
+    display: none;
   }
 
   ul.timeline > li {
     margin-bottom: 20px;
     position: relative;
-    width:90%;
+    width:100%;
     float: left;
     clear: left;
   }

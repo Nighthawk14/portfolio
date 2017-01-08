@@ -52,3 +52,16 @@
     background-position:-186px bottom;
   }
 }
+
+@media screen and (max-width:800px) {
+  .socials{
+    top:0;
+    width: 201px;
+    margin: 40px auto 30px;
+    position:inherit;
+    display: block;
+  }
+  .socials:not(.socials_mobile) {
+    display:none;
+  }
+}

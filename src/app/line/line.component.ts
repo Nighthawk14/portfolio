@@ -4,8 +4,6 @@ class LineDrawing {
   angle: number;
 
   triggerAnimation() {
-    console.log(jQuery(window).width());
-    console.log();
     jQuery('#mask').animate(
         {
           left: jQuery(window).width()*3,
@@ -18,7 +16,6 @@ class LineDrawing {
             top: 'easeInOutCubic'
           },
           complete: () => {
-            console.log('finish');
             jQuery('#mask').css('display', 'none');
           }
         }

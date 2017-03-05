@@ -5,8 +5,8 @@ const technosData = require('json-loader!yaml-loader!./technos.yml');
 
 @Component({
   selector: 'app-technos',
-  template: require('./technos.component.html'),
-  styles: [require('./technos.component.scss')],
+  templateUrl: './technos.component.html',
+  styleUrls: ['./technos.component.scss'],
   viewProviders: [TechnoPosition],
 })
 export class TechnosComponent{

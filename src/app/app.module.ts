@@ -13,7 +13,6 @@ import { ProjectDescriptionComponent } from './projects/project-description/proj
 import { NavComponent } from './nav/nav.component';
 import { SocialsComponent } from './socials/socials.component';
 import { LineComponent } from './line/line.component';
-import { MobileHomeComponent } from './mobile-home/mobile-home.component';
 import { LinkTooltipComponent } from './link-tooltip/link-tooltip.component';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { LinkTooltipComponent } from './link-tooltip/link-tooltip.component';
     NavComponent,
     SocialsComponent,
     LineComponent,
-    MobileHomeComponent,
     LinkTooltipComponent
   ],
   imports: [

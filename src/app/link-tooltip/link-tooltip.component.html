@@ -1,5 +1,5 @@
 <a href="#" class="link" (click)="onClicked.emit($event)" (mouseenter)="displayTooltip()" (mouseleave)="hideTooltip()"></a>
-<div class="tooltip fade right in" [ngClass]="{'in': isTooltipVisible }" role="tooltip">
+<div class="tooltip fade in right" *ngIf="isTooltipVisible" role="tooltip">
   <div class="tooltip-arrow"></div>
   <div class="tooltip-inner">{{title | translate}}</div>
 </div>

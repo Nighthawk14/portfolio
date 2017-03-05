@@ -4,7 +4,7 @@ import {TranslateService} from "@ngx-translate/core";
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styles: [require('./nav.component.scss')]
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
   constructor(public translate: TranslateService) {

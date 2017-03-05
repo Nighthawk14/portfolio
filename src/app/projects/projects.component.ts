@@ -5,7 +5,7 @@ const projectsData = require('json-loader!yaml-loader!./projects.yml');
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styles: [require('./projects.component.scss')]
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
   projects: Array<ProjectComponent> = [];

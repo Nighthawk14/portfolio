@@ -13,7 +13,7 @@ class Url {
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styles: [require('./project.component.scss')],
+  styleUrls: ['./project.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ProjectComponent {

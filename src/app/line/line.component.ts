@@ -1,6 +1,6 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
 
-class LineDrawing {
+export class LineDrawing {
   angle: number;
 
   triggerAnimation() {
@@ -49,7 +49,7 @@ class LineDrawing {
   selector: 'app-line',
   templateUrl: './line.component.html',
   providers: [LineDrawing],
-  styles: [require('./line.component.scss')]
+  styleUrls: ['./line.component.scss']
 })
 export class LineComponent implements OnInit {
 
@@ -70,7 +70,7 @@ export class LineComponent implements OnInit {
   }
 
   moveToProjects() {
-    jQuery(document).scrollTo('#timeline', {offset:-30, duration:800});
+    jQuery(document).scrollTo('#timeline', {offset:-20, duration:800});
   }
 
 }

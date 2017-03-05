@@ -6,7 +6,7 @@ import {MultiLangPipe} from "../../shared/multiLang/multi-lang.pipe";
   selector: 'app-project-description',
   templateUrl: './project-description.component.html',
   providers: [MultiLangPipe],
-  styles: [require('./project-description.component.scss')],
+  styleUrls: ['./project-description.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ProjectDescriptionComponent implements OnInit {

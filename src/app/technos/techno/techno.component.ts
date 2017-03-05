@@ -3,9 +3,9 @@ import { TechnoPosition } from './techno-position';
 
 @Component({
     selector: 'app-techno',
-    template: require('./techno.component.html'),
+    templateUrl: './techno.component.html',
     inputs: ['techno'],
-    styles: [require('./techno.component.scss')]
+    styleUrls: ['./techno.component.scss']
 })
 export class TechnoComponent implements OnInit{
     title: String;
@@ -21,7 +21,7 @@ export class TechnoComponent implements OnInit{
     constructor(@Host() private technoPosition: TechnoPosition, private elementRef: ElementRef) {}
 
     ngOnInit() {
-        this.root = $(this.elementRef.nativeElement);
+        this.root = jQuery(this.elementRef.nativeElement);
         let {base, row, addClear} = this.technoPosition.getBase(this.index);
         if(addClear) {
             this.root.before('<div class="clear"></div>');

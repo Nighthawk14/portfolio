@@ -4,13 +4,16 @@
   height: 35px;
   display: inline-block;
   cursor: pointer;
+  position: relative;
 }
 
 nav{
   position: fixed;
   left: 10px;
   width: 40px;
-  display: inline-block;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
   ul{
     list-style-type: none;
     padding: 0;
@@ -36,7 +39,7 @@ nav{
     background-position:-224px bottom;
   }
 }
-.projets{
+.projects{
   background-position: -299px top;
   &:hover
   {
@@ -44,14 +47,25 @@ nav{
   }
 }
 .fr{
-  background-position: -335px bottom;
+  background-position: -336px bottom;
 }
 .en{
   background-position: -373px bottom;
 }
 
-@media screen and (max-width: 800px) {
+#logo {
+  margin-top: 50px;
+  object {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #logo {
+    display: none;
+  }
   nav {
-    display:none;
+    display: inline-block;
   }
 }

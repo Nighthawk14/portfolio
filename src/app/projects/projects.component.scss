@@ -60,6 +60,10 @@
   margin-top: 60px;
 }
 
+.page-header {
+  margin-top: 20px;
+}
+
 @media (max-width: 767px) {
   ul.timeline:before {
     display: none;
@@ -69,15 +73,16 @@
     margin-bottom: 20px;
     position: relative;
     width:100%;
-    float: left;
-    clear: left;
+    max-width: 541px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
   }
 
   .timeline > li.timeline-inverted{
-    float: left;
-    clear: left;
     margin-top: 30px;
     margin-bottom: 30px;
+    float: none;
   }
 }
 

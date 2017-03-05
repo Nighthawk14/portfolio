@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TechnoComponent } from './techno/techno.component';
 import { TechnoPosition } from "./techno/techno-position";
-const technosData = require('json!yaml!./technos.yml');
+const technosData = require('json-loader!yaml-loader!./technos.yml');
 
 @Component({
   selector: 'app-technos',
@@ -30,7 +30,7 @@ export class TechnosComponent{
   private setTechnosState(tags: Set<String>) {
     this.technos.map(techno => {
       let commonTags = [...techno.tags].filter(x => tags.has(x));
-      techno.disabled = (commonTags.length > 0) ? false : true;
+      techno.disabled = (commonTags.length <= 0);
     });
   }
 
@@ -50,6 +50,7 @@ export class TechnosComponent{
         tags = ['inte','mobile'];
         break;
     }
+
     return new Set(tags);
   }
   private isSameFilter(filter) {

@@ -53,12 +53,7 @@ class LineDrawing {
 })
 export class LineComponent implements OnInit {
 
-  elementRef: ElementRef;
-  line: LineDrawing;
-  constructor(elementRef: ElementRef, line: LineDrawing) {
-    this.elementRef = elementRef;
-    this.line = line;
-  }
+  constructor(public elementRef: ElementRef, public line: LineDrawing) {}
 
   ngAfterContentInit() {
     this.line.calculateDiagonale();

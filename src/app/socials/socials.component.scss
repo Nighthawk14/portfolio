@@ -5,7 +5,9 @@
   width: 40px;
   position: fixed;
   right: 10px;
-  a{
+  top: 50%;
+  transform: translateY(-50%);
+  a {
     @extend .nav-link;
   }
 }
@@ -39,7 +41,7 @@
   }
 }
 .cv{
-  background-position: -148px top;
+  background-position: -149px top;
   &:hover
   {
     background-position:-148px bottom;
@@ -60,8 +62,5 @@
     margin: 40px auto 30px;
     position:inherit;
     display: block;
-  }
-  .socials:not(.socials_mobile) {
-    display:none;
   }
 }

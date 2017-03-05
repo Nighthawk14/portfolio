@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
-import {TranslateService} from "ng2-translate";
+import {TranslateService} from "@ngx-translate/core";
 import {MultiLangPipe} from "../../shared/multiLang/multi-lang.pipe";
 
 @Component({
@@ -10,16 +10,11 @@ import {MultiLangPipe} from "../../shared/multiLang/multi-lang.pipe";
   encapsulation: ViewEncapsulation.None
 })
 export class ProjectDescriptionComponent implements OnInit {
-
   @Input('description') description;
   descriptionHTML: string = "";
-  multiLangPipe: MultiLangPipe;
-  translate: TranslateService;
 
-  constructor(multiLangPipe: MultiLangPipe, translate: TranslateService) {
-    this.multiLangPipe = multiLangPipe;
-    this.translate = translate;
-  }
+  constructor(private multiLangPipe: MultiLangPipe, private translate: TranslateService) {}
+
   updateDescription() {
     this.descriptionHTML = this.multiLangPipe.transform(this.description, null);
   }

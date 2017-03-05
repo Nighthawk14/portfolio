@@ -7,7 +7,7 @@
     fr: |-
       Je travaille actuellement sur une nouvelle application pour envoyer des colis pour AustraliaPost. Je suis concentré sur le FrontEnd, sur la création d'outils et de patterns pour l'entreprise ainsi que <span class="orange">l'amélioration des compétences des autres dévelopeurs</span> du client dans mon équipe.
     en: |-
-      I'm currently working for <span class="orange">AustraliaPost</span> on a new application to send parcels. I'm focus on the FrontEnd, on creating <span class="orange">enterprise wide tools/pattern</span> and the <span class="orange">upskill of the other client developers</span> in my team.
+      I'm currently working for <span class="orange">AustraliaPost</span> on a new application to send parcels. I'm focused on the FrontEnd, on creating <span class="orange">enterprise wide tools/pattern</span> and on the <span class="orange">upskill of the other client developers</span> in my team.
   urls:
   - url: https://auspost.com.au/mypost-business
     copy:
@@ -23,7 +23,7 @@
       La business logic de l'application est assez complexe comprenant beaucoup de données à afficher et à manipuler, il y a aussi de la <span class="orange">data visualisation</span> avec des graphs interactifs. J'ai utilisé la <span class="orange">derniére version de Koa</span> et des builders fait avec Faker.js pour le mock du BackEnd.
       C'était une trés bonne expérience car j'avais la possibilité de choisir le stack FrontEnd et de travailler proche de l'équipe BackEnd et devOps et le client était trés content de la solution finale.
     en: |-
-      I worked on the PEXA Projects project for 16 weeks (8 sprints) as <span class="orange">lead front end engineer</span>. The application is made with Angular 1.6 and <span class="orange">Redux</span>, with a full suite (100% coverage) of unit / integration tests with Jasmine and Protractor.
+      I worked on the PEXA Projects project for 16 weeks (8 sprints) as <span class="orange">lead front end engineer</span>. The application was made with Angular 1.6 and <span class="orange">Redux</span>, with a full suite (100% coverage) of unit / integration tests with Jasmine and Protractor.
       The business logic for the app is quite complex with a lot of data to render and to manipulate and there is also some <span class="orange">data visualisation</span> with interactive graphs. I created a mocked backend using the <span class="orange">newest version of Koa</span> combined with builders made with Faker.js.
       This was a really good experience as I had to choose the FE stack and work closely with the BackEnd and the devOps team and the client was really happy of the solution.
   urls:

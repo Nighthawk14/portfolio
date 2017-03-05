@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
-import {TranslateModule, TranslateService} from "ng2-translate/ng2-translate";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 
 import { AppComponent } from './app.component';
 import { TechnosComponent } from './technos/technos.component';
@@ -14,6 +14,7 @@ import { NavComponent } from './nav/nav.component';
 import { SocialsComponent } from './socials/socials.component';
 import { LineComponent } from './line/line.component';
 import { MobileHomeComponent } from './mobile-home/mobile-home.component';
+import { LinkTooltipComponent } from './link-tooltip/link-tooltip.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MobileHomeComponent } from './mobile-home/mobile-home.component';
     NavComponent,
     SocialsComponent,
     LineComponent,
-    MobileHomeComponent
+    MobileHomeComponent,
+    LinkTooltipComponent
   ],
   imports: [
     BrowserModule,

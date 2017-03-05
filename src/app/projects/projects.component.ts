@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ProjectComponent} from "./project/project.component";
-const projectsData = require('json!yaml!./projects.yml');
+const projectsData = require('json-loader!yaml-loader!./projects.yml');
 
 @Component({
   selector: 'app-projects',
@@ -16,6 +16,4 @@ export class ProjectsComponent {
       this.projects.push(project);
     });
   }
-
-  // ngOnInit() {}
 }

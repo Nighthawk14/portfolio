@@ -23,6 +23,4 @@ export class ProjectComponent {
   title: MultiLangCopy;
   urls: Array<Url>;
   inverted: Boolean;
-
-  constructor() { }
 }

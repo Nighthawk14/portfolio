@@ -13,17 +13,12 @@ export class TechnoComponent implements OnInit{
     tags: Array<String>;
     CSSClass: String;
     disabled: Boolean = false;
-    technoPosition: TechnoPosition;
-    elementRef: ElementRef;
     root: any;
 
     @Input('index') private index: number;
     @Input('last') private last: Boolean;
 
-    constructor(@Host() technoPosition: TechnoPosition, elementRef: ElementRef) {
-        this.technoPosition = technoPosition;
-        this.elementRef = elementRef;
-    }
+    constructor(@Host() private technoPosition: TechnoPosition, private elementRef: ElementRef) {}
 
     ngOnInit() {
         this.root = $(this.elementRef.nativeElement);
@@ -39,7 +34,7 @@ export class TechnoComponent implements OnInit{
         }
 
         if(this.last){
-            var $w = jQuery('#technos').find('.wrapper');
+            const $w = jQuery('#technos').find('.wrapper');
             $w.height($w.height()+(this.getOffset(row)));
         }
     }

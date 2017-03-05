@@ -1,10 +1,19 @@
 <nav>
   <ul>
-    <li><a href="#" data-key="HOME" [title]="'HOME' | translate" data-toggle="tooltip" data-placement="right" class="nav-link home" (click)="moveTo($event, 'home')"></a></li>
-    <li><a href="#" data-key="PROJECTS" [title]="'PROJECTS' | translate" data-toggle="tooltip" data-placement="right" class="nav-link projets" (click)="moveTo($event, 'projects')"></a></li>
-    <li><a href="#" data-key="TECHS" [title]="'TECHS' | translate" data-toggle="tooltip" data-placement="right" class="nav-link technos" (click)="moveTo($event, 'techs')"></a></li>
+    <li>
+      <app-link-tooltip class="nav-link home" [title]="'HOME'" (onClicked)="moveTo($event, 'home')"></app-link-tooltip>
+    </li>
+    <li>
+      <app-link-tooltip class="nav-link projects" [title]="'PROJECTS'" (onClicked)="moveTo($event, 'projects')"></app-link-tooltip>
+    </li>
+    <li>
+      <app-link-tooltip class="nav-link technos" [title]="'TECHS'" (onClicked)="moveTo($event, 'techs')"></app-link-tooltip>
+    </li>
     <li><div class="nav-link fr" [style.display]="isNavLangHidden('fr')?'none':'inherit'" (click)="changeLang('fr')"></div></li>
     <li><div class="nav-link en" [style.display]="isNavLangHidden('en')?'none':'inherit'" (click)="changeLang('en')"></div></li>
   </ul>
 </nav>
+<div id="logo">
+  <object data="/assets/images/logo-mobile.svg" type="image/svg+xml"></object>
+</div>
 <app-socials></app-socials>

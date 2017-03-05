@@ -1,13 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {TranslateService} from 'ng2-translate/ng2-translate';
+import {TranslateService} from '@ngx-translate/core';
 
 @Pipe({
   name: 'multiLang'
 })
 export class MultiLangPipe implements PipeTransform {
-  translate: TranslateService;
-
-  constructor(translate: TranslateService) {
+  constructor(private translate: TranslateService) {
     this.translate = translate;
   }
 

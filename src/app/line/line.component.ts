@@ -1,13 +1,16 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
+import * as $ from 'jquery';
+import 'jquery-ui/ui/effect';
+import 'jquery.scrollto';
 
 export class LineDrawing {
   angle: number;
 
   triggerAnimation() {
-    jQuery('#mask').animate(
+    $('#mask').animate(
         {
-          left: jQuery(window).width()*3,
-          top: -jQuery(window).height()*3+100
+          left: $(window).width()*3,
+          top: -$(window).height()*3+100
         },
         {
           duration: 3000,
@@ -16,23 +19,23 @@ export class LineDrawing {
             top: 'easeInOutCubic'
           },
           complete: () => {
-            jQuery('#mask').css('display', 'none');
+            $('#mask').css('display', 'none');
           }
         }
     );
   }
 
   calculateDiagonale() {
-    let scrW = jQuery(window).width();
-    let scrH = jQuery(window).height();
+    let scrW = $(window).width();
+    let scrH = $(window).height();
     this.angle = (Math.atan(scrH / scrW)) * (180/Math.PI);
-    let lineElement = jQuery('#line,#mask');
+    let lineElement = $('#line,#mask');
     let length = Math.sqrt(( scrW * scrW) + (scrH * scrH ))+10;
     lineElement.css('left', ( -1 ) * ((length - scrW) / 2) );
     lineElement.css('width', length);
     lineElement.css('top', (scrH / 2));
     this.setAngle(lineElement);
-    jQuery('#mask').css('top',(scrH / 2)-2000);
+    $('#mask').css('top',(scrH / 2)-2000);
   }
 
   setAngle(element) {
@@ -61,16 +64,16 @@ export class LineComponent implements OnInit {
   }
 
   ngOnInit() {
-    jQuery(this.elementRef.nativeElement).css({
-      height:jQuery(window).height()
+    $(this.elementRef.nativeElement).css({
+      height:$(window).height()
     });
-    jQuery(window).bind('resize', () => {
+    $(window).bind('resize', () => {
       this.line.calculateDiagonale();
     });
   }
 
   moveToProjects() {
-    jQuery(document).scrollTo('#timeline', {offset:-20, duration:800});
+    $(document).scrollTo('#timeline', {offset:-20, duration:800});
   }
 
 }

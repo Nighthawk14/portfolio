@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
     "version": "1.0.0-beta.24",
     "name": "antoine-savignac-portfolio"
@@ -17,14 +18,8 @@
       "tsconfig": "tsconfig.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.css"
-      ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/jquery.scrollto/jquery.scrollTo.js",
-        "assets/vendors/jquery-ui.js"
-      ],
+      "styles": [],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -1,5 +1,6 @@
 import {Component, OnInit, ElementRef, Input, Host} from '@angular/core';
 import { TechnoPosition } from './techno-position';
+import * as $ from 'jquery';
 
 @Component({
     selector: 'app-techno',
@@ -14,14 +15,16 @@ export class TechnoComponent implements OnInit{
     CSSClass: String;
     disabled: Boolean = false;
     root: any;
+    onTouch: Boolean = false;
 
     @Input('index') private index: number;
     @Input('last') private last: Boolean;
+    @Input('techno') techno: this;
 
     constructor(@Host() private technoPosition: TechnoPosition, private elementRef: ElementRef) {}
 
     ngOnInit() {
-        this.root = jQuery(this.elementRef.nativeElement);
+        this.root = $(this.elementRef.nativeElement);
         let {base, row, addClear} = this.technoPosition.getBase(this.index);
         if(addClear) {
             this.root.before('<div class="clear"></div>');
@@ -34,7 +37,7 @@ export class TechnoComponent implements OnInit{
         }
 
         if(this.last){
-            const $w = jQuery('#technos').find('.wrapper');
+            const $w = $('#technos').find('.wrapper');
             $w.height($w.height()+(this.getOffset(row)));
         }
     }

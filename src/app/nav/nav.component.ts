@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import * as $ from 'jquery';
+import 'jquery.scrollto';
 
 @Component({
   selector: 'app-nav',
@@ -14,7 +16,7 @@ export class NavComponent {
   moveTo(event, tag) {
     event.preventDefault();
     let {elem, offset} = this.getOffset(tag);
-    jQuery(document).scrollTo(elem, {offset:offset, duration:800, onAfter: () => {
+    $(document).scrollTo(elem, {offset:offset, duration:800, onAfter: () => {
       history.pushState({}, '', elem);
     }});
   }

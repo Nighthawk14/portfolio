@@ -6,4 +6,3 @@ declare var module: {
 };
 declare var require: any;
 declare var System: any;
-declare var jQuery: JQueryStatic;

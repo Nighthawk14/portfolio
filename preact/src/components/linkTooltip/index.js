@@ -14,7 +14,7 @@ export default class LinkTooltip extends Component {
       <div class={`nav-link ${this.props.title}`}>
         <a href="#" class="link" title={this.props.title} onMouseEnter={this.displayTooltip.bind(this)} onMouseLeave={this.hideTooltip.bind(this)}/>
         {this.state.isTooltipVisible &&
-        <div class="tooltip fade in right" role="tooltip">
+        <div class="tooltip right" role="tooltip">
           <div class="tooltip-arrow" />
           <div class="tooltip-inner">{this.props.title}</div>
         </div>

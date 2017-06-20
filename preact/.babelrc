@@ -1,0 +1,11 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    ["env", {
+      "targets": { "uglify": false }
+    }]
+  ],
+  "plugins": [
+    ["transform-react-jsx", { "pragma": "h" }]
+  ]
+}

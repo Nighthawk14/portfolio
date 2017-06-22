@@ -68,6 +68,7 @@ export default class Technos extends Component {
     );
   }
 
+  //TODO: that could be done once in the constructor instead of at every render
   getTechnos() {
     const technos = [];
     this.state.technos.map((techno, index) => {
@@ -114,7 +115,7 @@ export default class Technos extends Component {
       this.state.technos.map(techno => {
         techno.disabled = false;
       });
-      this.setState({filter: null});
+      this.setState({activeFilter: null});
     }
     return isSameFilter;
   }

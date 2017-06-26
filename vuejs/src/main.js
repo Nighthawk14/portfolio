@@ -4,7 +4,7 @@ import App from './App';
 Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
+  el: '#main',
   template: '<App/>',
   components: { App }
 });

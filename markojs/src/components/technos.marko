@@ -1,0 +1,152 @@
+import technos from '../assets/technos.yml';
+static const filters = [
+  { value: 'js', label: 'Javascript', tags: new Set(['js']) },
+  { value: 'dev', label: 'Development', tags: new Set(['dev']) },
+  { value: 'data', label: 'Data', tags: new Set(['data']) },
+  { value: 'inte', label: 'Integration', tags: new Set(['inte', 'mobile']) },
+];
+static class TechnoPosition {
+  constructor() {
+    this.row = 0;
+    this.base = 6;
+    this.loopIndex = -1;
+  }
+
+  getBase() {
+    let addClear = false;
+    this.loopIndex++;
+    if(this.loopIndex === this.base) {
+      this.base = (this.base === 6) ? 5 : 6;
+      addClear = true;
+      this.row++;
+      this.loopIndex = 0;
+    }
+
+    return {
+      base:this.base,
+      row: this.row,
+      addClear: addClear
+    };
+  }
+}
+
+class {
+  onCreate() {
+    this.state = {
+      activeFiler: null,
+      filters,
+      technos: this.getTechnos()
+    }
+  }
+  filterTech(filter) {
+    if(this.state.activeFilter !== filter) {
+      this.setState('activeFilter', filter);
+    } else {
+      this.setState('activeFilter', null);
+    }
+
+    this.setState('technos',  this.getTechnos());
+    this.forceUpdate();
+  }
+  getTechnos() {
+    const technoPosition = new TechnoPosition();
+    const activeFilter = this.state && this.state.activeFilter;
+    return technos.map((techno, index) => {
+      if (activeFilter) {
+        techno.disabled = !([...techno.tags].filter(x => activeFilter.tags.has(x)).length);
+      } else {
+        techno.disabled = false;
+      }
+
+      techno.position = technoPosition.getBase();
+      techno.last = index === technos.length - 1;
+      return techno;
+    });
+  }
+}
+
+div#technos
+  div.wrapper
+    div.filters
+      i.glyphicon.glyphicon-th-list
+      span for(index, filter in state.filters)
+        span.filter on-click("filterTech", filter) class={active: state.activeFilter && state.activeFilter.value === filter.value} -- &nbsp;${filter.label}&nbsp;
+        if(index !== filters.length - 1)
+          span -- /
+    div.techs
+      for(index, techno in state.technos)
+        div.clear if(techno.position.addClear)
+        techno(techno).tech
+
+
+style.scss {
+  @import "../variables";
+
+  #technos {
+    width: 100%;
+    overflow-y: hidden;
+  }
+
+  .wrapper{
+    padding: 40px 20px;
+    width: 904px;
+    margin: 0 auto;
+  }
+
+  .filters{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #DDDDDD;
+    text-align: center;
+    font-family: $open;
+    margin-bottom: 20px;
+    i{
+      color: $orange;
+      font-size: 30px;
+      position: relative;
+      top: 7px;
+      margin-right: 20px;
+    }
+    .filter{
+      &.caption{
+        color: #333;
+      }
+      transition: all .3s ease 0s;
+      &.active,&:hover{
+        color: $orange;
+      }
+      cursor: pointer;
+    }
+  }
+
+  .techs{
+    position: relative;
+    top: 20px;
+
+    .tech{
+
+      width: $techW;
+      height: $techH;
+      margin: 0px 6px;
+      display: inline-block;
+      vertical-align: top;
+      font-weight: 300;
+      position: relative;
+      transition: all .2s;
+
+      &.disabled{
+        opacity: .2;
+      }
+
+      &.odd{
+        left:($techW/2)+6;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px){
+    .wrapper {
+      display: none;
+    }
+  }
+}

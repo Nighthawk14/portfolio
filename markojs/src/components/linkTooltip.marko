@@ -1,0 +1,34 @@
+class {
+  onCreate() {
+    this.state = {
+      isTooltipVisible: false
+    }
+  }
+  displayTooltip() {
+    this.setState('isTooltipVisible', true);
+  }
+  hideTooltip() {
+    this.setState('isTooltipVisible', false);
+  }
+}
+
+div.nav-link class=input.title
+  a href="#" class="link" title=input.title on-mouseenter('displayTooltip') on-mouseleave('hideTooltip')
+  div.tooltip.right if(state.isTooltipVisible) role="tooltip"
+    div.tooltip-arrow
+    div.tooltip-inner -- ${input.title}
+
+style.scss {
+  .tooltip {
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+    top: 50%;
+    opacity: 1;
+  }
+
+  .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

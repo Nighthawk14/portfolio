@@ -1,0 +1,158 @@
+import * as jQuery from 'jquery';
+import 'jquery.scrollto';
+
+class {
+  moveToProject() {
+    jQuery(document).scrollTo('#projects', {offset:0, duration:800});
+  }
+  // onMount() {
+  //   jQuery('#home').css({
+  //     height:jQuery(window).height()
+  //   });
+  //   jQuery(window).bind('resize', () => {
+  //     this.calculateDiagonale();
+  //   });
+  //   this.calculateDiagonale();
+  // }
+  // calculateDiagonale() {
+  //   let scrW = jQuery(window).width();
+  //   let scrH = jQuery(window).height();
+  //   this.angle = (Math.atan(scrH / scrW)) * (180/Math.PI);
+  //   let lineElement = jQuery('#line,#mask');
+  //   let length = Math.sqrt(( scrW * scrW) + (scrH * scrH ))+10;
+  //   lineElement.css('left', ( -1 ) * ((length - scrW) / 2) );
+  //   lineElement.css('width', length);
+  //   lineElement.css('top', (scrH / 2));
+  //   this.setAngle(lineElement);
+  //   jQuery('#mask').css('top',(scrH / 2)-2000);
+  // }
+  // setAngle(element) {
+  //   let cssProperties = 'scale(1) rotate(' + (-1) * this.angle + 'deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)';
+  //   element.css('-webkit-transform', cssProperties);
+  //   element.css('-moz-transform', cssProperties);
+  //   element.css('-o-transform', cssProperties);
+  //   element.css('-ms-transform', cssProperties);
+  //   element.css('transform', cssProperties);
+  // }
+}
+
+div#home
+  div#line
+    object#logo.logo-object data="/assets/images/logo.svg" aria-label="logo" type="image/svg+xml"
+  div.mask
+  div.scroll.cursor on-click('moveToProject')
+
+style.scss {
+  @import "../variables";
+
+  .borderBottom{
+    width: 50%;
+    left: 7px;
+    height: 9px;
+    bottom: 0px;
+    background-color: #e95a2d;
+    position: absolute;
+  }
+
+  #home{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #line{
+    position:relative;
+    top:0;
+    height:9px;
+    width:0;
+    background:$orange;
+    left:0;
+    -moz-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -webkit-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  }
+
+  #mask{
+    position:relative;
+    top:0px;
+    height:4000px;
+    background:#ffffff;
+    left:0;
+    -moz-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -webkit-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  }
+
+  .logo-object{
+    position: absolute;
+    left: 34%;
+    top: -116px;
+    width: 500px;
+    height: 150px;
+  }
+
+  .line
+  {
+    position:absolute;
+    top:0;
+    height:2px;
+    width:0;
+    background:$orange;
+    left:0;
+    -moz-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -webkit-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate(-45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+  }
+
+  .scroll{
+    background: url('../assets/images/arrow-intro.svg') no-repeat 50%;
+    background-color: $orange;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    left: 49%;
+    top:80%;
+    position: absolute;
+    -webkit-transition: top 1s ease, -webkit-transform 1s ease;
+    -moz-transition: top 1s ease, -moz-transform 1s ease;
+    -ms-transition: top 1s ease, -ms-transform 1s ease;
+    -o-transition: top 1s ease, -o-transform 1s ease;
+    transition: top 1s ease, transform 1s ease;
+    z-index: 1;
+
+    &.top{
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+
+    }
+
+    &:hover{
+      background: url('../assets/images/arrow-intro_o.svg') no-repeat 50%;
+      border: 1px solid $orange;
+      background-color: #FFFFFF;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    #home {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    #mobile-home {
+      display:none;
+    }
+  }
+}

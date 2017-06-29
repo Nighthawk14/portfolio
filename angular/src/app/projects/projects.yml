@@ -1,4 +1,22 @@
 ---
+- image: portfolio.jpg
+  title:
+    fr: Portfolio
+    en: Personal website
+  description:
+    fr: |-
+      Je viens juste de finir une experimentation sur mon portfolio consistant en la création de differentes versions via différents frameworks.
+      J'ai utilisé <span class="orange">PREACT</span>, <span class="orange">Vue.js</span> et <span class="orange">Marko</span> a partir du code (Angular4) déja existant.
+      Cela m'a permis de découvrir un peu plus ces technologies, je suis en train d'écrire un article de blog a ce propos.
+    en: |-
+      I just finished an experiment on my personal website which consisted of creating multiple versions of it with different frameworks.
+      I used <span class="orange">PREACT</span>, <span class="orange">Vue.js</span> and <span class="orange">Marko</span> from the angular4 codebase that was already existing.
+      This allowed me to get some insights and experience with all those frameworks, I'm currently writing a blog post about it.
+  urls:
+  - url: https://github.com/Nighthawk14/portfolio
+    copy:
+      fr: Github
+      en: Github
 - image: my-post-business.jpg
   title:
     fr: My Post Business

@@ -1,227 +1,198 @@
 ---
-- title: AngularJs
-  description: Javascript
+- title: GraphQL
+  description: Query Language
   tags:
-  - js
-  - inte
-  CSSClass: angular
-- title: Node.Js
-  description: Javascript
-  tags:
-  - js
-  CSSClass: node
-- title: Webpack
-  description: Module builder
-  tags:
-  - js
-  - dev
-  CSSClass: webpack
-- title: Redux
-  description: Javascript
-  tags:
-  - js
-  - dev
-  CSSClass: redux
-- title: Express
-  description: Javascript
-  tags:
-  - js
-  CSSClass: express
-- title: Jasmine
-  description: Testing framework
-  tags:
-  - js
-  - dev
-  CSSClass: jasmine
-- title: Protractor
-  description: Testing framework
-  tags:
-  - js
-  - dev
-  CSSClass: protractor
+    - dev
+  CSSClass: graphql
 - title: TypeScript
   description: Superset of Javascript
   tags:
-  - js
-  - dev
+    - js
+    - dev
   CSSClass: typescript
-- title: Koa
+- title: Node.Js
   description: Javascript
   tags:
-  - js
-  - dev
-  CSSClass: koa
-- title: Sails.js
-  description: Javascript
-  tags:
-  - js
-  CSSClass: sails
-- title: Loopback
-  description: Javascript
-  tags:
-  - js
-  CSSClass: loopback
-- title: Grunt
-  description: Javascript
-  tags:
-  - js
-  CSSClass: grunt
-- title: Groovy
-  description: Java platform language
-  tags:
-  - dev
-  CSSClass: groovy
-- title: Backbone
-  description: Javascript
-  tags:
-  - js
-  - inte
-  CSSClass: backbone
-- title: Cordova
-  description: Mobile
-  tags:
-  - mobile
-  - dev
-  CSSClass: cordova
-- title: HTML5
-  description: ''
-  tags:
-  - inte
-  CSSClass: html5
-- title: Karma
-  description: Javascript
-  tags:
-  - js
-  CSSClass: karma
-- title: KrakenJs
-  description: Javascript
-  tags:
-  - js
-  CSSClass: kraken
-- title: Socket.io
-  description: Javascript
-  tags:
-  - js
-  CSSClass: socket-io
-- title: jQuery
-  description: Javascript
-  tags:
-  - js
-  - inte
-  CSSClass: jquery
-- title: RequireJS
-  description: Javascript
-  tags:
-  - js
-  - inte
-  CSSClass: require
-- title: Yeoman
-  description: TOOLS
-  tags:
-  - dev
-  - inte
-  CSSClass: yeoman
-- title: Ionic
-  description: Mobile
-  tags:
-  - mobile
-  - dev
-  CSSClass: ionic
-- title: Lodash
-  description: Javascript
-  tags:
-  - js
-  - inte
-  CSSClass: lodash
-- title: CSS3
-  description: ''
-  tags:
-  - inte
-  CSSClass: css3
-- title: D3.js
-  description: Javascript
-  tags:
-  - js
-  - inte
-  CSSClass: d3
-- title: Bower
-  description: TOOLS
-  tags:
-  - inte
-  - dev
-  CSSClass: bower
-- title: MongoDB
-  description: DATA
-  tags:
-  - data
-  CSSClass: mongo
+    - js
+  CSSClass: node
 - title: Docker
   description: DevOps
   tags:
-  - dev
+    - dev
   CSSClass: docker
 - title: AWS
   description: DevOps
   tags:
-  - dev
+    - dev
   CSSClass: aws
+- title: React
+  description: Javascript
+  tags:
+    - js
+    - inte
+  CSSClass: react
+- title: Terraform
+  description: Deployment
+  tags:
+    - dev
+  CSSClass: terraform
+- title: Codeship
+  description: Deployment
+  tags:
+    - dev
+  CSSClass: codeship
+- title: Splunk
+  description: Logging & alert management
+  tags:
+    - dev
+  CSSClass: splunk
+- title: Next.Js
+  description: Javascript
+  tags:
+    - js
+  CSSClass: nextjs
+- title: AngularJs
+  description: Javascript
+  tags:
+    - js
+    - inte
+  CSSClass: angular
+- title: Webpack
+  description: Module builder
+  tags:
+    - js
+    - dev
+  CSSClass: webpack
+- title: Kubernetes
+  description: Container management
+  tags:
+    - dev
+  CSSClass: kubernetes
+- title: Redux
+  description: Javascript
+  tags:
+    - js
+    - dev
+  CSSClass: redux
+- title: Express
+  description: Javascript
+  tags:
+    - js
+  CSSClass: express
+- title: Jest
+  description: Testing framework
+  tags:
+    - js
+    - dev
+  CSSClass: jest
+- title: NightWatch
+  description: Testing framework
+  tags:
+    - js
+    - dev
+  CSSClass: nightwatch
+- title: Koa
+  description: Javascript
+  tags:
+    - js
+    - dev
+  CSSClass: koa
+- title: Groovy
+  description: Java platform language
+  tags:
+    - dev
+  CSSClass: groovy
+- title: Cordova
+  description: Mobile
+  tags:
+    - mobile
+    - dev
+  CSSClass: cordova
+- title: HTML5
+  description: ""
+  tags:
+    - inte
+  CSSClass: html5
+- title: Ionic
+  description: Mobile
+  tags:
+    - mobile
+    - dev
+  CSSClass: ionic
+- title: Lodash
+  description: Javascript
+  tags:
+    - js
+    - inte
+  CSSClass: lodash
+- title: CSS3
+  description: ""
+  tags:
+    - inte
+  CSSClass: css3
+- title: D3.js
+  description: Javascript
+  tags:
+    - js
+    - inte
+  CSSClass: d3
+- title: MongoDB
+  description: DATA
+  tags:
+    - data
+  CSSClass: mongo
 - title: Nginx
   description: DevOps
   tags:
-  - dev
+    - dev
   CSSClass: nginx
 - title: Chef
   description: DevOps
   tags:
-  - dev
+    - dev
   CSSClass: chef
-- title: MariaDB
-  description: DATA
-  tags:
-  - data
-  CSSClass: mariadb
 - title: MySQL
   description: DATA
   tags:
-  - data
+    - data
   CSSClass: mysql
 - title: Redis
   description: DATA
   tags:
-  - data
+    - data
   CSSClass: redis
 - title: Lucene Solr
   description: DATA
   tags:
-  - data
+    - data
   CSSClass: solr
 - title: New Relic
   description: Monitoring
   tags:
-  - dev
+    - dev
   CSSClass: new-relic
 - title: Prosody
   description: XMPP - lua
   tags:
-  - dev
+    - dev
   CSSClass: prosody
 - title: XMPP
   description: Protocole
   tags:
-  - dev
+    - dev
   CSSClass: xmpp
 - title: PHP
-  description: ''
+  description: ""
   tags:
-  - dev
+    - dev
   CSSClass: php
 - title: Ruby
-  description: ''
+  description: ""
   tags:
-  - dev
+    - dev
   CSSClass: ruby
 - title: Heroku
   description: DevOps
   tags:
-  - dev
+    - dev
   CSSClass: heroku

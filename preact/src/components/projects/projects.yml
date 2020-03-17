@@ -1,13 +1,41 @@
 ---
+- image: localheroes.jpg
+  title:
+    fr: LocalHeroes
+    en: LocalHeroes
+  description:
+    fr: |-
+      J'ai travaillé pour LocalHeroes comme Solution Architect en étant principalement concentré sur la <span class="orange">stabilité</span>, la <span class="orange">reliabilité</span> et la <span class="orange">securité</span> de la plateforme. J'etais en charge de maintenir et d'améliorer la <span class="orange">plateforme AWS</span> mais aussi de créer de nouveaux outils pour la pipeline de <span class="orange">developpement/deploiement</span>. Je travaillais aussi en tant que full stack Javascript developer ce qui me permettait de créer de nouvelles fonctionalitées pour les utilisateurs sur le Front & Back end.
+    en: |-
+      I worked for LocalHeroes as a Solution Architect mainly focused on the platform <span class="orange">stability</span>, <span class="orange">realibility</span> and <span class="orange">security</span>. I was in charge of maintaining and improving the entire <span class="orange">AWS stack</span> as well as creating new <span class="orange">development/deployment</span> pipeline tools for developers. Also I was a full stack Javascript developer delivering features for the end user on both Front & Back End.
+  urls:
+  - url: https://www.localheroes.com
+    copy:
+      fr: LocalHeroes
+      en: LocalHeroes
+- image: ig.png
+  title:
+    fr: IG
+    en: IG
+  description:
+    fr: |-
+      J'ai travaillé pour IG principalement sur le user <span class="orange">dashboard</span> comme developpeur Javascript Senior. J'etais en charge de délivrer de nouvelles fonctionalités pour les clients et aussi a la transition de l'application de AngularJS vers <span class="orange">Angular</span>.
+    en: |-
+      I worked for IG on the main client <span class="orange">dashboard</span> as a Senior Javascript developer. I was in charge of delivering new features and transitioning the application from AngularJS to <span class="orange">Angular</span>.
+  urls:
+  - url: https://www.ig.com/uk
+    copy:
+      fr: IG
+      en: IG
 - image: my-post-business.jpg
   title:
     fr: My Post Business
     en: My Post Business
   description:
     fr: |-
-      Je travaille actuellement sur une nouvelle application pour envoyer des colis pour AustraliaPost. Je suis concentré sur le FrontEnd, sur la création d'outils et de patterns pour l'entreprise ainsi que <span class="orange">l'amélioration des compétences des autres dévelopeurs</span> du client dans mon équipe.
+      J'ai travaillé sur une nouvelle application pour envoyer des colis pour AustraliaPost. J'étais concentré sur le FrontEnd, sur la création d'outils et de patterns pour l'entreprise ainsi que <span class="orange">l'amélioration des compétences des autres dévelopeurs</span> du client dans mon équipe.
     en: |-
-      I'm currently working for <span class="orange">AustraliaPost</span> on a new application to send parcels. I'm focused on the FrontEnd, on creating <span class="orange">enterprise wide tools/pattern</span> and on the <span class="orange">upskill of the other client developers</span> in my team.
+      I worked for <span class="orange">AustraliaPost</span> on a new application to send parcels. I was focused on the FrontEnd, on creating <span class="orange">enterprise wide tools/pattern</span> and on the <span class="orange">upskill of the other client developers</span> in my team.
   urls:
   - url: https://auspost.com.au/mypost-business
     copy:

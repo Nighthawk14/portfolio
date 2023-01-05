@@ -6,11 +6,11 @@ export default class Project extends Component {
     const { project } = this.props;
     return (
       <div>
-        <div className="timeline-badge primary"><i className="ion-ios-radio-button-on" /></div>
+        <div className="timeline-badge primary"><ion-icon name="radio-button-on" className="orange"></ion-icon></div>
         <div className="timeline-panel">
           <div className="timeline-heading"><img src={`assets/images/projects/${project.image}`} alt={project.title.en} className="img-responsive"/></div>
           <div className="timeline-body">
-            <h3>{project.title}</h3>
+            <h3>{project.title.en}</h3>
             <div className="description" dangerouslySetInnerHTML={{__html: project.description.en}} />
             {project.urls.length > 0 &&
               <div className="links" style>
@@ -29,7 +29,7 @@ export default class Project extends Component {
       return (
         <a href={url.url} target="_blank" rel="noopener">
           {url.copy.en} &nbsp;
-          <i className="ion-ios-log-out" />
+          <ion-icon name="log-out"></ion-icon>
           <div className="clear" />
         </a>
       )

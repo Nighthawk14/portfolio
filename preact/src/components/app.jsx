@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
-import Projects from './projects/';
-import Technos from './technos/';
+import Projects from './projects';
+import Technos from './technos';
 import Nav from './nav';
 import Line from './line';
 

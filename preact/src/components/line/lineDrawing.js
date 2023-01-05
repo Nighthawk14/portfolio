@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import 'jquery-ui/ui/effect';
+// import $ from 'jquery';
+// import 'jquery-ui/ui/effect';
 
 export default class LineDrawing {
   triggerAnimation() {

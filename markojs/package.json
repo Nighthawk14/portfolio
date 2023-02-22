@@ -33,7 +33,7 @@
     "yaml-loader": "0.4.0"
   },
   "dependencies": {
-    "bootstrap-sass": "3.3.7",
+    "bootstrap-sass": "3.4.1",
     "ionicons": "3.0.0",
     "jquery": "3.2.1",
     "jquery-ui": "1.12.1",
